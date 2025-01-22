@@ -16,3 +16,5 @@ export default {
   },
   plugins: [],
 } satisfies Config;
+
+// #6FBDF5
