@@ -41,7 +41,6 @@ const Navbar = () => {
 
   return (
     <>
-   
       <nav className="fixed w-full backdrop-blur-sm shadow-sm z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 lg:py-4">
           <div className="flex items-center justify-between h-16">
@@ -100,7 +99,7 @@ const Navbar = () => {
                       initial={{ opacity: 0, y: -10 }}
                       animate={{ opacity: 1, y: 0 }}
                       exit={{ opacity: 0, y: -10 }}
-                      className="absolute left-0 w-48 bg-white/20 backdrop-blur-lg rounded-md shadow-lg"
+                      className="absolute left-0 w-48 bg-white/50 backdrop-blur-xl rounded-md shadow-lg z-[9999]"
                       onMouseEnter={() => setActiveDropdown(item.title)}
                       onMouseLeave={() => setActiveDropdown(null)}
                     >
@@ -160,12 +159,7 @@ const Navbar = () => {
                 initial={{ opacity: 0, height: 0 }}
                 animate={{ opacity: 1, height: "auto" }}
                 exit={{ opacity: 0, height: 0 }}
-                className="md:hidden overflow-hidden backdrop-blur-lg rounded-md shadow-lg"
-                style={{
-                  borderRadius: "20px",
-                  background: "linear-gradient(145deg, #f0f0f0, #ffffff)",
-                  boxShadow: "8px 8px 16px #d1d1d1, -8px -8px 16px #ffffff",
-                }}
+                className="md:hidden overflow-hidden bg-white/20 border border-gray-200 backdrop-blur-lg rounded-md shadow-lg"
               >
                 <div className="px-2 pt-2 pb-3 space-y-1">
                   {navItems.map((item) => (

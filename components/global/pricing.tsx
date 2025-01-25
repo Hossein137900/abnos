@@ -13,6 +13,7 @@ interface PricingPlan {
   features: PricingFeature[];
   buttonText: string;
   highlighted?: boolean;
+  icon?: React.ReactNode; // Add this new property
 }
 
 interface PricingProps {
@@ -46,18 +47,23 @@ const Pricing = ({
                   plan.highlighted ? "bg-[#6FBDF5] text-gray-50" : ":bg-gray-50"
                 }`}
               >
-                <div className="space-y-2">
-                  <h4 className="text-2xl font-bold group-hover:text-white transition-all duration-200 ease-in-out">
-                    {plan.title}
-                  </h4>
-                  <span className="text-6xl font-bold group-hover:text-white transition-all duration-200 ease-in-out">
-                    {plan.price}
-                    {plan.period && (
-                      <span className="text-sm group-hover:text-white transition-all duration-200 ease-in-out tracking-wide">
-                        /{plan.period}
-                      </span>
-                    )}
-                  </span>
+                <div className="relative">
+                  <div className="absolute group-hover:text-white top-0 -right-4 w-20 h-20  transition-opacity duration-200">
+                    {plan.icon}
+                  </div>
+                  <div className="space-y-2">
+                    <h4 className="text-2xl font-bold group-hover:text-white transition-all duration-200 ease-in-out">
+                      {plan.title}
+                    </h4>
+                    <span className="text-6xl font-bold group-hover:text-white transition-all duration-200 ease-in-out">
+                      {plan.price}
+                      {plan.period && (
+                        <span className="text-sm group-hover:text-white transition-all duration-200 ease-in-out tracking-wide">
+                          /{plan.period}
+                        </span>
+                      )}
+                    </span>
+                  </div>
                 </div>
                 <p
                   className={`leading-relaxed group-hover:text-white transition-all duration-200 ease-in-out ${
