@@ -19,12 +19,12 @@ const ClientTestimonial = () => {
 
         {/* Testimonial Section */}
         <div>
-          <p className="text-blue-600 uppercase font-semibold text-sm">
+          <p className="text-[#6FBDF5] uppercase font-semibold text-sm">
             Our Client Say
           </p>
           <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mt-2">
             What our satisfied clients{" "}
-            <span className="text-blue-600">are saying</span>
+            <span className="text-[#6FBDF5]">are saying</span>
           </h2>
           <p className="text-gray-600 text-lg mt-4">
             The team’s attention to detail and commitment to quality exceeded
@@ -49,7 +49,7 @@ const ClientTestimonial = () => {
           {/* Navigation Buttons */}
           <div className="flex space-x-4 mt-8">
             <button
-              className="p-3 rounded-full bg-blue-100 text-blue-600 hover:bg-blue-200"
+              className="p-3 rounded-full bg-blue-100 text-[#6FBDF5] hover:bg-blue-200"
               aria-label="Previous Testimonial"
             >
               <MdChevronLeft className="w-5 h-5" />

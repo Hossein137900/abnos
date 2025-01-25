@@ -26,7 +26,7 @@ export default function TeamSection() {
   ];
 
   return (
-    <section className="py-12 mx-20">
+    <section className="py-12 lg:mx-20 mx-4">
       <div className=" py-12 text-center">
         <div className="flex lg:flex-row gap-4 flex-col items-center justify-between">
           <div className="text-left">

@@ -1,6 +1,5 @@
 "use client";
 import { useState } from "react";
-import Link from "next/link";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -22,7 +21,7 @@ const CollapseFaq = ({ title, faqItems }: CollapseFaqProps) => {
   };
 
   return (
-    <div className=" mx-20 px-4 pb-28">
+    <div className="lg:mx-20 px-4 pb-28">
       {/* Header Section */}
       <div className="flex lg:flex-row flex-col gap-4 justify-between items-center py-12 mb-10">
         <motion.h2
@@ -68,7 +67,7 @@ const CollapseFaq = ({ title, faqItems }: CollapseFaqProps) => {
               src="/assets/images/about.jpg"
               alt="FAQ Illustration"
               fill
-              className="object-cover rounded-lg"
+              className="object-cover w-full rounded-lg"
               priority
             />
           </div>

@@ -12,9 +12,9 @@ const navItems = [
     title: "Products",
     href: "#",
     dropdown: [
-      { title: "Software", href: "/products/software" },
-      { title: "Hardware", href: "/products/hardware" },
-      { title: "Services", href: "/products/services" },
+      { title: "Software", href: "/Manufacturing" },
+      { title: "Hardware", href: "/Manufacturing" },
+      { title: "Services", href: "/Manufacturing" },
     ],
   },
   {
@@ -41,7 +41,7 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="fixed w-full backdrop-blur-sm shadow-sm z-50">
+      <nav className="absolute w-full backdrop-blur-sm shadow-sm z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 lg:py-4">
           <div className="flex items-center justify-between h-16">
             <Link href="/" className="flex-shrink-0">
