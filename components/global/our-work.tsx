@@ -4,9 +4,7 @@ import { useState } from "react";
 
 const OurWork = () => {
   const [activeFilter, setActiveFilter] = useState("all");
-
   const filters = ["All", "Branding", "Web Design", "Development", "Marketing"];
-
   const works = [
     {
       id: 1,
@@ -39,12 +37,12 @@ const OurWork = () => {
   ];
 
   return (
-    <div className="container px-4 py-16">
+    <div className="w-full max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16">
       {/* Top Text Section */}
-      <div className="flex flex-col md:flex-row mx-36 justify-between items-center mb-12">
-        <h2 className="text-4xl text-black font-light mb-4 md:mb-0">
-          Our Successful Works <br />{" "}
-          <span className="font-bold">initiativies</span>{" "}
+      <div className="flex flex-col md:flex-row justify-between items-center mb-8 sm:mb-12 px-4 sm:px-8 lg:px-16">
+        <h2 className="text-3xl sm:text-4xl text-black font-light mb-4 md:mb-0 text-center md:text-left">
+          Our Successful Works <br />
+          <span className="font-bold">initiativies</span>
         </h2>
         <p className="text-gray-600 max-w-md text-center md:text-left">
           Discover our portfolio of successful projects and creative solutions
@@ -52,15 +50,15 @@ const OurWork = () => {
       </div>
 
       {/* Filter Section */}
-      <div className="flex flex-wrap justify-center gap-4 mb-12">
+      <div className="flex flex-wrap justify-center items-center gap-2 sm:gap-4 mb-8 sm:mb-12 px-2">
         {filters.map((filter) => (
           <button
             key={filter}
             onClick={() => setActiveFilter(filter.toLowerCase())}
-            className={`px-6 py-2 border-r rounded-full transition-all ${
+            className={`px-3 py-1 sm:px-4 sm:py-2 lg:px-6 lg:py-2 border rounded-full text-sm sm:text-base transition-all ${
               activeFilter === filter.toLowerCase()
                 ? "bg-blue-600 text-white"
-                : " hover:bg-gray-200 text-black"
+                : "hover:bg-gray-200 text-black"
             }`}
           >
             {filter}
@@ -69,13 +67,13 @@ const OurWork = () => {
       </div>
 
       {/* Work Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mx-36">
+      <div className="grid grid-cols-1 justify-center items-center sm:grid-cols-2 gap-4 lg:gap-8 px-4 lg:px-10">
         {works.map((work) => (
           <div
             key={work.id}
-            className="group relative overflow-hidden rounded-lg shadow-lg transition-all hover:shadow-xl"
+            className="group relative rounded-lg shadow-lg transition-all hover:shadow-xl"
           >
-            <div className="relative h-64 w-full">
+            <div className="relative h-48 sm:h-56 lg:h-64 w-full">
               <Image
                 src={work.image}
                 alt={work.title}
@@ -83,11 +81,13 @@ const OurWork = () => {
                 className="object-cover transition-transform group-hover:scale-105"
               />
             </div>
-            <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6">
-              <h3 className="text-xl font-bold text-white mb-2">
+            <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4 sm:p-6">
+              <h3 className="text-lg sm:text-xl font-bold text-white mb-1 sm:mb-2">
                 {work.title}
               </h3>
-              <p className="text-gray-200">{work.description}</p>
+              <p className="text-gray-200 text-sm sm:text-base">
+                {work.description}
+              </p>
             </div>
           </div>
         ))}

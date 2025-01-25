@@ -159,7 +159,12 @@ const Navbar = () => {
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: "auto" }}
               exit={{ opacity: 0, height: 0 }}
-              className="md:hidden overflow-hidden bg-white"
+              className="md:hidden overflow-hidden backdrop-blur-lg rounded-md shadow-lg"
+              style={{
+                borderRadius: '20px',
+                background: 'linear-gradient(145deg, #f0f0f0, #ffffff)',
+                boxShadow: '8px 8px 16px #d1d1d1, -8px -8px 16px #ffffff'
+              }}
             >
               <div className="px-2 pt-2 pb-3 space-y-1">
                 {navItems.map((item) => (

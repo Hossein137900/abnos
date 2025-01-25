@@ -26,8 +26,10 @@ const BannerText = ({
         {" "}
         {/* Optional overlay for better text visibility */}
         <div className="container mx-auto h-full">
-          <div className="flex flex-row items-center justify-between -mt-12 h-full px-8">
-            <h2 className="text-4xl font-bold lg:w-1/2 text-white">{text}</h2>
+          <div className="flex lg:flex-row flex-col items-center justify-between lg:-mt-12 lg:h-full gap-12  px-8">
+            <h2 className="text-4xl font-bold w-full mt-20 md:mt-0 lg:w-1/2 text-white">
+              {text}
+            </h2>
             <p className="text-xl lg:w-1/2 font-light text-white">
               {description}
             </p>
