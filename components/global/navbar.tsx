@@ -1,5 +1,4 @@
 "use client";
-import { FaPhone } from "react-icons/fa";
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
@@ -30,7 +29,6 @@ const navItems = [
   {
     title: "+1 (555) 123-4567",
     href: "tel:+15551234567",
-    icon: <FaPhone />,
     isButton: true,
   },
 ];
@@ -80,18 +78,20 @@ const Navbar = () => {
                       </svg>
                     </button>
                   ) : (
-                    <Link
-                      href={item.href}
-                      className={`${
-                        item.isButton
-                          ? "bg-transparent text-white hover:bg-[#6FBDF5]"
-                          : "text-gray-50 hover:text-[#6FBDF5]"
-                      } transition-colors px-3 py-2 text-sm font-medium ${
-                        item.isButton ? "rounded-md" : ""
-                      }`}
-                    >
-                      {item.title}
-                    </Link>
+                    <>
+                      <Link
+                        href={item.href}
+                        className={` inline ${
+                          item.isButton
+                            ? "bg-transparent text-white  hover:bg-[#6FBDF5]"
+                            : "text-gray-50 hover:text-[#6FBDF5]"
+                        } transition-colors px-3 py-2 text-sm font-medium ${
+                          item.isButton ? "rounded-md" : ""
+                        }`}
+                      >
+                        {item.title}
+                      </Link>
+                    </>
                   )}
 
                   {item.dropdown && activeDropdown === item.title && (
