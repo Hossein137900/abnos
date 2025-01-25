@@ -65,11 +65,11 @@ const ClientTestimonial = () => {
       </div>
 
       {/* Logos Section */}
-      <div className="flex flex-wrap justify-center mt-12 gap-2 space-x-8">
+      <div className="flex flex-wrap items-center justify-center mt-12 gap-6 ">
         {[1, 2, 3, 4, 5].map((logo, index) => (
           <Image
             key={index}
-            src={`/logo-${logo}.png`} // Replace with your logo paths
+            src={`/assets/images/company.png`}
             alt={`Logo ${logo}`}
             className="h-10 object-contain"
             width={100}

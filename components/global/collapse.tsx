@@ -23,14 +23,26 @@ const CollapseFaq = ({ title, faqItems }: CollapseFaqProps) => {
   return (
     <div className="lg:mx-20 px-4 pb-28">
       {/* Header Section */}
-      <div className="flex lg:flex-row flex-col gap-4 justify-between items-center py-12 mb-10">
-        <motion.h2
-          initial={{ opacity: 0, x: -20 }}
-          animate={{ opacity: 1, x: 0 }}
-          className="text-3xl font-bold text-center lg:text-left text-gray-900"
-        >
-          {title}
-        </motion.h2>
+      <div className="flex lg:flex-row flex-col gap-4 justify-between items-center py-12">
+        <div>
+          <Image
+            src="/assets/images/icontop.png"
+            className="inline w-4 h-4"
+            alt="FAQ Icon"
+            width={50}
+            height={50}
+          />
+          <span className="text-[#6FBDF5] mx-2 font-semibold text-xs">
+            FAQS
+          </span>
+          <motion.h2
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            className="text-3xl font-bold text-center lg:text-left text-gray-900"
+          >
+            {title}
+          </motion.h2>
+        </div>
 
         <motion.div
           initial={{ opacity: 0, x: 20 }}
@@ -85,14 +97,17 @@ const CollapseFaq = ({ title, faqItems }: CollapseFaqProps) => {
             >
               <motion.button
                 onClick={() => toggleCollapse(index)}
-                className="w-full flex justify-between items-center p-4 bg-[#6FBDF5] hover:bg-opacity-80 rounded-lg transition-colors"
+                className="w-full flex justify-between group items-center text-black p-4 border border-[#6FBDF5] hover:bg-[#6FBDF5] rounded-lg transition-colors"
                 whileHover={{ scale: 1.01 }}
                 whileTap={{ scale: 0.99 }}
               >
-                <span className="font-medium text-left">{item.question}</span>
+                <span className="font-medium text-left group-hover:text-white">
+                  {item.question}
+                </span>
                 <motion.span
                   animate={{ rotate: openIndex === index ? 180 : 0 }}
                   transition={{ duration: 0.3 }}
+                  className="group-hover:text-white"
                 >
                   ↓
                 </motion.span>

@@ -6,10 +6,23 @@ const BlogPost = () => {
   return (
     <section className="py-6 sm:py-12 mx-20  text-gray-100">
       <div className=" space-y-8">
-        <div className=" flex flex-col lg:flex-row justify-between items-center gap-4 text-center">
-          <h2 className="text-3xl font-bold text-black">
-            Partem reprimique an pro
-          </h2>
+        <div className=" flex flex-col lg:flex-row justify-between items-center gap-4">
+          <div>
+            <Image
+              src="/assets/images/icontop.png"
+              className="inline w-4 h-4"
+              alt="FAQ Icon"
+              width={50}
+              height={50}
+            />
+            <span className="text-[#6FBDF5] mx-2 font-semibold text-xs">
+              Blogs
+            </span>
+            <h2 className="text-3xl font-bold text-black">
+              Partem reprimique an pro
+            </h2>
+          </div>
+
           <p className=" text-sm text-gray-400">
             Qualisque erroribus usu at, duo te agam soluta mucius.
           </p>
