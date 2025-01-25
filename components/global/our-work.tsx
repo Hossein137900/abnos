@@ -37,7 +37,7 @@ const OurWork = () => {
   ];
 
   return (
-    <div className="w-full max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16">
+    <div className="w-full max-w-[1440px] mx-auto px-4 mt-12 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16">
       {/* Top Text Section */}
       <div className="flex flex-col md:flex-row justify-between items-center mb-8 sm:mb-12 px-4 sm:px-8 lg:px-16">
         <h2 className="text-3xl sm:text-4xl text-black font-light mb-4 md:mb-0 text-center md:text-left">

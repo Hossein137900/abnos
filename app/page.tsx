@@ -1,4 +1,4 @@
-import AboutFeature from "@/components/global/aboutFeature";
+// import AboutFeature from "@/components/global/aboutFeature";
 import BannerText from "@/components/global/bannerText";
 import BlogPost from "@/components/global/blog-post";
 import ClientTestimonial from "@/components/global/our-client";
@@ -55,7 +55,9 @@ export default function Home() {
   return (
     <div className="grid items-center justify-items-center min-h-screen">
       <HeroSection />
-      <AboutFeature />
+
+      <OurStory />
+      {/* <AboutFeature /> */}
       <BannerText
         imageSrc="/assets/images/bannerText.jpg"
         text="Comprehensive solutions for industrial excellence"
@@ -63,9 +65,10 @@ export default function Home() {
         description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ac semper augue. Sed euismod, nunc vel tincidunt ultricies, sapien nunc aliquet nunc, euismod euismod nunc nunc euismod nunc."
       />
       <OverlayBox />
-      <OurStory />
-      <WhatWeDo />
       <OurWork />
+
+      <WhatWeDo />
+
       <OurProcess />
       <Pricing plans={pricingPlans} />
       <ClientTestimonial />
