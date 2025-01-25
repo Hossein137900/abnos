@@ -72,7 +72,7 @@ const Footer = () => {
           </div>
           <div className="flex justify-center sm:justify-start mt-4 lg:mt-0">
             <div className="flex items-center ">
-              <span className="text-sm text-wrap text-center lg:text-justify font-bold">
+              <span className="text-sm text-wrap text-center lg:text-justify text-white/70 font-bold">
                 {" "}
                 Crafting excellence in glass <br /> manufacturing since 1990.
                 Your premier destination for premium <br /> glass solutions and

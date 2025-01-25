@@ -26,19 +26,18 @@ const navItems = [
       { title: "Support", href: "/resources/support" },
     ],
   },
-  { title: "About", href: "/about" }, 
+  { title: "About", href: "/about" },
   {
     title: "Contact Us",
     href: "/contactus",
     isButton: true,
   },
   {
-    svg:phone.src,
+    svg: phone.src,
     title: "+1 (555) 123-4567",
     href: "tel:+15551234567",
     isButton: true,
   },
- 
 ];
 
 const Navbar = () => {
@@ -97,12 +96,15 @@ const Navbar = () => {
                           item.isButton ? "rounded-md" : ""
                         }`}
                       >
-                        {item.svg&&<Image
-                          src={item.svg}
-                          alt="phone"
-                          width={20}
-                          height={20}
-                          className="h-5 w-5 fill-sky-300"/>}
+                        {item.svg && (
+                          <Image
+                            src={item.svg}
+                            alt="phone"
+                            width={20}
+                            height={20}
+                            className="h-5 w-5 fill-sky-300"
+                          />
+                        )}
                         {item.title}
                       </Link>
                     </>
