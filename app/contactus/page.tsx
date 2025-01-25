@@ -11,7 +11,7 @@ import ContactUs from '@/components/static/contact_us'
       />
         <ContactUs />
         <iframe 
-          src="https://neshan.org/maps/@35.889673,50.84275,17.5z,0p/places/4520e98c9359d21dc3ae9e50a70734b7"
+          src="https://www.google.com/maps?ll=35.891855,50.842928&z=15&t=m&hl=en&gl=US&mapclient=embed&cid=13995456689188650281"
           width="100%" 
           height="450" 
           style={{ border: 0 }} 
