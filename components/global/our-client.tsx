@@ -4,12 +4,12 @@ import { MdChevronLeft, MdChevronRight } from "react-icons/md";
 
 const ClientTestimonial = () => {
   return (
-    <div className="bg-gray-50 py-12 px-6 md:px-16">
+    <div className=" py-12 px-6 md:px-16">
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
         {/* Image Section */}
         <div className="relative">
           <Image
-            src="/assets/images/about.jpg" // Replace with your image path
+            src="/assets/images/clientSay.jpeg" // Replace with your image path
             alt="Engineer with robotic arm"
             className="rounded-2xl shadow-lg object-cover w-full"
             width={2000}
@@ -19,18 +19,18 @@ const ClientTestimonial = () => {
 
         {/* Testimonial Section */}
         <div>
-          <p className="text-blue-600 uppercase font-semibold text-sm">
+          <p className="text-[#6FBDF5] uppercase font-semibold text-sm">
             Our Client Say
           </p>
           <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mt-2">
             What our satisfied clients{" "}
-            <span className="text-blue-600">are saying</span>
+            <span className="text-[#6FBDF5]">are saying</span>
           </h2>
           <p className="text-gray-600 text-lg mt-4">
-            "The team’s attention to detail and commitment to quality exceeded
+            The team’s attention to detail and commitment to quality exceeded
             our expectations. They delivered on time, and their innovative
             solutions improved our production efficiency by 30%. Highly
-            recommended!"
+            recommended!
           </p>
           <div className="flex items-center mt-6">
             <Image
@@ -49,7 +49,7 @@ const ClientTestimonial = () => {
           {/* Navigation Buttons */}
           <div className="flex space-x-4 mt-8">
             <button
-              className="p-3 rounded-full bg-blue-100 text-blue-600 hover:bg-blue-200"
+              className="p-3 rounded-full bg-blue-100 text-[#6FBDF5] hover:bg-blue-200"
               aria-label="Previous Testimonial"
             >
               <MdChevronLeft className="w-5 h-5" />

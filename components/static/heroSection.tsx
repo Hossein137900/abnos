@@ -23,7 +23,7 @@ const HeroSection = () => {
     <div className="relative min-h-screen w-full">
       {/* Background Image */}
       <Image
-        src={"/assets/images/herosection.jpg"}
+        src={"/assets/images/hero.jpeg"}
         alt="Glass Factory Background"
         fill
         className="object-cover z-0"
@@ -31,7 +31,7 @@ const HeroSection = () => {
       />
 
       {/* Overlay */}
-      <div className="absolute inset-0 bg-black/50 z-1" />
+      <div className="absolute inset-0 lg:bg-black/20 bg-black/30 z-1" />
 
       {/* Content Container */}
       <div className="relative z-10 mt-20 px-4 pt-32">
@@ -85,11 +85,11 @@ const HeroSection = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.8 + index * 0.2 }}
-                className="p-1 bg-white/10 backdrop-blur-sm rounded-xl hover:bg-white/20 transition-all duration-300"
+                className=" bg-white/10 p-1 backdrop-blur-sm rounded-xl hover:bg-white/20 transition-all duration-300"
               >
-                <div className="flex  flex-row justify-center items-center gap-4">
+                <div className="flex flex-row justify-center items-center gap-4">
                   <span className="text-[#6FBDF5]"> {feature.icon}</span>
-                  <p className="text-gray-300 text-nowrap mt-2">
+                  <p className="text-gray-300 text-sm text-nowrap">
                     {feature.description}
                   </p>
                 </div>

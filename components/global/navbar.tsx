@@ -1,5 +1,4 @@
 "use client";
-import { FaPhone } from "react-icons/fa";
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
@@ -12,16 +11,16 @@ const navItems = [
     title: "Products",
     href: "#",
     dropdown: [
-      { title: "Software", href: "/products/software" },
-      { title: "Hardware", href: "/products/hardware" },
-      { title: "Services", href: "/products/services" },
+      { title: "Manufacturing", href: "/Manufacturing" },
+      { title: "Hardware", href: "#" },
+      { title: "Services", href: "#" },
     ],
   },
   {
     title: "Resources",
     href: "#",
     dropdown: [
-      { title: "Blog", href: "/resources/blog" },
+      { title: "Blog", href: "/blogs" },
       { title: "Documentation", href: "/resources/docs" },
       { title: "Support", href: "/resources/support" },
     ],
@@ -30,7 +29,6 @@ const navItems = [
   {
     title: "+1 (555) 123-4567",
     href: "tel:+15551234567",
-    icon: <FaPhone />,
     isButton: true,
   },
 ];
@@ -41,7 +39,7 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="fixed w-full backdrop-blur-sm shadow-sm z-50">
+      <nav className="absolute w-full backdrop-blur-sm shadow-sm z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 lg:py-4">
           <div className="flex items-center justify-between h-16">
             <Link href="/" className="flex-shrink-0">
@@ -80,18 +78,20 @@ const Navbar = () => {
                       </svg>
                     </button>
                   ) : (
-                    <Link
-                      href={item.href}
-                      className={`${
-                        item.isButton
-                          ? "bg-transparent text-white hover:bg-[#6FBDF5]"
-                          : "text-gray-50 hover:text-[#6FBDF5]"
-                      } transition-colors px-3 py-2 text-sm font-medium ${
-                        item.isButton ? "rounded-md" : ""
-                      }`}
-                    >
-                      {item.title}
-                    </Link>
+                    <>
+                      <Link
+                        href={item.href}
+                        className={` inline ${
+                          item.isButton
+                            ? "bg-transparent text-white  hover:bg-[#6FBDF5]"
+                            : "text-gray-50 hover:text-[#6FBDF5]"
+                        } transition-colors px-3 py-2 text-sm font-medium ${
+                          item.isButton ? "rounded-md" : ""
+                        }`}
+                      >
+                        {item.title}
+                      </Link>
+                    </>
                   )}
 
                   {item.dropdown && activeDropdown === item.title && (
