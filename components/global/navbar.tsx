@@ -4,6 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import logo from "@/public/assets/images/logo.png";
+import phone from "@/public/assets/images/phonesvg.svg";
 
 const navItems = [
   { title: "Home", href: "/" },
@@ -25,12 +26,19 @@ const navItems = [
       { title: "Support", href: "/resources/support" },
     ],
   },
-  { title: "About", href: "/about" },
+  { title: "About", href: "/about" }, 
   {
+    title: "Contact Us",
+    href: "/contactus",
+    isButton: true,
+  },
+  {
+    svg:phone.src,
     title: "+1 (555) 123-4567",
     href: "tel:+15551234567",
     isButton: true,
   },
+ 
 ];
 
 const Navbar = () => {
@@ -39,7 +47,7 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="absolute w-full backdrop-blur-sm shadow-sm z-50">
+      <nav className="absolute w-full backdrop-blur-sm shadow-sm z-50 items-center">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 lg:py-4">
           <div className="flex items-center justify-between h-16">
             <Link href="/" className="flex-shrink-0">
@@ -53,7 +61,7 @@ const Navbar = () => {
             </Link>
 
             {/* Desktop Navigation */}
-            <div className="hidden md:flex space-x-8">
+            <div className="hidden md:flex space-x-8 items-center">
               {navItems.map((item) => (
                 <div key={item.title} className="relative">
                   {item.dropdown ? (
@@ -83,12 +91,18 @@ const Navbar = () => {
                         href={item.href}
                         className={` inline ${
                           item.isButton
-                            ? "bg-transparent text-white  hover:bg-[#6FBDF5]"
+                            ? "bg-transparent text-white  hover:bg-[#dce8f089]"
                             : "text-gray-50 hover:text-[#6FBDF5]"
-                        } transition-colors px-3 py-2 text-sm font-medium ${
+                        } transition-colors px-3 py-2 text-sm font-medium flex gap-x-2  ${
                           item.isButton ? "rounded-md" : ""
                         }`}
                       >
+                        {item.svg&&<Image
+                          src={item.svg}
+                          alt="phone"
+                          width={20}
+                          height={20}
+                          className="h-5 w-5 fill-sky-300"/>}
                         {item.title}
                       </Link>
                     </>
