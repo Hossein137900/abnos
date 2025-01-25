@@ -99,7 +99,7 @@ const Navbar = () => {
                       initial={{ opacity: 0, y: -10 }}
                       animate={{ opacity: 1, y: 0 }}
                       exit={{ opacity: 0, y: -10 }}
-                      className="absolute left-0 w-48 bg-white/50 backdrop-blur-xl rounded-md shadow-lg z-[9999]"
+                      className="absolute left-0 w-48 bg-[#6FBDF5] bg-opacity-70 backdrop-blur-xl rounded-md shadow-lg z-[9999]"
                       onMouseEnter={() => setActiveDropdown(item.title)}
                       onMouseLeave={() => setActiveDropdown(null)}
                     >
