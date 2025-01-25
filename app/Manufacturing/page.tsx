@@ -27,7 +27,7 @@ export default function Manufacturing() {
       answer: "Delivery typically takes 2-3 business days...",
     },
   ];
-  
+
   return (
     <div>
       <HeroSection

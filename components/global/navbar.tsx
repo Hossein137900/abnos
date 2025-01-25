@@ -12,16 +12,16 @@ const navItems = [
     title: "Products",
     href: "#",
     dropdown: [
-      { title: "Software", href: "/Manufacturing" },
-      { title: "Hardware", href: "/Manufacturing" },
-      { title: "Services", href: "/Manufacturing" },
+      { title: "Manufacturing", href: "/Manufacturing" },
+      { title: "Hardware", href: "#" },
+      { title: "Services", href: "#" },
     ],
   },
   {
     title: "Resources",
     href: "#",
     dropdown: [
-      { title: "Blog", href: "/resources/blog" },
+      { title: "Blog", href: "/blogs" },
       { title: "Documentation", href: "/resources/docs" },
       { title: "Support", href: "/resources/support" },
     ],

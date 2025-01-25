@@ -6,11 +6,11 @@ const BlogPost = () => {
   return (
     <section className="py-6 sm:py-12 mx-20  text-gray-100">
       <div className=" space-y-8">
-        <div className=" flex flex-col lg:flex-row justify-between gap-4 text-center">
+        <div className=" flex flex-col lg:flex-row justify-between items-center gap-4 text-center">
           <h2 className="text-3xl font-bold text-black">
             Partem reprimique an pro
           </h2>
-          <p className="font-serif text-sm text-gray-400">
+          <p className=" text-sm text-gray-400">
             Qualisque erroribus usu at, duo te agam soluta mucius.
           </p>
         </div>
