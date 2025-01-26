@@ -237,8 +237,8 @@ const Navbar = () => {
                 initial={{ opacity: 0, height: 0 }}
                 animate={{ opacity: 1, height: "auto" }}
                 exit={{ opacity: 0, height: 0 }}
-                className="md:hidden overflow-hidden bg-white/20 border border-gray-200 backdrop-blur-2xl rounded-md shadow-lg"
-              >
+                className={`md:hidden overflow-hidden bg-white/20 border border-gray-200 backdrop-blur-2xl rounded-md shadow-lg ${state.currentLang === "fa" ? "text-right" : "text-left"}`}
+                >
                 <div className="px-2 pt-2 pb-3 space-y-1">
                   {currentNavItems.map((item) => (
                     <div key={item.title}>
@@ -252,7 +252,7 @@ const Navbar = () => {
                                   : item.title
                               )
                             }
-                            className="w-full flex items-center justify-between px-3 py-2 text-base font-medium text-gray-50 hover:text-blue-600 hover:bg-gray-50 rounded-md"
+                            className="w-full flex items-center justify-between px-3 py-2 text-base  font-medium text-gray-50 hover:text-blue-600 hover:bg-gray-50 rounded-md"
                           >
                             {item.title}
                             <motion.svg

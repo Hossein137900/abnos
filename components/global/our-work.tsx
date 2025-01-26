@@ -2,7 +2,6 @@
 import Image from "next/image";
 import { useState } from "react";
 import { useLanguage } from "../global/LanguageContext";
-import { s } from "framer-motion/client";
 
 const works = {
   en: [
