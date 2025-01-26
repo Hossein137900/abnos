@@ -72,20 +72,15 @@ export default function Home() {
 
       <OurStory />
       {/* <AboutFeature /> */}
-      <BannerText
-        imageSrc="/assets/images/bannerText.jpg"
-        text="Comprehensive solutions for industrial excellence"
-        imageAlt="about"
-        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ac semper augue. Sed euismod, nunc vel tincidunt ultricies, sapien nunc aliquet nunc, euismod euismod nunc nunc euismod nunc."
-      />
+      <BannerText imageSrc="/assets/images/bannerText.jpg" imageAlt="about" />
       <OverlayBox />
       <OurWork />
 
       <WhatWeDo />
 
       <OurProcess />
-      <Pricing plans={pricingPlans} />
-      <ClientTestimonial />
+      {/*      
+      <ClientTestimonial /> */}
       <BlogPost />
     </div>
   );

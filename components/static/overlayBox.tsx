@@ -1,60 +1,153 @@
+"use client";
+import { useLanguage } from "../global/LanguageContext";
 import {
   MdPrecisionManufacturing,
   MdSmartToy,
   MdDesignServices,
   MdBuildCircle,
+  MdPeople,
+  MdSpeed,
 } from "react-icons/md";
+import { BsArrowRight } from "react-icons/bs";
+import { motion } from "framer-motion";
 
-export default function FeaturesSection() {
-  const features = [
+const features = {
+  en: [
     {
       icon: MdPrecisionManufacturing,
-      title: "Custom Manufacturing Solution",
+      title: "Standard Certificate Holder",
+      description:
+        "First holder of national standard certification in building glass production and ISO9001, ISO14001, OHSAS 18001, IMS Management systems certificates",
     },
     {
       icon: MdSmartToy,
-      title: "Industrial Automation And Robotics",
+      title: "Modern European Equipment",
+      description:
+        "Using modern and up-to-date glass industry equipment, manufactured in Germany, UK, Finland and Austria",
     },
     {
       icon: MdDesignServices,
-      title: "Product Design And Prototyping",
+      title: "Premium Raw Materials",
+      description:
+        "Using first-grade glass and other consumables including double-glazing materials, stone, drill bits, paint etc. is a priority for this factory",
+    },
+    {
+      icon: MdPeople,
+      title: "Human Resources",
+      description:
+        "Having experienced staff in production and sales that facilitates order receipt and preparation",
     },
     {
       icon: MdBuildCircle,
-      title: "Equipment Maintenance Support",
+      title: "Production Leader",
+      description:
+        "Product variety and quality due to long history and sufficient production experience",
     },
-  ];
+    {
+      icon: MdSpeed,
+      title: "Quick Delivery",
+      description:
+        "Ability to produce glass in minimum possible time (three hours)",
+    },
+  ],
+  fa: [
+    {
+      icon: MdPrecisionManufacturing,
+      title: "دارنده نشان استاندارد",
+      description:
+        "اولین دارنده نشان استاندارد ملی در زمینه تولید شیشه های ساختمانی",
+    },
+    {
+      icon: MdSmartToy,
+      title: "دستگاه‌های به روز اروپایی",
+      description:
+        "استفاده از دستگاه‌های مدرن صنعت شیشه، ساخت کشورهای آلمان، انگلیس",
+    },
+    {
+      icon: MdDesignServices,
+      title: "مواد اولیه درجه یک",
+      description: "استفاده از شیشه‌های درجه یک و سایر مواد مصرفی",
+    },
+    {
+      icon: MdPeople,
+      title: "منابع انسانی",
+      description: "دارای کادری مجرب در زمینه تولید فروش و تولید",
+    },
+    {
+      icon: MdBuildCircle,
+      title: "پیشرو در تولید",
+      description:
+        "تنوع و کیفیت محصولات بواسطه قدمت طولانی و تجربه کافی در زمینه تولید",
+    },
+    {
+      icon: MdSpeed,
+      title: "تحویل در کوتاه‌ترین زمان",
+      description: "امکان تولید شیشه‌ها با حداقل زمان ممکن (سه ساعته)",
+    },
+  ],
+};
+
+export default function FeaturesSection() {
+  const { state } = useLanguage();
+  const isRTL = state.currentLang === "fa";
+  const currentFeatures = features[state.currentLang === "en" ? "en" : "fa"];
 
   return (
-    <div className="py-16 bg-white shadow-md rounded-3xl lg:-mt-36 z-[9999]">
-      <div className="container mx-auto lg:max-w-5xl px-6">
-        <div className="flex lg:flex-row flex-col">
-          {features.map((feature, index) => (
-            <div
+    <div className="py-16 bg-white/20 backdrop-blur-md shadow-2xl rounded-3xl lg:-mt-36 z-[9999]  lg:mx-auto max-w-7xl">
+      <div className=" lg:mx-auto lg:max-w-8xl px-6">
+        <div
+          className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 ${
+            isRTL ? "rtl" : "ltr"
+          }`}
+        >
+          {currentFeatures.map((feature, index) => (
+            <motion.div
               key={index}
-              className="bg-transparent border-l p-6 flex flex-col items-center justify-between "
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              className="group  hover:bg-[#6FBDF5]/10 rounded-xl transition-all duration-500 p-16 relative min-h-[220px] overflow-hidden cursor-pointer"
             >
-              <feature.icon className="h-16 w-16 mr-auto text-[#6FBDF5]" />
+              {/* Icon and Title - Always Visible */}
+              <div
+                className={`flex flex-col ${
+                  isRTL ? "items-end" : "items-start"
+                } space-y-4`}
+              >
+                <div className="relative">
+                  <div className="absolute inset-0 bg-[#6FBDF5]/20 rounded-full blur-xl group-hover:blur-2xl transition-all duration-500" />
+                  <feature.icon className="h-12 w-12 text-[#6FBDF5] relative z-0" />
+                </div>
 
-              <h3 className="text-lg text-left font-semibold text-gray-800 mb-4">
-                {feature.title}
-              </h3>
-              <button className="bg-gray-200 group  hover:bg-[#6FBDF5] text-gray-400 hover:text-[#ffffff] rounded-full p-2">
-                <span className="sr-only">Learn more</span>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-5 w-5 transform group-hover:rotate-180 duration-300 transition-transform"
-                  viewBox="0 0 20 20"
-                  fill="currentColor"
+                <h3
+                  className={`text-xl font-bold text-gray-800 ${
+                    isRTL ? "text-right" : "text-left"
+                  }`}
                 >
-                  <path
-                    fillRule="evenodd"
-                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11.293l3.293 3.293a1 1 0 01-1.414 1.414L10 9.414l-2.879 2.88a1 1 0 11-1.414-1.414L9 7.707a1 1 0 011.414 0z"
-                    clipRule="evenodd"
+                  {feature.title}
+                </h3>
+                <button className="group flex items-center gap-2 px-4 py-2 text-blue-500 hover:text-white bg-transparent hover:bg-blue-500  rounded-lg transition-all duration-300 ease-in-out">
+                  {isRTL ? "مشاهده بیشتر" : "View More"}
+                  <BsArrowRight
+                    className={`w-5 h-5 transition-transform duration-300 group-hover:translate-x-2 ${
+                      isRTL ? "rotate-180" : ""
+                    }`}
                   />
-                </svg>
-              </button>
-            </div>
+                </button>
+              </div>
+
+              {/* Description - Hidden by Default, Shown on Hover */}
+              <div
+                className={`absolute inset-x-0 bottom-0 h-full bg-[#6FBDF5]
+    opacity-0 group-hover:opacity-100 transition-all duration-500 ease-in-out
+    translate-y-full group-hover:translate-y-0 p-6
+    ${isRTL ? "text-right" : "text-left"}`}
+              >
+                <p className="text-gray-50 leading-relaxed h-full flex items-center justify-center">
+                  {feature.description}
+                </p>
+              </div>
+            </motion.div>
           ))}
         </div>
       </div>

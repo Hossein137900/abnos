@@ -1,30 +1,75 @@
+"use client";
 import Image from "next/image";
+import { useLanguage } from "../global/LanguageContext";
+
+const content = {
+  en: {
+    sectionTitle: "Our Story",
+    mainTitle: "Transforming industries",
+    subTitle: "with innovative efficient solutions",
+    description: "Welcome to Abnos Jam Glass Factory, a pioneering force in the glass industry. We take pride in delivering comprehensive technical and engineering services in glass manufacturing. Our commitment lies in understanding and meeting customer requirements while exceeding their expectations. Through the dedicated efforts of our hardworking team and management, we've achieved industry standard certifications from the Iranian Institute of Standards and Industrial Research. We continue to innovate and excel, guided by our core values of quality, innovation, and customer satisfaction.",
+    stats: {
+      projects: {
+        number: "10k+",
+        label: "Completed Projects"
+      },
+      customers: {
+        number: "15+",
+        label: "Satisfied Customers"
+      },
+      experience: {
+        number: "10k+",
+        label: "Years of Mastery"
+      }
+    },
+    cta: "Watch Intro"
+  },
+  fa: {
+    sectionTitle: "داستان ما",
+    mainTitle: "متحول کننده صنایع",
+    subTitle: "با راهکارهای نوآورانه و کارآمد",
+    description: "به کارخانه شیشه آبنوس جام خوش آمدید، پیشگام در صنعت شیشه. ما با افتخار، خدمات جامع فنی و مهندسی در زمینه تولید شیشه ارائه می‌دهیم. تعهد ما درک و برآورده‌سازی نیازهای مشتریان و فراتر رفتن از انتظارات آنهاست. با تلاش‌های مستمر تیم متخصص و مدیریت کارآمد، موفق به کسب گواهینامه‌های استاندارد از سازمان ملی استاندارد ایران شده‌ایم. ما همواره با تکیه بر ارزش‌های اصلی خود یعنی کیفیت، نوآوری و رضایت مشتری، به مسیر پیشرفت و تعالی ادامه می‌دهیم.",
+    stats: {
+      projects: {
+        number: "+۱۰ هزار",
+        label: "پروژه تکمیل شده"
+      },
+      customers: {
+        number: "+۱۵",
+        label: "مشتری راضی"
+      },
+      experience: {
+        number: "+۱۰ هزار",
+        label: "سال تجربه"
+      }
+    },
+    cta: "مشاهده ویدیو"
+  }
+};
 
 export default function OurStory() {
+  const { state } = useLanguage();
+  const isRTL = state.currentLang === "fa";
+  const currentContent = content[state.currentLang === "en" ? "en" : "fa"];
+
   return (
-    <div className="min-h-screen bg-white flex flex-col items-center justify-center py-10">
-      {/* Main Container */}
+    <div className={`min-h-screen bg-white flex flex-col items-center justify-center py-10 ${isRTL ? 'rtl' : 'ltr'}`}>
       <div className="max-w-7xl w-full px-6 lg:px-16 space-y-10">
-        {/* Title Section */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-          {/* Text Section */}
-          <div className="space-y-4 text-center lg:text-left">
-            <p className="text-[#6FBDF5] font-semibold text-sm uppercase tracking-wide">
-              Our Story
+          <div className={`space-y-4 text-center lg:text-${isRTL ? 'right' : 'left'}`}>
+            <p className={`text-[#6FBDF5] font-semibold text-sm uppercase tracking-wide ${state.currentLang === 'fa' ? 'text-center' : 'text-base'}`}>
+              {currentContent.sectionTitle}
             </p>
-            <h1 className="text-3xl lg:text-5xl font-light text-gray-900">
-              Transforming industries
-              <br />
-              <span className="text-gray-700 font-bold">
-                with{" "}
-                <span className="font-bold text-black">
-                  innovative efficient solutions
-                </span>
-              </span>
+            <h1 className={`text-3xl lg:text-5xl mb-4 font-light text-gray-900 ${state.currentLang === 'fa' ? 'text-center ' : 'text-base'}`}>
+              {currentContent.mainTitle}
+             
             </h1>
+            <br />
+            <span className="text-gray-700 pt-4 text-3xl lg:text-5xl font-bold">
+                {currentContent.subTitle}
+              </span>
           </div>
 
-          {/* Two Images in Row */}
           <div className="grid grid-cols-2 gap-4">
             <Image
               src={"/assets/images/bannerText.jpg"}
@@ -43,7 +88,6 @@ export default function OurStory() {
           </div>
         </div>
 
-        {/* Image Section */}
         <div className="flex flex-col lg:flex-row items-center justify-center gap-10">
           <div className="">
             <Image
@@ -55,42 +99,29 @@ export default function OurStory() {
             />
           </div>
           <div className="space-y-8">
-            <p className="text-gray-600 lg:text-justify text-center ml-auto ">
-              We specialize in revolutionizing industries by delivering
-              innovative, efficient solutions that enhance productivity and
-              streamline processes. Through advanced technologies, precision
-              engineering, and sustainable practices.
+            <p className={`text-gray-600 lg:text-${isRTL ? 'right' : 'left'} text-center ml-auto`}>
+              {currentContent.description}
             </p>
             <div className="flex flex-col lg:flex-row items-center justify-center lg:justify-between space-y-6 lg:space-y-0 border-t border-gray-200 pt-6">
-              <div className="flex items-center justify-center space-x-4">
-                <div>
-                  <h3 className="text-2xl font-bold text-gray-900">10k+</h3>
-                  <p className="text-gray-500 text-sm">Completed Project</p>
+              {Object.entries(currentContent.stats).map(([key, value]) => (
+                <div key={key} className="flex items-center justify-center space-x-4">
+                  <div className={`text-center ${isRTL ? 'space-x-reverse' : ''}`}>
+                    <h3 className="text-2xl font-bold text-gray-900">{value.number}</h3>
+                    <p className="text-gray-500 text-sm">{value.label}</p>
+                  </div>
                 </div>
-              </div>
-              <div className="flex items-center space-x-4">
-                <div>
-                  <h3 className="text-2xl font-bold text-gray-900">15+</h3>
-                  <p className="text-gray-500 text-sm">Satisfied Customer</p>
-                </div>
-              </div>
-              <div className="flex items-center space-x-4">
-                <div>
-                  <h3 className="text-2xl font-bold text-gray-900">10k+</h3>
-                  <p className="text-gray-500 text-sm">Year Of Mastery</p>
-                </div>
-              </div>
+              ))}
             </div>
-            <div className="flex items-center  justify-center ">
-              <Image
+            <div className="flex items-center justify-center">
+              {/* <Image
                 src="/assets/images/logo.png"
-                alt="Team"
+                alt="Abnos Jam Logo"
                 width={100}
                 height={100}
                 className="rounded-full mx-2"
-              />
+              /> */}
               <button className="flex items-center space-x-2 bg-[#6FBDF5] text-white px-4 py-2 rounded-lg shadow hover:bg-blue-700">
-                <span>Watch Intro</span>
+                <span>{currentContent.cta}</span>
               </button>
             </div>
           </div>

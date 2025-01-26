@@ -1,10 +1,12 @@
 import type { Metadata } from "next";
 import { Manrope } from "next/font/google";
-// import { sahel } from "@/next-persian-fonts/sahel";
-// import { ray, rayBold } from "@/next-persian-fonts/ray";
+import { sahel } from "@/next-persian-fonts/sahel";
 import "./globals.css";
 import Navbar from "@/components/global/navbar";
 import Footer from "@/components/global/footer";
+import { LanguageProvider } from "@/components/global/LanguageContext";
+import LanguageIcon from "@/components/global/languageIcon";
+import FontWrapper from "@/components/global/fontWrapper";
 
 const manrope = Manrope({ subsets: ["latin"], variable: "--font-manrope" });
 
@@ -20,10 +22,19 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${manrope.variable}  antialiased`}>
-        <Navbar />
-        {children}
-        <Footer />
+      <body className={`${manrope.variable} ${sahel.className} antialiased`}>
+        <LanguageProvider>
+          <div className="fixed lg:top-8 lg:right-4 right-40 top-4 z-[9999]">
+            <LanguageIcon />
+          </div>
+          <FontWrapper>
+            <div>
+              <Navbar />
+              {children}
+              <Footer />
+            </div>
+          </FontWrapper>
+        </LanguageProvider>
       </body>
     </html>
   );
