@@ -24,7 +24,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${manrope.variable} ${sahel.className} antialiased`}>
         <LanguageProvider>
-          <div className="fixed border-[#6FBDF5] shadow-md shadow-[#6FBDF5] border-2 rounded-2xl lg:bottom-8 lg:right-4 right-40 bottom-4 z-[9999]">
+          <div className="fixed border-[#6FBDF5] shadow-md shadow-[#6FBDF5] border-2 rounded-full lg:bottom-8 lg:right-4 right-40 bottom-4 z-[9999]">
             <LanguageIcon />
           </div>
           <FontWrapper>
