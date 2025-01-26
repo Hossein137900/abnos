@@ -193,7 +193,6 @@ const Navbar = () => {
                   )}
                 </div>
               ))}
-           
             </div>
 
             {/* Mobile Menu Button */}
@@ -237,8 +236,10 @@ const Navbar = () => {
                 initial={{ opacity: 0, height: 0 }}
                 animate={{ opacity: 1, height: "auto" }}
                 exit={{ opacity: 0, height: 0 }}
-                className={`md:hidden overflow-hidden bg-white/20 border border-gray-200 backdrop-blur-2xl rounded-md shadow-lg ${state.currentLang === "fa" ? "text-right" : "text-left"}`}
-                >
+                className={`md:hidden overflow-hidden bg-[#6FBDF5]/60 border border-gray-200 backdrop-blur-2xl rounded-md shadow-lg ${
+                  state.currentLang === "fa" ? "text-right" : "text-left"
+                }`}
+              >
                 <div className="px-2 pt-2 pb-3 space-y-1">
                   {currentNavItems.map((item) => (
                     <div key={item.title}>
