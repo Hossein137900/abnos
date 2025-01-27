@@ -44,7 +44,7 @@ const Footer = () => {
         {
           name: "Instagram",
           icon: <FaInstagram className="w-6 h-6" />,
-          description: "Follow our latest designs",
+          description: "Follow latest designs",
           href: "#",
         },
         {
@@ -93,7 +93,7 @@ const Footer = () => {
         {
           name: "اینستاگرام",
           icon: <FaInstagram className="w-6 h-6" />,
-          description: "آخرین طرح‌های ما را دنبال کنید",
+          description: "آخرین طرح را دنبال کنید",
           href: "#",
         },
         {
@@ -264,9 +264,14 @@ const Footer = () => {
               isRTL ? "md:text-right" : "md:text-left"
             }`}
           >
-            <p className="text-lg font-bold text-gray-50">
+            <p className="text-lg md:inline font-bold text-gray-50">
               {isRTL ? "تماس با ما" : "Contact Us"}
             </p>
+            <>
+              <span className={`text-gray-100 md:mr-12 ${isRTL ? "" : "md:ml-4"} `}>02634704990</span>
+              <span className="text-gray-100 md:mr-12 mx-4">02634706969</span>
+              <span className="text-gray-100 md:mr-12">02634714413-5</span>
+            </>
             <div className="mt-8 grid grid-cols-3 sm:grid-cols-3 gap-6">
               {currentContent.socialMedia.map(
                 (item: {
