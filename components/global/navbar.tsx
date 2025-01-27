@@ -126,11 +126,15 @@ const Navbar = () => {
                     <button
                       onMouseEnter={() => setActiveDropdown(item.title)}
                       onMouseLeave={() => setActiveDropdown(null)}
-                      className="text-gray-50 hover:text-[#6FBDF5] transition-colors px-3 py-0.5 text-sm font-medium flex items-center gap-1"
+                      className="text-gray-50 hover:text-[#6FBDF5] group transition-colors px-3 py-0.5 text-sm font-medium flex items-center gap-1"
                     >
                       {item.title}
                       <svg
-                        className={`w-3 h-3 ${isRTL ? "rotate-180" : ""}`}
+                        className={`w-3 h-3 ${
+                          isRTL
+                            ? "group-hover:rotate-180 transition-all duration-300"
+                            : ""
+                        }`}
                         fill="none"
                         stroke="currentColor"
                         viewBox="0 0 24 24"
@@ -149,8 +153,8 @@ const Navbar = () => {
                         href={item.href}
                         className={`inline ${
                           item.isButton
-                            ? "bg-transparent text-white hover:bg-[#dce8f089]"
-                            : "text-gray-50 hover:text-[#6FBDF5]"
+                            ? "bg-transparent text-gray-50 hover:text-[#6FBDF5] "
+                            : "text-gray-50 hover:text-[#6FBDF5] "
                         } transition-colors px-3 py-2 text-sm font-medium flex gap-x-2 ${
                           item.isButton ? "rounded-md" : ""
                         }`}
@@ -176,7 +180,7 @@ const Navbar = () => {
                       exit={{ opacity: 0, y: -10 }}
                       className={`absolute ${
                         isRTL ? "right-0" : "left-0"
-                      } w-48 border border-gray-400 bg-white/30 backdrop-blur-xl rounded-md z-[9999]`}
+                      } w-48 border border-gray-300 bg-white/30 backdrop-blur-xl rounded-md z-[9999]`}
                       onMouseEnter={() => setActiveDropdown(item.title)}
                       onMouseLeave={() => setActiveDropdown(null)}
                     >
@@ -184,7 +188,7 @@ const Navbar = () => {
                         <Link
                           key={dropdownItem.title}
                           href={dropdownItem.href}
-                          className="block px-4 py-2 text-sm text-gray-50 rounded-md hover:bg-[#6FBDF5] hover:text-white"
+                          className="block px-4 py-2 text-sm text-gray-50 rounded-md hover:bg-[#6FBDF5] transition-all duration-300 hover:text-white"
                         >
                           {dropdownItem.title}
                         </Link>
@@ -253,7 +257,7 @@ const Navbar = () => {
                                   : item.title
                               )
                             }
-                            className="w-full flex items-center justify-between px-3 py-2 text-base  font-medium text-gray-50 hover:text-blue-600 hover:bg-gray-50 rounded-md"
+                            className={`w-full  flex  ${isRTL ? "flex-row-reverse" : "flex-row"} justify-between px-3 py-2 text-base  font-medium text-gray-50 hover:text-blue-600 hover:bg-gray-50 rounded-md`}
                           >
                             {item.title}
                             <motion.svg
