@@ -7,6 +7,7 @@ import Footer from "@/components/global/footer";
 import { LanguageProvider } from "@/components/global/LanguageContext";
 import LanguageIcon from "@/components/global/languageIcon";
 import FontWrapper from "@/components/global/fontWrapper";
+import ChatWidget from "@/components/global/ChatWidget";
 
 const manrope = Manrope({ subsets: ["latin"], variable: "--font-manrope" });
 
@@ -29,24 +30,14 @@ export default function RootLayout({
           <div className="fixed border-[#6FBDF5] shadow-md shadow-[#6FBDF5] border-2 rounded-full lg:bottom-8 lg:right-4 right-40 bottom-4 z-[9999]">
             <LanguageIcon />
           </div>
+         
           <FontWrapper>
-            <div className="relative">
+            
               <Navbar />
               {children}
-              <Footer />
-
-              {/* Bottom gradient overlay */}
-              <div
-                className="fixed bottom-0 left-0 right-0 h-12 pointer-events-none z-50"
-                style={{
-                  background:
-                    "linear-gradient(to top, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0) 100%)",
-                  backdropFilter: "blur(1px)",
-                  pointerEvents: "none",
-                  zIndex: 50,
-                }}
-              />
-            </div>
+          
+            
+            <Footer />
           </FontWrapper>
         </LanguageProvider>
       </body>
