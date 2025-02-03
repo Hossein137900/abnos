@@ -93,7 +93,7 @@ export default function FeaturesSection() {
   const currentFeatures = features[state.currentLang === "en" ? "en" : "fa"];
 
   return (
-    <div className="py-16 bg-white/20 backdrop-blur-md shadow-2xl rounded-3xl lg:-mt-36 z-[9999]  lg:mx-auto max-w-7xl">
+    <div className="py-16 bg-white/20 backdrop-blur-md shadow-2xl rounded-3xl lg:-mt-36 z-[99]  lg:mx-auto max-w-7xl">
       <div className=" lg:mx-auto lg:max-w-8xl px-6">
         <div
           className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 ${
