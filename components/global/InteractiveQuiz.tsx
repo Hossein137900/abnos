@@ -1,7 +1,6 @@
 'use client'
 import { useState } from "react";
 import { useLanguage } from "./LanguageContext";
-import Image from "next/image";
 
 const quizData = {
   en: {

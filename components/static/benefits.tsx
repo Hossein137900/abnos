@@ -1,9 +1,9 @@
 'use client'
 import { useLanguage } from "../global/LanguageContext";
 import { IconType } from "react-icons";
-import { FiSettings, FiShield, FiThumbsUp } from "react-icons/fi";
-import { BsLightbulb, BsGraphUp, BsClock } from "react-icons/bs";
-import { FaWrench, FaLeaf, FaRegHandshake } from "react-icons/fa";
+import {  FiShield } from "react-icons/fi";
+import { BsLightbulb } from "react-icons/bs";
+import { FaWrench, FaLeaf} from "react-icons/fa";
 import { MdOutlineHighQuality } from "react-icons/md";
 
 type BenefitType = {
