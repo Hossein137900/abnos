@@ -45,8 +45,7 @@ const content = {
   },
   fa: {
     title: " آبنوس جام با بیش از نیم قرن تجربه پیشرو در صنعت تولید شیشه",
-    description:
-      "تولید محصولات شیشه‌ای با کیفیت برتر با استفاده از فناوری‌های نوین و دهه‌ها تجربه. نگاه شما، دقت ما.",
+    description: "تولید محصولات شیشه‌ای با کیفیت برتر با استفاده از فناوری‌های نوین و دهه‌ها تجربه. نگاه شما، دقت ما.",
     buttonText: "مشاهده محصولات ما",
     imageAlt: "کارخانه شیشه سازی",
   },
@@ -58,7 +57,7 @@ const HeroSection = () => {
   const currentContent = content[state.currentLang === "en" ? "en" : "fa"];
 
   return (
-    <div className="relative min-h-screen w-full">
+    <div className="relative h-[700px] w-full">
       <Image
         src={"/assets/images/hero.jpeg"}
         alt={currentContent.imageAlt}

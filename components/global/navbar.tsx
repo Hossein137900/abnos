@@ -1,41 +1,36 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import logo from "@/public/assets/images/logo.png";
-// import phone from "@/public/assets/images/phonesvg.svg";
 import { useLanguage } from "./LanguageContext";
+import LanguageIcon from "./languageIcon";
 
-const navItemsEn = [
+interface NavItem {
+  title: string;
+  href: string;
+  dropdown?: NavItem[];
+  isButton?: boolean;
+}
+
+const specialItemsEn =
+  "🎉 Special Offer: Get 20% off on all tempered glass products";
+const specialItemsIr = "🎉 20 درصد تخفیف خرید روز ";
+const navItemsEn: NavItem[] = [
   { title: "Home", href: "/" },
-
   { title: "About", href: "/about" },
   { title: "Projects", href: "/Projects" },
-
   {
     title: "Products",
     href: "#",
     dropdown: [
-      { title: "Tempered Glass", href: "/Manufacturing" },
-      { title: "Double-glazed glass", href: "#" },
-      { title: "Printed Glass", href: "#" },
-      { title: "Laminated Glass", href: "#" },
-      { title: "WindowFilm Glass", href: "#" },
-      { title: "Digital printing on Glasses", href: "#" },
-      { title: "Smart Glasses", href: "#" },
-    ],
-  },
-  {
-    title: "Production Lines",
-    href: "#",
-    dropdown: [
-      { title: "Drilling machine", href: "/blogs" },
-      { title: "Furnaces", href: "/resources/docs" },
-      { title: "Cutting lines", href: "/resources/support" },
-      { title: "Doubled-glazation lines", href: "/resources/support" },
-      { title: "Industrial printing lines", href: "/resources/support" },
-      { title: "Grinding lines", href: "/resources/support" },
+      { title: "Tempered Glass", href: "/products/tempered-glasses" },
+      { title: "Double-glazed glass", href: "/products/Double-glazed-glass" },
+      { title: "Printed Glass", href: "/products/printed-glasses" },
+      { title: "Laminated Glass", href: "/products/laminated-glasses" },
+      { title: "WindowFilm Glass", href: "/products/windowFilm-glasses" }, 
+      { title: "Digital printing on Glasses", href: "/products/digital-printin-on-glasses" }, 
     ],
   },
   {
@@ -43,42 +38,22 @@ const navItemsEn = [
     href: "/contactus",
     isButton: true,
   },
-  // {
-  //   svg: phone.src,
-  //   title: "+1 (555) 123-4567",
-  //   href: "tel:+15551234567",
-  //   isButton: true,
-  // },
 ];
-const navItemsIr = [
-  { title: "خانه", href: "/" },
 
+const navItemsIr: NavItem[] = [
+  { title: "خانه", href: "/" },
   { title: "درباره ما", href: "/about" },
   { title: "پروژه‌ها", href: "/Projects" },
-
   {
     title: "محصولات",
     href: "#",
     dropdown: [
-      { title: "شیشه سکوریت", href: "/Manufacturing" },
-      { title: "شیشه دوجداره", href: "#" },
-      { title: "شیشه چاپی", href: "#" },
-      { title: "شیشه لمینت", href: "#" },
-      { title: "شیشه فیلم‌دار", href: "#" },
-      { title: "چاپ دیجیتال روی شیشه", href: "#" },
-      { title: "شیشه هوشمند", href: "#" },
-    ],
-  },
-  {
-    title: "خط تولید",
-    href: "#",
-    dropdown: [
-      { title: "دستگاه سوراخکاری", href: "/blogs" },
-      { title: "کوره‌ها", href: "/resources/docs" },
-      { title: "خط برش", href: "/resources/support" },
-      { title: "خط تولید دوجداره", href: "/resources/support" },
-      { title: "خط چاپ صنعتی", href: "/resources/support" },
-      { title: "خط سنگ زنی", href: "/resources/support" },
+      { title: "شیشه سکوریت", href: "/products/tempered-glasses" },
+      { title: "شیشه دوجداره", href: "/products/Double-glazed-glass" },
+      { title: "شیشه چاپی", href: "/products/printed-glasses" },
+      { title: "شیشه لمینت", href: "/products/laminated-glasses" },
+      { title: "شیشه فیلم‌دار", href: "/products/windowFilm-glasses" },
+      { title: "چاپ دیجیتال روی شیشه", href: "/products/digital-printin-on-glasses" },
     ],
   },
   {
@@ -88,19 +63,71 @@ const navItemsIr = [
   },
 ];
 
+// Announcement component
+const AnnouncementBar = () => {
+  const [isVisible, setIsVisible] = useState(true);
+  const { state } = useLanguage();
+  const isRTL = state.currentLang === "fa";
+
+  return isVisible ? (
+    <div className="bg-[#6FBDF5]/80 backdrop-blur-lg text-white py-2">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between">
+          <p
+            className={`text-sm font-medium text-center flex-1 ${
+              isRTL ? "rtl" : "ltr"
+            }`}
+          >
+            {state.currentLang === "en" ? specialItemsEn : specialItemsIr}
+          </p>
+          <button
+            onClick={() => setIsVisible(false)}
+            className="flex-shrink-0 ml-4"
+          >
+            <span className="sr-only">Close</span>
+            <svg
+              className="h-4 w-4"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M6 18L18 6M6 6l12 12"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  ) : null;
+};
+// Enhanced Navbar component
 const Navbar = () => {
   const { state } = useLanguage();
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
   const isRTL = state.currentLang === "fa";
   const currentNavItems = state.currentLang === "en" ? navItemsEn : navItemsIr;
 
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 0);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
     <>
+      <AnnouncementBar />
       <nav
-        className={`absolute w-full backdrop-blur-sm bg-white/10 shadow-sm z-50 items-center ${
-          isRTL ? "rtl" : "ltr"
-        }`}
+        className={`absolute w-full transition-all duration-300 bg-transparent
+       
+      } z-50 ${isRTL ? "rtl" : "ltr"}`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 lg:py-4">
           <div className="flex items-center justify-between h-16">
@@ -196,7 +223,8 @@ const Navbar = () => {
                     </motion.div>
                   )}
                 </div>
-              ))}
+              ))}{" "}
+              <LanguageIcon />
             </div>
 
             {/* Mobile Menu Button */}
@@ -314,6 +342,9 @@ const Navbar = () => {
                       )}
                     </div>
                   ))}
+                </div>
+                <div className="mb-4 mx-auto justify-center flex">
+                  <LanguageIcon />
                 </div>
               </motion.div>
             )}

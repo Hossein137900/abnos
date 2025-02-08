@@ -5,7 +5,6 @@ import "./globals.css";
 import Navbar from "@/components/global/navbar";
 import Footer from "@/components/global/footer";
 import { LanguageProvider } from "@/components/global/LanguageContext";
-import LanguageIcon from "@/components/global/languageIcon";
 import FontWrapper from "@/components/global/fontWrapper";
 import ChatWidget from "@/components/global/ChatWidget";
 
@@ -28,7 +27,7 @@ export default function RootLayout({
       >
         <LanguageProvider>
           <div className="fixed shadow-md shadow-[#6FBDF5]  rounded-full lg:top-7 lg:right-4 right-44 top-4 z-[9999]">
-            <LanguageIcon />
+            
           </div>
 
           <FontWrapper>
