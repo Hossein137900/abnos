@@ -4,150 +4,261 @@ import Benefits from "../../../components/static/benefits";
 import HeroSection from "@/components/global/heroSection";
 import Image from "next/image";
 import CollapseFaq from "@/components/global/collapse";
-import InteractiveQuiz from "../../../components/global/InteractiveQuiz";
+import Testimonials from "@/components/global/Testimonials";
+import Specifications from "@/components/global/Specifications";
 
 const pageContent = {
   en: {
-    title: "Digital Glass Printing",
-    description: "Revolutionary digital printing technology for glass surfaces, offering unlimited design possibilities with exceptional color accuracy and durability.",
+    hero: {
+      title: "Printed Glass for Buildings: Transform Your Architecture",
+      description:
+        "Elevate your building's aesthetics and functionality with our custom printed glass solutions. From stunning facades to interior design, we bring your vision to life.",
+      videoUrl: "/assets/video/video.mp4",
+    },
+    content: {
+      title: "Innovative Printed Glass for Architectural Design",
+      description:
+        "Our advanced printing technology allows for high-resolution images and designs to be directly applied to glass surfaces, transforming ordinary glass into extraordinary architectural features.  Create unique facades, eye-catching interior designs, and branded spaces with our custom printed glass.",
+      metaKeywords:
+        "printed glass, building glass printing, architectural glass, custom glass printing, glass facades, interior glass design, decorative glass",
+      metaDescription:
+        "Transform your building with custom printed glass. Create stunning facades, interiors, and branded spaces with high-resolution printing on glass.",
+    },
     features: {
-      title: "Outstanding Features",
+      title: "Exceptional Features for Building Applications",
       list: [
-        "Ultra-high resolution printing up to 1440 DPI",
-        "Permanent ceramic ink fusion technology",
-        "Full-color CMYK + White printing capability",
-        "Seamless large-format printing up to 3x6 meters",
-        "Weather and UV resistant inks",
-        "Variable opacity printing (20% to 100%)",
-        "Compatible with tempered and laminated glass",
-      ]
+        "High-resolution image printing for stunning visual impact",
+        "Durable, UV-resistant inks for long-lasting vibrancy",
+        "Customizable designs, colors, and patterns",
+        "Suitable for various glass types and thicknesses (tempered, laminated, etc.)",
+        "Can be combined with other glass technologies (e.g., low-E coatings)",
+        "Enhances privacy and light control",
+        "Improves building aesthetics and branding",
+        "Suitable for interior and exterior applications",
+        "Professional installation services available",
+        "Expert design consultation",
+      ],
     },
     applications: {
-      title: "Applications of Digital Glass Printing",
+      title: "Versatile Applications in Buildings",
       list: [
-        "Architectural glass facades",
-        "Interior design elements",
-        "Corporate branding displays",
-        "Artistic glass installations",
-        "Decorative room dividers",
-        "Custom shower enclosures",
-        "Retail storefront graphics",
-      ]
+        "Building facades and curtain walls",
+        "Interior partitions and feature walls",
+        "Skylights and canopies",
+        "Balustrades and railings",
+        "Storefronts and retail displays",
+        "Office branding and signage",
+        "Hotel and hospitality design",
+        "Museum and gallery installations",
+        "Residential interior design",
+        "Privacy screens and decorative panels",
+      ],
+    },
+    specifications: {
+      title: "Technical Specifications",
+      details: [
+        {
+          category: "Printing Process",
+          items: [
+            "Technology: UV-curable digital printing",
+            "Resolution: Up to 1440 dpi",
+            "Ink Type: UV-resistant, eco-friendly",
+            "Color Gamut: CMYK + White",
+          ],
+        },
+        {
+          category: "Glass Types",
+          items: [
+            "Thickness: 4mm to 19mm (and beyond, depending on project)",
+            "Types: Tempered, laminated, annealed, coated",
+            "Sizes: Custom sizes available",
+          ],
+        },
+      ],
+    },
+    testimonials: {
+      title: "Client Testimonials",
+      feedbacks: [
+        {
+          name: "John Smith",
+          location: "London, UK",
+          comment:
+            "The printed glass facade has completely transformed our building. It's a real statement piece.",
+          rating: "5/5",
+        },
+        {
+          name: "Maria Garcia",
+          location: "Madrid, Spain",
+          comment:
+            "We used printed glass for our office partitions and it has created a modern and stylish workspace.",
+          rating: "4.9/5",
+        },
+      ],
     },
     completedProjects: {
-      title: "Creative Installations",
-      subtitle: "Where technology meets artistic expression",
+      title: "Our Architectural Glass Projects",
+      subtitle: "Explore our portfolio of printed glass installations",
       projects: [
         {
-          title: "Cultural Center Facade",
-          location: "Tehran Arts Complex",
-          description: "Large-scale artistic facade printing",
-          stats: { area: "850 m²", completion: "2023", rating: "5/5" },
-          imageUrl: "/assets/images/projects/cultural-center.jpg"
+          title: "Modern Office Tower",
+          location: "New York City, USA",
+          description:
+            "Printed glass facade featuring a custom design for a modern office tower.",
+          stats: { area: "2,000 m²", completion: "2023", rating: "5/5" },
+          imageUrl: "/assets/images/printed-glass-building.jpg",
         },
-        {
-          title: "Corporate Headquarters",
-          location: "Digital Innovation Hub",
-          description: "Custom branded glass partitions",
-          stats: { area: "420 m²", completion: "2023", rating: "4.9/5" },
-          imageUrl: "/assets/images/projects/corporate-hq.jpg"
-        },
-        {
-          title: "Luxury Hotel Design",
-          location: "Persian Gulf Resort",
-          description: "Artistic glass installations throughout",
-          stats: { area: "680 m²", completion: "2022", rating: "4.8/5" },
-          imageUrl: "/assets/images/projects/hotel-design.jpg"
-        }
-      ]
+      ],
     },
     faq: [
       {
-        question: "How durable is digital printing on glass?",
-        answer: "Our ceramic ink technology fuses permanently with the glass during tempering, ensuring decades of color stability and scratch resistance.",
+        question: "What types of designs can be printed on building glass?",
+        answer:
+          "We can print virtually any high-resolution image or design, including logos, patterns, photographs, and custom artwork. Our team can assist with design development.",
       },
       {
-        question: "What types of designs can be printed?",
-        answer: "Any design from simple patterns to complex photographic images can be printed with precise color matching and fine detail reproduction.",
+        question: "What is the maximum size of printed glass for buildings?",
+        answer:
+          "The maximum size depends on the glass type and project requirements.  Contact us for specific details.",
       },
       {
-        question: "Is digitally printed glass suitable for exteriors?",
-        answer: "Yes, our UV-resistant ceramic inks are specifically designed for both interior and exterior applications, maintaining color integrity for years.",
+        question: "How durable is the printed image on building glass?",
+        answer:
+          "The printed images are highly durable and UV-resistant, ensuring long-lasting vibrancy and preventing fading.",
       },
-    ]
+      {
+        question:
+          "Can printed glass be used for both interior and exterior applications?",
+        answer:
+          "Yes, our printed glass solutions are suitable for both interior and exterior use, depending on the glass type selected.",
+      },
+    ],
   },
   fa: {
-    title: "چاپ دیجیتال روی شیشه",
-    description: "فناوری انقلابی چاپ دیجیتال برای سطوح شیشه‌ای، با امکانات نامحدود طراحی همراه با دقت رنگی و دوام استثنایی.",
+    hero: {
+      title: "شیشه چاپی برای ساختمان‌ها: معماری خود را متحول کنید",
+      description:
+        "با راه حل‌های شیشه چاپی سفارشی ما، زیبایی و عملکرد ساختمان خود را ارتقا دهید. از نماهای خیره‌کننده تا طراحی داخلی، ما دیدگاه شما را زنده می‌کنیم.",
+      videoUrl: "/assets/video/video.mp4",
+    },
+    content: {
+      title: "شیشه چاپی نوآورانه برای طراحی معماری",
+      description:
+        "فناوری چاپ پیشرفته ما امکان اعمال تصاویر و طرح‌های با وضوح بالا را مستقیماً روی سطوح شیشه‌ای فراهم می‌کند و شیشه‌های معمولی را به ویژگی‌های معماری خارق‌العاده تبدیل می‌کند. با شیشه چاپی سفارشی ما، نماهای منحصربه‌فرد، طرح‌های داخلی چشم‌نواز و فضاهای برنددار ایجاد کنید.",
+      metaKeywords:
+        "شیشه چاپی، چاپ شیشه ساختمان، شیشه معماری، چاپ شیشه سفارشی، نماهای شیشه‌ای، طراحی داخلی شیشه، شیشه تزئینی",
+      metaDescription:
+        "ساختمان خود را با شیشه چاپی سفارشی متحول کنید. نماهای خیره‌کننده، فضاهای داخلی و فضاهای برنددار را با چاپ با وضوح بالا روی شیشه ایجاد کنید.",
+    },
     features: {
-      title: "ویژگی‌های برجسته",
+      title: "ویژگی‌های استثنایی برای کاربردهای ساختمانی",
       list: [
-        "چاپ با وضوح فوق‌العاده بالا تا ۱۴۴۰ DPI",
-        "فناوری ذوب جوهر سرامیکی دائمی",
-        "قابلیت چاپ تمام رنگی CMYK + سفید",
-        "چاپ یکپارچه در ابعاد بزرگ تا ۳×۶ متر",
-        "جوهرهای مقاوم در برابر آب و هوا و UV",
-        "چاپ با شفافیت متغیر (۲۰٪ تا ۱۰۰٪)",
-        "سازگار با شیشه‌های سکوریت و لمینت",
-      ]
+        "چاپ تصویر با وضوح بالا برای تأثیر بصری خیره‌کننده",
+        "جوهر بادوام و مقاوم در برابر UV برای ماندگاری طولانی",
+        "طرح‌ها، رنگ‌ها و الگوهای قابل تنظیم",
+        "مناسب برای انواع و ضخامت‌های مختلف شیشه (سکوریت، لمینت و غیره)",
+        "قابلیت ترکیب با سایر فناوری‌های شیشه (به عنوان مثال، پوشش‌های کم گسیل)",
+        "افزایش حریم خصوصی و کنترل نور",
+        "بهبود زیبایی و برندسازی ساختمان",
+        "مناسب برای کاربردهای داخلی و خارجی",
+        "خدمات نصب حرفه‌ای در دسترس است",
+        "مشاوره طراحی تخصصی",
+      ],
     },
     applications: {
-      title: "کاربردهای چاپ دیجیتال روی شیشه",
+      title: "کاربردهای متنوع در ساختمان‌ها",
       list: [
-        "نمای شیشه‌ای ساختمان",
-        "المان‌های طراحی داخلی",
-        "نمایشگرهای برند شرکتی",
-        "نصب‌های هنری شیشه‌ای",
-        "جداکننده‌های تزئینی اتاق",
-        "محفظه‌های دوش سفارشی",
-        "گرافیک ویترین فروشگاه‌ها",
-      ]
+        "نماهای ساختمان و دیوارهای پرده‌ای",
+        "پارتیشن‌های داخلی و دیوارهای برجسته",
+        "نورگیرها و سایبان‌ها",
+        "نرده‌ها و حفاظ‌ها",
+        "ویترین مغازه‌ها و نمایشگرهای خرده‌فروشی",
+        "برندسازی و تابلوهای اداری",
+        "طراحی هتل و مهمان‌نوازی",
+        "نصب موزه‌ها و گالری‌ها",
+        "طراحی داخلی مسکونی",
+        "صفحه‌های حریم خصوصی و پانل‌های تزئینی",
+      ],
+    },
+    specifications: {
+      title: "مشخصات فنی",
+      details: [
+        {
+          category: "فرآیند چاپ",
+          items: [
+            "فناوری: چاپ دیجیتال UV قابل درمان",
+            "وضوح: تا ۱۴۴۰ dpi",
+            "نوع جوهر: مقاوم در برابر UV، سازگار با محیط زیست",
+            "طیف رنگی: CMYK + سفید",
+          ],
+        },
+        {
+          category: "انواع شیشه",
+          items: [
+            "ضخامت: ۴ میلی‌متر تا ۱۹ میلی‌متر (و فراتر از آن، بسته به پروژه)",
+            "انواع: سکوریت، لمینت، آنیل شده، پوشش داده شده",
+            "اندازه‌ها: اندازه‌های سفارشی در دسترس است",
+          ],
+        },
+      ],
+    },
+    testimonials: {
+      title: "مشتریان ما چه می گویند",
+      feedbacks: [
+        {
+          name: "علی رضایی",
+          location: "تهران، ایران",
+          comment:
+            "شیشه لمینتی که در دفتر خود نصب کردیم، تفاوت زیادی در کاهش صدا ایجاد کرده است. اکنون بسیار ساکت تر و پربارتر است.",
+          rating: "5/5",
+        },
+        {
+          name: "عمر الفارسی",
+          location: "مسقط، عمان",
+          comment:
+            "ما از شیشه لمینت برای پنجره های فروشگاه خود استفاده کردیم و این اطمینان را به ما می دهد که بسیار امن تر است.",
+          rating: "4.9/5",
+        },
+      ],
     },
     completedProjects: {
-      title: "نصب‌های خلاقانه",
-      subtitle: "جایی که فناوری با بیان هنری تلاقی می‌کند",
+      title: "پروژه های شیشه لمینت ما را کاوش کنید",
+      subtitle:
+        "ببینید چگونه به کسب و کارها و صاحبان خانه کمک کرده ایم تا ایمنی و امنیت را افزایش دهند",
       projects: [
         {
-          title: "نمای مرکز فرهنگی",
-          location: "مجتمع هنری تهران",
-          description: "چاپ نمای هنری در مقیاس بزرگ",
-          stats: { area: "۸۵۰ متر مربع", completion: "۱۴۰۲", rating: "۵/۵" },
-          imageUrl: "/assets/images/projects/cultural-center.jpg"
+          title: "ساختمان اداری بلند مرتبه",
+          location: "دبی، امارات متحده عربی",
+          description:
+            "ما پنجره های شیشه ای لمینت را در سراسر یک ساختمان اداری بلند مرتبه برای افزایش ایمنی و امنیت نصب کردیم.",
+          stats: { area: "۵۰۰۰ متر مربع", completion: "۲۰۲۳", rating: "5/5" },
+          imageUrl: "/assets/images/laminated-glass-office.jpg",
         },
-        {
-          title: "دفتر مرکزی شرکت",
-          location: "مرکز نوآوری دیجیتال",
-          description: "پارتیشن‌های شیشه‌ای برند سفارشی",
-          stats: { area: "۴۲۰ متر مربع", completion: "۱۴۰۲", rating: "۴.۹/۵" },
-          imageUrl: "/assets/images/projects/corporate-hq.jpg"
-        },
-        {
-          title: "طراحی هتل لوکس",
-          location: "هتل خلیج فارس",
-          description: "نصب شیشه‌های هنری در سراسر مجموعه",
-          stats: { area: "۶۸۰ متر مربع", completion: "۱۴۰۱", rating: "۴.۸/۵" },
-          imageUrl: "/assets/images/projects/hotel-design.jpg"
-        }
-      ]
+      ],
     },
     faq: [
       {
-        question: "دوام چاپ دیجیتال روی شیشه چقدر است؟",
-        answer: "فناوری جوهر سرامیکی ما در طول فرآیند سکوریت به طور دائم با شیشه ترکیب می‌شود و دهه‌ها ثبات رنگ و مقاومت در برابر خش را تضمین می‌کند.",
+        question: "تفاوت بین شیشه لمینت و شیشه سکوریت چیست؟",
+        answer:
+          "شیشه لمینت با اتصال دو یا چند لایه شیشه به یکدیگر با یک لایه میانی ساخته می شود، در حالی که شیشه سکوریت یک تکه شیشه است که برای افزایش مقاومت آن تحت عملیات حرارتی قرار گرفته است. شیشه لمینت به گونه ای طراحی شده است که هنگام شکستن تکه ها به هم بچسبند، در حالی که شیشه سکوریت به قطعات کوچک و نسبتاً بی خطر تبدیل می شود.",
       },
       {
-        question: "چه نوع طرح‌هایی را می‌توان چاپ کرد؟",
-        answer: "هر نوع طرح از الگوهای ساده تا تصاویر پیچیده عکاسی را می‌توان با تطبیق دقیق رنگ و بازتولید جزئیات ظریف چاپ کرد.",
+        question: "آیا شیشه لمینت گران تر از شیشه سکوریت است؟",
+        answer:
+          "شیشه لمینت به دلیل فرآیند تولید و مواد اضافی مورد استفاده معمولاً گران تر از شیشه سکوریت است.",
       },
       {
-        question: "آیا شیشه چاپ دیجیتال برای فضای خارجی مناسب است؟",
-        answer: "بله، جوهرهای سرامیکی مقاوم در برابر UV ما به طور خاص برای کاربردهای داخلی و خارجی طراحی شده‌اند و یکپارچگی رنگ را برای سال‌ها حفظ می‌کنند.",
+        question: "آیا شیشه لمینت را می توان پس از ساخت برش داد یا سوراخ کرد؟",
+        answer:
+          "خیر، شیشه لمینت را نمی توان پس از ساخت برش داد یا سوراخ کرد. هرگونه تغییر باید قبل از فرآیند لمینت انجام شود.",
       },
-    ]
-  }
+      {
+        question: "چگونه شیشه لمینت را تمیز کنیم؟",
+        answer:
+          "شیشه لمینت را می توان با یک پارچه نرم و یک ماده شوینده ملایم تمیز کرد. از استفاده از پاک کننده های ساینده یا مواد شیمیایی خشن خودداری کنید.",
+      },
+    ],
+  },
 };
-
-
 function CompletedProjects({
   content,
 }: {
@@ -216,8 +327,8 @@ export default function Manufacturing() {
   return (
     <div className="min-h-screen bg-gray-50 gap-2">
       <HeroSection
-        title={content.title}
-        description={content.description}
+        title={content.hero.title}
+        description={content.hero.description}
         videoUrl="/assets/video/video.mp4"
       />
 
@@ -228,52 +339,58 @@ export default function Manufacturing() {
         <div className="md:col-span-2 space-y-6">
           <section className=" p-8 rounded-xl shadow-sm">
             <h1 className="text-3xl font-bold mb-4 text-[#6FBDF5]">
-              {content.title}
+              {content.content.title}
             </h1>
-            <p className="text-gray-700">{content.description}</p>
+            <p className="text-gray-700">{content.content.description}</p>
           </section>
           <Benefits productType="temperedGlass" />
-          <section className=" p-8 rounded-xl shadow-sm grid grid-rows-2 gap-4">
-            <div className="grid grid-cols-2 gap-4  ">
-              <div className="h-[80px]">
-                <h2 className="text-2xl font-bold mb-6 text-[#6FBDF5]">
+          <section className="p-8 rounded-xl shadow-sm grid grid-rows-1 lg:grid-rows-2 gap-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
+              <div className="min-h-[400px] md:min-h-[300px] lg:h-[80px]">
+                <h2 className="text-xl md:text-2xl font-bold mb-4 md:mb-6 text-[#6FBDF5]">
                   {content.applications.title}
                 </h2>
-                <ul className="grid gap-3 mb-6">
+                <ul className="grid gap-2 md:gap-3 mb-4 md:mb-6">
                   {content.applications.list.map((application, index) => (
                     <li key={index} className="flex items-center gap-2">
                       <span className="text-[#6FBDF5]">•</span>
-                      <span className="text-gray-700">{application}</span>
+                      <span className="text-gray-700 text-sm md:text-base">
+                        {application}
+                      </span>
                     </li>
                   ))}
                 </ul>
               </div>
-              <div className="h-[80px]">
-                <h2 className="text-2xl font-bold mb-6 text-[#6FBDF5]">
+              <div className="min-h-[400px] md:min-h-[300px] lg:h-[80px]">
+                <h2 className="text-xl md:text-2xl font-bold mb-4 md:mb-6 text-[#6FBDF5]">
                   {content.features.title}
                 </h2>
-                <ul className="grid gap-3">
+                <ul className="grid gap-2 md:gap-3">
                   {content.features.list.map((feature, index) => (
                     <li key={index} className="flex items-center gap-2">
                       <span className="text-[#6FBDF5]">•</span>
-                      <span className="text-gray-700">{feature}</span>
+                      <span className="text-gray-700 text-sm md:text-base">
+                        {feature}
+                      </span>
                     </li>
                   ))}
                 </ul>
               </div>
             </div>
-            <div className="w-full -mt-48">
+            <div className="w-full mt-4 md:mt-0 lg:-mt-32">
               <Image
                 src="/assets/images/about.jpg"
-                alt={`${content.title} 1`}
-                className="rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 w-full "
+                alt={`${content.hero.title} 1`}
+                className="rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 w-full object-cover"
                 width={400}
                 height={400}
               />
             </div>
           </section>
+          <Specifications specifications={content.specifications} />
 
-          <InteractiveQuiz />
+          <Testimonials testimonials={content.testimonials.feedbacks} />
+
         </div>
       </div>
 

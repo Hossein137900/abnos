@@ -4,148 +4,269 @@ import Benefits from "../../../components/static/benefits";
 import HeroSection from "@/components/global/heroSection";
 import Image from "next/image";
 import CollapseFaq from "@/components/global/collapse";
-import InteractiveQuiz from "../../../components/global/InteractiveQuiz";
+import Testimonials from "@/components/global/Testimonials";
+import Specifications from "@/components/global/Specifications";
 
 const pageContent = {
   en: {
-    title: "Printed Glass Solutions",
-    description: "State-of-the-art digital and ceramic printed glass technology offering unlimited design possibilities with exceptional durability and visual appeal.",
+    hero: {
+      title: "Custom Printed Glass: Elevate Your Space with Personalized Designs",
+      description:
+        "Transform ordinary glass into stunning works of art with our custom printed glass solutions. Add personality, branding, or artistic flair to any space.",
+      videoUrl: "/assets/video/video.mp4",
+    },
+    content: {
+      title: "Unleash Your Creativity with Printed Glass",
+      description:
+        "Our state-of-the-art printing technology allows for vibrant, high-resolution images and designs to be directly applied to glass surfaces. Create unique feature walls, eye-catching signage, or personalized décor that reflects your style.",
+      metaKeywords:
+        "printed glass, custom glass printing, glass art, personalized glass, decorative glass, glass signage, architectural glass",
+      metaDescription:
+        "Create stunning, personalized spaces with our custom printed glass solutions. High-resolution printing, vibrant colors, and endless design possibilities.",
+    },
     features: {
-      title: "Outstanding Features",
+      title: "Exceptional Printing Features",
       list: [
-        "High-resolution digital printing up to 720 DPI",
-        "UV resistant ceramic inks for lasting colors",
-        "Custom designs and patterns available",
-        "Seamless integration with tempered glass",
-        "Weather and scratch resistant finish",
-        "Multiple opacity levels available",
-        "Compatible with laminated safety glass",
-      ]
+        "High-resolution image printing for crystal-clear details",
+        "Vibrant, long-lasting UV-resistant inks",
+        "Full-color spectrum for unlimited design possibilities",
+        "Durable and scratch-resistant finish",
+        "Suitable for various glass types and thicknesses",
+        "Customizable sizes and shapes",
+        "Easy to clean and maintain",
+        "Indoor and outdoor applications",
+        "Fast turnaround times",
+        "Expert design consultation available",
+      ],
     },
     applications: {
-      title: "Applications of Printed Glass",
+      title: "Versatile Applications for Printed Glass",
       list: [
-        "Decorative interior partitions",
-        "Branded corporate spaces",
-        "Designer shower enclosures",
-        "Artistic facade elements",
-        "Custom kitchen backsplashes",
-        "Museum and gallery displays",
-        "Retail store branding",
-      ]
+        "Feature walls and backsplashes",
+        "Office partitions and conference rooms",
+        "Retail displays and signage",
+        "Shower enclosures and bathroom décor",
+        "Kitchen countertops and backsplashes",
+        "Balustrades and railings",
+        "Skylights and canopies",
+        "Furniture and decorative accents",
+        "Art installations and exhibitions",
+        "Corporate branding and promotional materials",
+      ],
+    },
+    specifications: {
+      title: "Technical Specifications",
+      details: [
+        {
+          category: "Printing Process",
+          items: [
+            "Technology: UV-curable digital printing",
+            "Resolution: Up to 1440 dpi",
+            "Ink Type: UV-resistant, eco-friendly",
+            "Color Gamut: CMYK + White",
+          ],
+        },
+        {
+          category: "Glass Types",
+          items: [
+            "Thickness: 4mm to 19mm",
+            "Types: Tempered, laminated, annealed",
+            "Finishes: Clear, frosted, tinted",
+          ],
+        },
+      ],
+    },
+    testimonials: {
+      title: "What Our Clients Say",
+      feedbacks: [
+        {
+          name: "Ali Rezaei",
+          location: "Tehran, Iran",
+          comment:
+            "The printed glass backsplash in my kitchen is absolutely stunning! The colors are so vibrant and the image is incredibly sharp.",
+          rating: "5/5",
+        },
+        {
+          name: "Omar Al-Farsi",
+          location: "Muscat, Oman",
+          comment:
+            "We used printed glass for our office partitions and it has completely transformed the space. It's modern, stylish, and adds a touch of personality.",
+          rating: "4.9/5",
+        },
+      ],
     },
     completedProjects: {
-      title: "Signature Installations",
-      subtitle: "Experience our artistic excellence in printed glass solutions",
+      title: "Explore Our Printed Glass Projects",
+      subtitle: "See how we've helped businesses and homeowners create stunning spaces",
       projects: [
         {
-          title: "Art Museum Facade",
-          location: "Tehran Contemporary Art Museum",
-          description: "Large-scale artistic printed glass installation",
-          stats: { area: "800 m²", completion: "2023", rating: "5/5" },
-          imageUrl: "/assets/images/projects/museum-facade.jpg"
+          title: "Luxury Hotel Lobby",
+          location: "Dubai, UAE",
+          description:
+            "We created a custom printed glass feature wall for the lobby of a luxury hotel, featuring a stunning image of the Dubai skyline.",
+          stats: { area: "100 m²", completion: "2023", rating: "5/5" },
+          imageUrl: "/assets/images/printed-glass-hotel.jpg",
         },
-        {
-          title: "Corporate Identity Project",
-          location: "Digital Innovation Center",
-          description: "Custom branded glass partitions and walls",
-          stats: { area: "350 m²", completion: "2023", rating: "4.9/5" },
-          imageUrl: "/assets/images/projects/corporate-branding.jpg"
-        },
-        {
-          title: "Luxury Hotel Interior",
-          location: "Grand Persian Hotel",
-          description: "Decorative printed glass features throughout interior",
-          stats: { area: "600 m²", completion: "2022", rating: "4.8/5" },
-          imageUrl: "/assets/images/projects/hotel-interior.jpg"
-        }
-      ]
+      ],
     },
     faq: [
       {
-        question: "How durable is printed glass?",
-        answer: "Our ceramic printed glass is highly durable, resistant to UV, scratches, and weather conditions, lasting for decades without fading.",
+        question: "What type of images can be printed on glass?",
+        answer:
+          "We can print virtually any high-resolution image on glass, including photos, logos, patterns, and custom designs. Our team can also help you source images if needed.",
       },
       {
-        question: "Can any design be printed on glass?",
-        answer: "Yes, we can print virtually any design, from simple patterns to complex photographs, with high resolution and accurate color reproduction.",
+        question: "What is the maximum size of printed glass?",
+        answer:
+          "The maximum size of printed glass depends on the type and thickness of the glass. Please contact us for more information.",
       },
       {
-        question: "Is printed glass suitable for outdoor use?",
-        answer: "Absolutely. Our ceramic printing technology ensures the designs remain vibrant and intact even in harsh outdoor conditions.",
+        question: "How durable is the printed image?",
+        answer:
+          "Our printed images are highly durable and scratch-resistant. They are also UV-resistant, so they will not fade or yellow over time.",
       },
-    ]
+      {
+        question: "How do I clean printed glass?",
+        answer:
+          "Printed glass can be cleaned with a soft cloth and a mild detergent. Avoid using abrasive cleaners or harsh chemicals.",
+      },
+    ],
   },
   fa: {
-    title: "شیشه‌های چاپی",
-    description: "فناوری پیشرفته چاپ دیجیتال و سرامیکی روی شیشه با امکانات نامحدود طراحی، دوام استثنایی و جذابیت بصری.",
+    hero: {
+      title: "شیشه چاپ شده سفارشی: فضای خود را با طرح های شخصی ارتقا دهید",
+      description:
+        "شیشه های معمولی را با راه حل های شیشه چاپ شده سفارشی ما به آثار هنری خیره کننده تبدیل کنید. شخصیت، برند یا استعداد هنری را به هر فضایی اضافه کنید.",
+      videoUrl: "/assets/video/video.mp4",
+    },
+    content: {
+      title: "خلاقیت خود را با شیشه چاپ شده آزاد کنید",
+      description:
+        "فناوری چاپ پیشرفته ما امکان اعمال تصاویر و طرح های پر جنب و جوش و با وضوح بالا را مستقیماً روی سطوح شیشه ای فراهم می کند. دیوارهای برجسته منحصر به فرد، تابلوهای چشم نواز یا دکور شخصی ایجاد کنید که منعکس کننده سبک شما باشد.",
+      metaKeywords:
+        "شیشه چاپ شده، چاپ شیشه سفارشی، هنر شیشه، شیشه شخصی، شیشه تزئینی، تابلوی شیشه ای، شیشه معماری",
+      metaDescription:
+        "فضاهای خیره کننده و شخصی را با راه حل های شیشه چاپ شده سفارشی ما ایجاد کنید. چاپ با وضوح بالا، رنگ های پر جنب و جوش و امکانات طراحی بی پایان.",
+    },
     features: {
-      title: "ویژگی‌های برجسته",
+      title: "ویژگی های چاپ استثنایی",
       list: [
-        "چاپ دیجیتال با کیفیت بالا تا ۷۲۰ DPI",
-        "جوهرهای سرامیکی مقاوم در برابر UV برای ماندگاری رنگ‌ها",
-        "امکان طراحی و الگوهای سفارشی",
-        "ادغام یکپارچه با شیشه سکوریت",
-        "پوشش مقاوم در برابر آب و هوا و خش",
-        "سطوح مختلف شفافیت",
-        "سازگار با شیشه‌های ایمنی لمینت",
-      ]
+        "چاپ تصویر با وضوح بالا برای جزئیات شفاف",
+        "جوهر های مقاوم در برابر UV پر جنب و جوش و ماندگار",
+        "طیف رنگی کامل برای امکانات طراحی نامحدود",
+        "پایان بادوام و مقاوم در برابر خراش",
+        "مناسب برای انواع و ضخامت های مختلف شیشه",
+        "اندازه ها و اشکال قابل تنظیم",
+        "تمیز کردن و نگهداری آسان",
+        "کاربردهای داخلی و خارجی",
+        "زمان تحویل سریع",
+        "مشاوره طراحی تخصصی در دسترس است",
+      ],
     },
     applications: {
-      title: "کاربردهای شیشه چاپی",
+      title: "کاربردهای متنوع برای شیشه چاپ شده",
       list: [
-        "پارتیشن‌های تزئینی داخلی",
-        "فضاهای شرکتی برندسازی شده",
-        "محفظه‌های دوش طراحی شده",
-        "المان‌های هنری نما",
-        "پشت آشپزخانه سفارشی",
-        "نمایشگرهای موزه و گالری",
-        "برندسازی فروشگاه‌ها",
-      ]
+        "دیوارهای برجسته و صفحات پشتی",
+        "پارتیشن های اداری و اتاق های کنفرانس",
+        "نمایشگرهای خرده فروشی و تابلوها",
+        "محفظه های دوش و دکور حمام",
+        "کانترهای آشپزخانه و صفحات پشتی",
+        "نرده ها و حفاظ ها",
+        "نورگیرها و سایبان ها",
+        "مبلمان و لهجه های تزئینی",
+        "چیدمان های هنری و نمایشگاه ها",
+        "برندسازی شرکتی و مواد تبلیغاتی",
+      ],
+    },
+    specifications: {
+      title: "مشخصات فنی",
+      details: [
+        {
+          category: "فرآیند چاپ",
+          items: [
+            "فناوری: چاپ دیجیتال UV قابل درمان",
+            "وضوح: تا 1440 dpi",
+            "نوع جوهر: مقاوم در برابر UV، سازگار با محیط زیست",
+            "طیف رنگی: CMYK + سفید",
+          ],
+        },
+        {
+          category: "انواع شیشه",
+          items: [
+            "ضخامت: 4 میلی متر تا 19 میلی متر",
+            "انواع: سکوریت، لمینت، آنیل شده",
+            "پرداخت: شفاف، مات، رنگی",
+          ],
+        },
+      ],
+    },
+    testimonials: {
+      title: "نظرات مشتریان",
+      feedbacks: [
+        {
+          name: "احمد رضایی",
+          location: "تهران، ایران",
+          comment:
+            "شیشه‌های دوجداره این شرکت کیفیت بی‌نظیری دارند. کاهش صدا و مصرف انرژی به‌وضوح احساس می‌شود.",
+          rating: "5/5",
+        },
+        {
+          name: "لیلا مرادی",
+          location: "اصفهان، ایران",
+          comment:
+            "از زمانی که از شیشه دوجداره استفاده کردیم، دمای خانه ثابت‌تر شده و قبض برق هم کمتر شده است!",
+          rating: "4.8/5",
+        },
+      ],
     },
     completedProjects: {
-      title: "نصب‌های شاخص",
-      subtitle: "تجربه برتری هنری ما در راه‌حل‌های شیشه چاپی",
+      title: "پروژه‌های موفق ما",
+      subtitle: "نصب موفق شیشه دوجداره در پروژه‌های مختلف",
       projects: [
         {
-          title: "نمای موزه هنر",
-          location: "موزه هنر معاصر تهران",
-          description: "نصب شیشه چاپی هنری در مقیاس بزرگ",
-          stats: { area: "۸۰۰ متر مربع", completion: "۱۴۰۲", rating: "۵/۵" },
-          imageUrl: "/assets/images/projects/museum-facade.jpg"
+          title: "برج مسکونی لوکس",
+          location: "تهران",
+          description:
+            "نصب شیشه‌های دوجداره در تمامی واحدهای برج برای بهبود عایق‌بندی صوتی و حرارتی.",
+          stats: {
+            area: "۱۰,۰۰۰ متر مربع",
+            completion: "۱۴۰۲",
+            rating: "۴.۹/۵",
+          },
+          imageUrl: "/assets/images/project1.jpg",
         },
-        {
-          title: "پروژه هویت سازمانی",
-          location: "مرکز نوآوری دیجیتال",
-          description: "پارتیشن‌ها و دیوارهای شیشه‌ای برندسازی شده",
-          stats: { area: "۳۵۰ متر مربع", completion: "۱۴۰۲", rating: "۴.۹/۵" },
-          imageUrl: "/assets/images/projects/corporate-branding.jpg"
-        },
-        {
-          title: "طراحی داخلی هتل لوکس",
-          location: "هتل بزرگ پارسیان",
-          description: "المان‌های شیشه چاپی تزئینی در سراسر فضای داخلی",
-          stats: { area: "۶۰۰ متر مربع", completion: "۱۴۰۱", rating: "۴.۸/۵" },
-          imageUrl: "/assets/images/projects/hotel-interior.jpg"
-        }
-      ]
+      ],
     },
     faq: [
       {
-        question: "دوام شیشه چاپی چقدر است؟",
-        answer: "شیشه‌های چاپی سرامیکی ما بسیار بادوام هستند و در برابر UV، خش و شرایط جوی مقاوم بوده و دهه‌ها بدون رنگ‌پریدگی دوام می‌آورند.",
+        question: "مزیت شیشه دوجداره نسبت به شیشه معمولی چیست؟",
+        answer:
+          "شیشه دوجداره عایق بهتری برای گرما و صدا است، که موجب کاهش مصرف انرژی و افزایش آسایش داخل ساختمان می‌شود.",
       },
       {
-        question: "آیا هر طرحی را می‌توان روی شیشه چاپ کرد؟",
-        answer: "بله، ما می‌توانیم تقریباً هر طرحی را، از الگوهای ساده تا عکس‌های پیچیده، با وضوح بالا و بازتولید دقیق رنگ چاپ کنیم.",
+        question: "چه گازهایی در شیشه دوجداره استفاده می‌شود؟",
+        answer:
+          "معمولاً از گاز آرگون یا کریپتون برای بهبود خاصیت عایق‌بندی حرارتی و صوتی استفاده می‌شود.",
       },
       {
-        question: "آیا شیشه چاپی برای استفاده در فضای باز مناسب است؟",
-        answer: "کاملاً. فناوری چاپ سرامیکی ما اطمینان می‌دهد که طرح‌ها حتی در شرایط سخت محیطی، شفاف و سالم باقی می‌مانند.",
+        question:
+          "چقدر می‌توان از طریق شیشه دوجداره در هزینه‌های انرژی صرفه‌جویی کرد؟",
+        answer:
+          "بسته به شرایط، شیشه دوجداره می‌تواند تا ۴۰٪ در هزینه‌های گرمایشی و سرمایشی صرفه‌جویی کند.",
       },
-    ]
-  }
-};
+      {
+        question: "آیا شیشه دوجداره ضد بخار است؟",
+        answer:
+          "بله، فضای بین دو لایه شیشه با گاز خشک پر شده و از تشکیل بخار و مه در سطح شیشه جلوگیری می‌کند.",
+      },
+      {
+        question: "آیا امکان سفارشی‌سازی شیشه دوجداره وجود دارد؟",
+        answer:
+          "بله، ضخامت، نوع پوشش، رنگ و ابعاد قابل تنظیم بر اساس نیاز مشتری است.",
+      },
+    ],
+
+  }}
 
 function CompletedProjects({
   content,
@@ -215,8 +336,8 @@ export default function Manufacturing() {
   return (
     <div className="min-h-screen bg-gray-50 gap-2">
       <HeroSection
-        title={content.title}
-        description={content.description}
+        title={content.hero.title}
+        description={content.hero.description}
         videoUrl="/assets/video/video.mp4"
       />
 
@@ -227,52 +348,58 @@ export default function Manufacturing() {
         <div className="md:col-span-2 space-y-6">
           <section className=" p-8 rounded-xl shadow-sm">
             <h1 className="text-3xl font-bold mb-4 text-[#6FBDF5]">
-              {content.title}
+              {content.content.title}
             </h1>
-            <p className="text-gray-700">{content.description}</p>
+            <p className="text-gray-700">{content.content.description}</p>
           </section>
           <Benefits productType="temperedGlass" />
-          <section className=" p-8 rounded-xl shadow-sm grid grid-rows-2 gap-4">
-            <div className="grid grid-cols-2 gap-4  ">
-              <div className="h-[80px]">
-                <h2 className="text-2xl font-bold mb-6 text-[#6FBDF5]">
+          <section className="p-8 rounded-xl shadow-sm grid grid-rows-1 lg:grid-rows-2 gap-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
+              <div className="min-h-[400px] md:min-h-[300px] lg:h-[80px]">
+                <h2 className="text-xl md:text-2xl font-bold mb-4 md:mb-6 text-[#6FBDF5]">
                   {content.applications.title}
                 </h2>
-                <ul className="grid gap-3 mb-6">
+                <ul className="grid gap-2 md:gap-3 mb-4 md:mb-6">
                   {content.applications.list.map((application, index) => (
                     <li key={index} className="flex items-center gap-2">
                       <span className="text-[#6FBDF5]">•</span>
-                      <span className="text-gray-700">{application}</span>
+                      <span className="text-gray-700 text-sm md:text-base">
+                        {application}
+                      </span>
                     </li>
                   ))}
                 </ul>
               </div>
-              <div className="h-[80px]">
-                <h2 className="text-2xl font-bold mb-6 text-[#6FBDF5]">
+              <div className="min-h-[400px] md:min-h-[300px] lg:h-[80px]">
+                <h2 className="text-xl md:text-2xl font-bold mb-4 md:mb-6 text-[#6FBDF5]">
                   {content.features.title}
                 </h2>
-                <ul className="grid gap-3">
+                <ul className="grid gap-2 md:gap-3">
                   {content.features.list.map((feature, index) => (
                     <li key={index} className="flex items-center gap-2">
                       <span className="text-[#6FBDF5]">•</span>
-                      <span className="text-gray-700">{feature}</span>
+                      <span className="text-gray-700 text-sm md:text-base">
+                        {feature}
+                      </span>
                     </li>
                   ))}
                 </ul>
               </div>
             </div>
-            <div className="w-full -mt-48">
+            <div className="w-full mt-4 md:mt-0 lg:-mt-32">
               <Image
                 src="/assets/images/about.jpg"
-                alt={`${content.title} 1`}
-                className="rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 w-full "
+                alt={`${content.hero.title} 1`}
+                className="rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 w-full object-cover"
                 width={400}
                 height={400}
               />
             </div>
           </section>
+          <Specifications specifications={content.specifications} />
 
-          <InteractiveQuiz />
+          <Testimonials testimonials={content.testimonials.feedbacks} />
+
         </div>
       </div>
 
