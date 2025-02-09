@@ -102,16 +102,7 @@ export default function OurStory() {
             <p className={`text-gray-600 lg:text-${isRTL ? 'right' : 'left'} text-center ml-auto`}>
               {currentContent.description}
             </p>
-            <div className="flex flex-col lg:flex-row items-center justify-center lg:justify-between space-y-6 lg:space-y-0 border-t border-gray-200 pt-6">
-              {Object.entries(currentContent.stats).map(([key, value]) => (
-                <div key={key} className="flex items-center justify-center space-x-4">
-                  <div className={`text-center ${isRTL ? 'space-x-reverse' : ''}`}>
-                    <h3 className="text-2xl font-bold text-gray-900">{value.number}</h3>
-                    <p className="text-gray-500 text-sm">{value.label}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
+            
             <div className="flex items-center justify-center">
               {/* <Image
                 src="/assets/images/logo.png"

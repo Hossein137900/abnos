@@ -1,7 +1,6 @@
 "use client";
 import { useState } from "react";
 import Image from "next/image";
-import Link from "next/link";
 import { IconType } from "react-icons";
 import {
   FaRobot,
@@ -81,13 +80,142 @@ const sliderData = {
         },
       ],
     },
+    {
+      id: 3,
+      heading: "Shahr Tower Project",
+      subheading: "Tabriz",
+      image: "/assets/images/project_shahr_tower.jpg",
+      services: [
+        {
+          id: 1,
+          title: "Comprehensive Glazing",
+          description:
+            "Installation of glass in floors, shops, and facades.",
+          icon: FaCogs,
+        },
+        {
+          id: 2,
+          title: "Modern Design",
+          description:
+            "One of the most modern and luxurious buildings in Tabriz.",
+          icon: FaLightbulb,
+        },
+      ],
+    },
+    {
+      id: 4,
+      heading: "Baharan Project",
+      subheading: "North",
+      image: "/assets/images/project_baharan.jpg",
+      services: [
+        {
+          id: 1,
+          title: "Coastal Construction",
+          description:
+            "Built on the Caspian Sea coastal road with 6 floors.",
+          icon: FaCogs,
+        },
+        {
+          id: 2,
+          title: "Extensive Area",
+          description: "Covers an area of 8,369 square meters.",
+          icon: FaLightbulb,
+        },
+      ],
+    },
+    {
+      id: 5,
+      heading: "Meraj Project",
+      subheading: "Qeshm",
+      image: "/assets/images/project_meraj.jpg",
+      services: [
+        {
+          id: 1,
+          title: "Large-Scale Development",
+          description:
+            "A massive commercial, recreational, and tourism complex.",
+          icon: FaCogs,
+        },
+        {
+          id: 2,
+          title: "Strategic Location",
+          description:
+            "Located near the only sea entrance of Qeshm Island.",
+          icon: FaLightbulb,
+        },
+      ],
+    },
+    {
+      id: 6,
+      heading: "Villa Town Project",
+      subheading: "Anzali",
+      image: "/assets/images/project_villa_town.jpg",
+      services: [
+        {
+          id: 1,
+          title: "Double-Glazed Windows",
+          description:
+            "Utilization of double-glazed glass with air balance valves.",
+          icon: FaCogs,
+        },
+        {
+          id: 2,
+          title: "Pressure Management",
+          description:
+            "Prevents fogging due to pressure differences between Karaj and Anzali.",
+          icon: FaLightbulb,
+        },
+      ],
+    },
+    {
+      id: 7,
+      heading: "Hamrah Shahr Project",
+      subheading: "Chitgar",
+      image: "/assets/images/project_hamrah_shahr.jpg",
+      services: [
+        {
+          id: 1,
+          title: "Ongoing Development",
+          description: "A massive project under construction in Chitgar.",
+          icon: FaCogs,
+        },
+        {
+          id: 2,
+          title: "Advanced Glazing",
+          description:
+            "Production and delivery of double-glazed and laminated glass in 2018.",
+          icon: FaLightbulb,
+        },
+      ],
+    },
+    {
+      id: 8,
+      heading: "Glass Staircases",
+      subheading: "Precision Engineering",
+      image: "/assets/images/project_glass_staircases.jpg",
+      services: [
+        {
+          id: 1,
+          title: "Accurate Installation",
+          description:
+            "Utilization of AutoCAD files to minimize errors in glass placement.",
+          icon: FaCogs,
+        },
+        {
+          id: 2,
+          title: "Modern Aesthetics",
+          description: "Implementation of sleek and contemporary glass staircases.",
+          icon: FaLightbulb,
+        },
+      ],
+    },
   ],
   fa: [
     {
       id: 1,
-      heading: "تولید پیشرفته شیشه",
-      subheading: "راهکارهای معماری مدرن",
-      image: "/assets/images/about2.jpg",
+      heading: "تولید شیشه های سکوریت برای ",
+      subheading: "پروژه شهرک ویلایی-انزلی",
+      image: "/assets/images/project5-1.png",
       services: [
         {
           id: 1,
@@ -114,12 +242,11 @@ const sliderData = {
           icon: FaLightbulb,
         },
       ],
-    },
-    {
+    },{
       id: 2,
       heading: "تولید هوشمند",
       subheading: "برای نیازهای فردا",
-      image: "/assets/images/about.jpg",
+      image: "/assets/images/project5-1.png",
       services: [
         {
           id: 1,
@@ -147,7 +274,127 @@ const sliderData = {
         },
       ],
     },
-  ],
+    {
+      id: 3,
+      heading: "پروژه برج شهر",
+      subheading: "تبریز",
+      image: "/assets/images/project5-1.png",
+      services: [
+        {
+          id: 1,
+          title: "نمای شیشه‌ای",
+          description: "نصب شیشه در طبقات، مغازه‌ها و نما",
+          icon: FaCogs,
+        },
+        {
+          id: 2,
+          title: "طراحی مدرن",
+          description: "یکی از مدرن‌ترین و لوکس‌ترین ساختمان‌های تبریز",
+          icon: FaLightbulb,
+        },
+      ],
+    },
+    {
+      id: 4,
+      heading: "پروژه بهاران",
+      subheading: "شمال",
+      image: "/assets/images/project5-1.png",
+      services: [
+        {
+          id: 1,
+          title: "ساخت در منطقه ساحلی",
+          description: "ساخته شده در جاده ساحلی دریای خزر با ۶ طبقه",
+          icon: FaCogs,
+        },
+        {
+          id: 2,
+          title: "مساحت گسترده",
+          description: "این پروژه دارای ۸,۳۶۹ متر مربع مساحت است",
+          icon: FaLightbulb,
+        },
+      ],
+    },
+    {
+      id: 5,
+      heading: "پروژه معراج",
+      subheading: "قشم",
+      image: "/assets/images/project5-1.png",
+      services: [
+        {
+          id: 1,
+          title: "توسعه بزرگ مقیاس",
+          description: "یک مجتمع تجاری، تفریحی و گردشگری عظیم",
+          icon: FaCogs,
+        },
+        {
+          id: 2,
+          title: "موقعیت استراتژیک",
+          description: "در نزدیکی تنها ورودی دریایی جزیره قشم",
+          icon: FaLightbulb,
+        },
+      ],
+    },
+    {
+      id: 6,
+      heading: "پروژه شهرک ویلایی",
+      subheading: "انزلی",
+      image: "/assets/images/project5-1.png",
+      services: [
+        {
+          id: 1,
+          title: "شیشه‌های دوجداره",
+          description: "استفاده از شیشه‌های دوجداره با شیرهای متعادل کننده هوا",
+          icon: FaCogs,
+        },
+        {
+          id: 2,
+          title: "مدیریت فشار",
+          description: "جلوگیری از مه‌گرفتگی ناشی از تفاوت فشار بین کرج و انزلی",
+          icon: FaLightbulb,
+        },
+      ],
+    },
+    {
+      id: 7,
+      heading: "پروژه همراه شهر",
+      subheading: "چیتگر",
+      image: "/assets/images/project5-1.png",
+      services: [
+        {
+          id: 1,
+          title: "پروژه در حال توسعه",
+          description: "یکی از پروژه‌های بزرگ در حال ساخت در چیتگر",
+          icon: FaCogs,
+        },
+        {
+          id: 2,
+          title: "شیشه‌های پیشرفته",
+          description: "تولید و ارسال شیشه‌های دوجداره و لمینت در سال ۲۰۱۸",
+          icon: FaLightbulb,
+        },
+      ],
+    },
+    {
+      id: 8,
+      heading: "راه‌پله‌های شیشه‌ای",
+      subheading: "دقت در مهندسی",
+      image: "/assets/images/project5-1.png",
+      services: [
+        {
+          id: 1,
+          title: "نصب دقیق",
+          description: "استفاده از فایل‌های اتوکد برای کاهش خطا در نصب شیشه",
+          icon: FaCogs,
+        },
+        {
+          id: 2,
+          title: "زیبایی مدرن",
+          description: "اجرای راه‌پله‌های شیشه‌ای مدرن و شیک",
+          icon: FaLightbulb,
+        },
+      ],
+    }
+  ]
 };
 
 const ServiceCard = ({
@@ -173,29 +420,28 @@ export default function WhatWeDo() {
   const { state } = useLanguage();
   const isRTL = state.currentLang === "fa";
   const currentData =
-    sliderData[state.currentLang === "en" ? "en" : "fa"][currentSlide];
+  sliderData[state.currentLang === "en" ? "en" : "fa"][currentSlide];
 
-  const nextSlide = () => {
-    setCurrentSlide(
-      (prev) =>
-        (prev + 1) % sliderData[state.currentLang === "en" ? "en" : "fa"].length
-    );
-  };
+const nextSlide = () => {
+  setCurrentSlide(
+    (prev) =>
+      (prev + 1) % sliderData[state.currentLang === "en" ? "en" : "fa"].length
+  );
+};
 
-  const prevSlide = () => {
-    setCurrentSlide(
-      (prev) =>
-        (prev -
-          1 +
-          sliderData[state.currentLang === "en" ? "en" : "fa"].length) %
-        sliderData[state.currentLang === "en" ? "en" : "fa"].length
-    );
-  };
+const prevSlide = () => {
+  setCurrentSlide(
+    (prev) =>
+      (prev -
+        1 +
+        sliderData[state.currentLang === "en" ? "en" : "fa"].length) %
+      sliderData[state.currentLang === "en" ? "en" : "fa"].length
+  );
+};
 
   return (
     <div
       className="bg-black text-white min-h-screen flex gap-4 py-4 items-center justify-center"
-      dir={isRTL ? "rtl" : "ltr"}
     >
       <div className="lg:flex flex-row-reverse lg:items-center">
         <div className="lg:w-1/2 mb-8 lg:mt-0 flex justify-center relative">
@@ -268,12 +514,7 @@ export default function WhatWeDo() {
             </motion.div>
           </AnimatePresence>
 
-          <p className="text-gray-400">
-            Lets make something great work together.{" "}
-            <Link href="#" className="text-blue-500 underline">
-              Get Free Quote
-            </Link>
-          </p>
+          
         </div>
       </div>
     </div>

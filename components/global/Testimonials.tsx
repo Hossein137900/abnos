@@ -1,7 +1,14 @@
 'use client'
 import { useLanguage } from './LanguageContext';
+interface testomenial {
+  name: string;
+  location: string;
+  comment: string;
+  rating: string ;
+}
 
-export default function Testimonials({ testimonials }: { testimonials: any[] }) {
+
+export default function Testimonials({ testimonials }: { testimonials: testomenial[] }) {
   const { state } = useLanguage();
   
   return (
@@ -18,7 +25,6 @@ export default function Testimonials({ testimonials }: { testimonials: any[] }) 
               
                 <div>
                   <h3 className="font-semibold text-gray-800">{testimonial.name}</h3>
-                  <p className="text-sm text-[#6FBDF5]">{testimonial.company}</p>
                 </div>
               </div>
               <p className="text-gray-600 italic">{testimonial.comment}</p>

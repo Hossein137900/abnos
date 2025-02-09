@@ -7,6 +7,8 @@ import CollapseFaq from "@/components/global/collapse";
 import Testimonials from "@/components/global/Testimonials";
 import Specifications from "@/components/global/Specifications";
 
+
+
 const pageContent = {
   en: {
     hero: {
@@ -97,7 +99,7 @@ const pageContent = {
     },
     completedProjects: {
       title: "Our Architectural Glass Projects",
-      subtitle: "Explore our portfolio of printed glass installations",
+      subtitle: "Explore our portfolio of printed \glass installations",
       projects: [
         {
           title: "Modern Office Tower",

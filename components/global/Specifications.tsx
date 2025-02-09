@@ -2,11 +2,22 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
-export default function Specifications({
-  specifications,
-}: {
-  specifications: any;
-}) {
+// Define interfaces for the data structure
+interface SpecificationCategory {
+  category: string;
+  items: string[];
+}
+
+interface SpecificationsData {
+  title: string;
+  details: SpecificationCategory[];
+}
+
+interface SpecificationsProps {
+  specifications: SpecificationsData;
+}
+
+export default function Specifications({ specifications }: SpecificationsProps) {
   const [activeCategory, setActiveCategory] = useState(0);
 
   return (
@@ -20,7 +31,7 @@ export default function Specifications({
           {/* Category Navigation */}
           <div className="md:col-span-1">
             <div className="sticky top-24 space-y-2">
-              {specifications.details.map((category: any, index: number) => (
+              {specifications.details.map((category, index) => (
                 <button
                   key={index}
                   onClick={() => setActiveCategory(index)}
@@ -51,7 +62,7 @@ export default function Specifications({
                 </h3>
                 <div className="grid gap-4">
                   {specifications.details[activeCategory].items.map(
-                    (item: string, index: number) => (
+                    (item, index) => (
                       <motion.div
                         key={index}
                         initial={{ opacity: 0, x: -20 }}

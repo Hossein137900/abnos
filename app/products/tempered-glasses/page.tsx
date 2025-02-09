@@ -94,7 +94,7 @@ const pageContent = {
           location: "Muscat, Oman",
           comment:
             "Top-notch tempered glass supplier! Our hotel facade is now more energy-efficient and elegant.",
-          rating: "4.9/5",
+          rating: "4.9",
         },
       ],
     },
@@ -234,26 +234,28 @@ const pageContent = {
         {
           name: "علی محمدی",
           company: "راه‌حل‌های معماری نوین",
+          location: "تهران، ایران",
+
           comment:
             "کیفیت چاپ دیجیتال فراتر از انتظارات ما بود. عالی برای پروژه دفتر مرکزی ما.",
-          rating: 5,
-          avatar: "/assets/images/testimonials/ali.jpg",
+          rating:" 5",
         },
         {
           name: "سارا احمدی",
           company: "طراحی داخلی مدرن",
+          location: "تهران، ایران",
+
           comment:
             "جزئیات و دقت رنگ استثنایی. مشتریان ما همیشه از نتایج شگفت‌زده می‌شوند.",
-          rating: 5,
-          avatar: "/assets/images/testimonials/sara.jpg",
+          rating: "5",
         },
         {
           name: "محمد رضایی",
           company: "سازندگان نوآور",
+          location: "تهران، ایران",
           comment:
             "دوام و کیفیت چاپ فوق‌العاده است. یک تحول در پروژه‌های معماری ما.",
-          rating: 5,
-          avatar: "/assets/images/testimonials/mohammad.jpg",
+          rating: "5",
         },
       ],
     },

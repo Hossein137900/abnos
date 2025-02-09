@@ -20,7 +20,7 @@ const specialItemsIr = "🎉 20 درصد تخفیف خرید روز ";
 const navItemsEn: NavItem[] = [
   { title: "Home", href: "/" },
   { title: "About", href: "/about" },
-  { title: "Projects", href: "/Projects" },
+
   {
     title: "Products",
     href: "#",
@@ -29,8 +29,11 @@ const navItemsEn: NavItem[] = [
       { title: "Double-glazed glass", href: "/products/Double-glazed-glass" },
       { title: "Printed Glass", href: "/products/printed-glasses" },
       { title: "Laminated Glass", href: "/products/laminated-glasses" },
-      { title: "WindowFilm Glass", href: "/products/windowFilm-glasses" }, 
-      { title: "Digital printing on Glasses", href: "/products/digital-printin-on-glasses" }, 
+      { title: "WindowFilm Glass", href: "/products/windowFilm-glasses" },
+      {
+        title: "Digital printing on Glasses",
+        href: "/products/digital-printin-on-glasses",
+      },
     ],
   },
   {
@@ -43,7 +46,7 @@ const navItemsEn: NavItem[] = [
 const navItemsIr: NavItem[] = [
   { title: "خانه", href: "/" },
   { title: "درباره ما", href: "/about" },
-  { title: "پروژه‌ها", href: "/Projects" },
+
   {
     title: "محصولات",
     href: "#",
@@ -53,7 +56,10 @@ const navItemsIr: NavItem[] = [
       { title: "شیشه چاپی", href: "/products/printed-glasses" },
       { title: "شیشه لمینت", href: "/products/laminated-glasses" },
       { title: "شیشه فیلم‌دار", href: "/products/windowFilm-glasses" },
-      { title: "چاپ دیجیتال روی شیشه", href: "/products/digital-printin-on-glasses" },
+      {
+        title: "چاپ دیجیتال روی شیشه",
+        href: "/products/digital-printin-on-glasses",
+      },
     ],
   },
   {
@@ -70,7 +76,7 @@ const AnnouncementBar = () => {
   const isRTL = state.currentLang === "fa";
 
   return isVisible ? (
-    <div className="bg-[#6FBDF5]/80 backdrop-blur-lg text-white py-2">
+    <div className="bg-[#6FBDF5]/80 backdrop-blur-lg text-white py-2 h-[40px]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
           <p
@@ -225,6 +231,8 @@ const Navbar = () => {
                   )}
                 </div>
               ))}{" "}
+            </div>
+            <div className="md:absolute space-x-8 items-center z-[9999] absolute left-4  -top-9">
               <LanguageIcon />
             </div>
 
