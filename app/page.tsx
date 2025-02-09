@@ -2,10 +2,10 @@ import dynamic from 'next/dynamic'
 import { Suspense } from 'react'
 
 // Dynamic imports with lazy loading
-// const HeroSection = dynamic(() => import('@/components/static/heroSection'), { 
-//   ssr: true,
-//   loading: () => <div aria-busy="true">Loading...</div>
-// })
+const HeroSection = dynamic(() => import('@/components/static/heroSection'), { 
+  ssr: true,
+  loading: () => <div aria-busy="true">Loading...</div>
+})
 
 const WhatWeDo = dynamic(() => import('@/components/static/what-we-do'), { 
   ssr: true 
@@ -49,7 +49,7 @@ export default function Home() {
       aria-label="Main Content"
     >
       <Suspense fallback={<div>Loading...</div>}>
-        {/* <HeroSection /> */}
+        <HeroSection />
         <WhatWeDo />
         <BannerText 
           imageSrc="/assets/images/bannerText.jpg" 
