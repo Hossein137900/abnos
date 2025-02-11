@@ -10,7 +10,8 @@ import Specifications from "@/components/global/Specifications";
 const pageContent = {
   en: {
     hero: {
-      title: "Custom Printed Glass: Elevate Your Space with Personalized Designs",
+      title:
+        "Custom Printed Glass: Elevate Your Space with Personalized Designs",
       description:
         "Transform ordinary glass into stunning works of art with our custom printed glass solutions. Add personality, branding, or artistic flair to any space.",
       videoUrl: "/assets/video/video.mp4",
@@ -97,7 +98,8 @@ const pageContent = {
     },
     completedProjects: {
       title: "Explore Our Printed Glass Projects",
-      subtitle: "See how we've helped businesses and homeowners create stunning spaces",
+      subtitle:
+        "See how we've helped businesses and homeowners create stunning spaces",
       projects: [
         {
           title: "Luxury Hotel Lobby",
@@ -265,8 +267,8 @@ const pageContent = {
           "بله، ضخامت، نوع پوشش، رنگ و ابعاد قابل تنظیم بر اساس نیاز مشتری است.",
       },
     ],
-
-  }}
+  },
+};
 
 function CompletedProjects({
   content,
@@ -342,7 +344,7 @@ export default function Manufacturing() {
       />
 
       <div
-        className="grid md:grid-cols-2 pt-12 mt-8 gap-6 lg:mx-20 mx-4 gap-2"
+        className="grid md:grid-cols-2 pt-12 mt-8 lg:mx-20 mx-4 gap-2"
         {...(isRTL ? { dir: "rtl" } : {})}
       >
         <div className="md:col-span-2 space-y-6">
@@ -399,7 +401,6 @@ export default function Manufacturing() {
           <Specifications specifications={content.specifications} />
 
           <Testimonials testimonials={content.testimonials.feedbacks} />
-
         </div>
       </div>
 

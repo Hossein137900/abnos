@@ -2,6 +2,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
+import { useLanguage } from "./LanguageContext";
 
 interface FaqItem {
   question: string;
@@ -15,15 +16,17 @@ interface CollapseFaqProps {
 
 const CollapseFaq = ({ title, faqItems }: CollapseFaqProps) => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
+  const { state } = useLanguage();
+  const isEnglish = state.currentLang === "en";
 
   const toggleCollapse = (index: number) => {
     setOpenIndex(openIndex === index ? null : index);
   };
 
   return (
-    <div className="lg:mx-20 px-4 pb-28">
+    <div className="lg:mx-20 px-4 pb-28" dir={`${isEnglish ? "ltr" : "rtl"}`}>
       {/* Header Section */}
-      <div className="flex lg:flex-row flex-col gap-4 justify-between items-center py-12"  >
+      <div className="flex lg:flex-row flex-col gap-4 justify-between items-center py-12">
         <div>
           <Image
             src="/assets/images/icontop.png"
@@ -47,13 +50,11 @@ const CollapseFaq = ({ title, faqItems }: CollapseFaqProps) => {
         <motion.div
           initial={{ opacity: 0, x: 20 }}
           animate={{ opacity: 1, x: 0 }}
-        >
-         
-        </motion.div>
+        ></motion.div>
       </div>
 
       {/* Content Section */}
-      <div className="flex flex-col md:flex-row gap-8">
+      <div className="flex flex-col items-center md:flex-row gap-8">
         {/* Left Image */}
         <motion.div
           className="md:w-1/3"
@@ -64,7 +65,11 @@ const CollapseFaq = ({ title, faqItems }: CollapseFaqProps) => {
           {" "}
           <div className="relative h-[400px] w-full">
             <Image
-              src="/assets/images/image2.jpg"
+              src={`${
+                isEnglish
+                  ? "/assets/images/enfaq.jpg"
+                  : "/assets/images/perfaq.jpg"
+              }`}
               alt="FAQ Illustration"
               fill
               className="object-cover w-full rounded-lg"

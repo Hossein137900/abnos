@@ -143,7 +143,7 @@ const Navbar = () => {
                 src={logo}
                 alt="Logo"
                 width={120}
-                height={40}
+                height={120}
                 className="h-10 w-auto"
               />
             </Link>
@@ -222,7 +222,9 @@ const Navbar = () => {
                         <Link
                           key={dropdownItem.title}
                           href={dropdownItem.href}
-                          className="block px-4 py-2 text-sm text-gray-50 rounded-md hover:bg-[#6FBDF5] transition-all duration-300 hover:text-white"
+                          className={`block px-4 py-2 text-sm ${
+                            isRTL ? "text-right" : "text-left"
+                          } text-gray-50 rounded-md hover:bg-[#6FBDF5]/60 transition-all duration-300 hover:text-white`}
                         >
                           {dropdownItem.title}
                         </Link>
