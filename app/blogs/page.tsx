@@ -1,3 +1,4 @@
+'use client'
 import BlogPost from "@/components/global/blog-post";
 import HeroSection from "@/components/global/heroSection";
 import { useLanguage } from "@/components/global/LanguageContext";
