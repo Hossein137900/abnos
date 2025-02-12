@@ -118,6 +118,8 @@ const Footer = () => {
   };
   const currentContent = content[state.currentLang === "en" ? "en" : "fa"];
   const getProductLink = (link: string, lang: string) => {
+    console.log(lang);
+
     return link; // URLs should be language-agnostic, handle language in routing config
   };
 
