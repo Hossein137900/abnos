@@ -16,81 +16,15 @@ import { useLanguage } from "../global/LanguageContext";
 const sliderData = {
   en: [
     {
-      id: 1,
-      heading: "Advanced Glass Manufacturing",
-      subheading: "solutions for modern architecture",
-      image: "/assets/images/about2.jpg",
-      services: [
-        {
-          id: 1,
-          title: "Automated Production",
-          description:
-            "State-of-the-art automated glass cutting and processing.",
-          icon: FaRobot,
-        },
-        {
-          id: 2,
-          title: "Quality Assurance",
-          description: "Rigorous testing and quality control standards.",
-          icon: FaCheckCircle,
-        },
-        {
-          id: 3,
-          title: "Technical Excellence",
-          description: "Advanced tempering and lamination processes.",
-          icon: FaCogs,
-        },
-        {
-          id: 4,
-          title: "Innovation",
-          description: "Smart glass and digital printing solutions.",
-          icon: FaLightbulb,
-        },
-      ],
-    },
-    {
-      id: 2,
-      heading: "Smart Manufacturing",
-      subheading: "for tomorrow's needs",
-      image: "/assets/images/about.jpg",
-      services: [
-        {
-          id: 1,
-          title: "Digital Integration",
-          description: "Computer-controlled precision manufacturing.",
-          icon: FaRobot,
-        },
-        {
-          id: 2,
-          title: "Quality Monitoring",
-          description: "Real-time quality control systems.",
-          icon: FaCheckCircle,
-        },
-        {
-          id: 3,
-          title: "Process Control",
-          description: "Advanced production monitoring.",
-          icon: FaCogs,
-        },
-        {
-          id: 4,
-          title: "Research & Development",
-          description: "Continuous innovation in glass technology.",
-          icon: FaLightbulb,
-        },
-      ],
-    },
-    {
       id: 3,
       heading: "Shahr Tower Project",
       subheading: "Tabriz",
-      image: "/assets/images/project_shahr_tower.jpg",
+      image: "/assets/images/tabriz.webp",
       services: [
         {
           id: 1,
           title: "Comprehensive Glazing",
-          description:
-            "Installation of glass in floors, shops, and facades.",
+          description: "Installation of glass in floors, shops, and facades.",
           icon: FaCogs,
         },
         {
@@ -106,13 +40,12 @@ const sliderData = {
       id: 4,
       heading: "Baharan Project",
       subheading: "North",
-      image: "/assets/images/project_baharan.jpg",
+      image: "/assets/images/baharan.webp",
       services: [
         {
           id: 1,
           title: "Coastal Construction",
-          description:
-            "Built on the Caspian Sea coastal road with 6 floors.",
+          description: "Built on the Caspian Sea coastal road with 6 floors.",
           icon: FaCogs,
         },
         {
@@ -127,7 +60,7 @@ const sliderData = {
       id: 5,
       heading: "Meraj Project",
       subheading: "Qeshm",
-      image: "/assets/images/project_meraj.jpg",
+      image: "/assets/images/meraj.webp",
       services: [
         {
           id: 1,
@@ -139,8 +72,7 @@ const sliderData = {
         {
           id: 2,
           title: "Strategic Location",
-          description:
-            "Located near the only sea entrance of Qeshm Island.",
+          description: "Located near the only sea entrance of Qeshm Island.",
           icon: FaLightbulb,
         },
       ],
@@ -149,7 +81,7 @@ const sliderData = {
       id: 6,
       heading: "Villa Town Project",
       subheading: "Anzali",
-      image: "/assets/images/project_villa_town.jpg",
+      image: "/assets/images/anzali3.webp",
       services: [
         {
           id: 1,
@@ -171,7 +103,7 @@ const sliderData = {
       id: 7,
       heading: "Hamrah Shahr Project",
       subheading: "Chitgar",
-      image: "/assets/images/project_hamrah_shahr.jpg",
+      image: "/assets/images/chitgar.webp",
       services: [
         {
           id: 1,
@@ -190,9 +122,9 @@ const sliderData = {
     },
     {
       id: 8,
-      heading: "Glass Staircases",
-      subheading: "Precision Engineering",
-      image: "/assets/images/project_glass_staircases.jpg",
+      heading: "Almas Shargh ",
+      subheading: "Mashhad",
+      image: "/assets/images/almas.webp",
       services: [
         {
           id: 1,
@@ -204,7 +136,8 @@ const sliderData = {
         {
           id: 2,
           title: "Modern Aesthetics",
-          description: "Implementation of sleek and contemporary glass staircases.",
+          description:
+            "Implementation of sleek and contemporary glass staircases.",
           icon: FaLightbulb,
         },
       ],
@@ -215,7 +148,7 @@ const sliderData = {
       id: 1,
       heading: "تولید شیشه های سکوریت برای ",
       subheading: "پروژه شهرک ویلایی-انزلی",
-      image: "/assets/images/project5-1.png",
+      image: "/assets/images/anzali1.webp",
       services: [
         {
           id: 1,
@@ -242,43 +175,12 @@ const sliderData = {
           icon: FaLightbulb,
         },
       ],
-    },{
-      id: 2,
-      heading: "تولید هوشمند",
-      subheading: "برای نیازهای فردا",
-      image: "/assets/images/project5-1.png",
-      services: [
-        {
-          id: 1,
-          title: "یکپارچگی دیجیتال",
-          description: "تولید دقیق با کنترل کامپیوتری",
-          icon: FaRobot,
-        },
-        {
-          id: 2,
-          title: "نظارت کیفیت",
-          description: "سیستم‌های کنترل کیفیت بلادرنگ",
-          icon: FaCheckCircle,
-        },
-        {
-          id: 3,
-          title: "کنترل فرآیند",
-          description: "نظارت پیشرفته بر تولید",
-          icon: FaCogs,
-        },
-        {
-          id: 4,
-          title: "تحقیق و توسعه",
-          description: "نوآوری مستمر در تکنولوژی شیشه",
-          icon: FaLightbulb,
-        },
-      ],
     },
     {
       id: 3,
       heading: "پروژه برج شهر",
       subheading: "تبریز",
-      image: "/assets/images/project5-1.png",
+      image: "/assets/images/tabriz.webp",
       services: [
         {
           id: 1,
@@ -298,7 +200,7 @@ const sliderData = {
       id: 4,
       heading: "پروژه بهاران",
       subheading: "شمال",
-      image: "/assets/images/project5-1.png",
+      image: "/assets/images/baharan.webp",
       services: [
         {
           id: 1,
@@ -318,7 +220,7 @@ const sliderData = {
       id: 5,
       heading: "پروژه معراج",
       subheading: "قشم",
-      image: "/assets/images/project5-1.png",
+      image: "/assets/images/meraj.webp",
       services: [
         {
           id: 1,
@@ -335,30 +237,10 @@ const sliderData = {
       ],
     },
     {
-      id: 6,
-      heading: "پروژه شهرک ویلایی",
-      subheading: "انزلی",
-      image: "/assets/images/project5-1.png",
-      services: [
-        {
-          id: 1,
-          title: "شیشه‌های دوجداره",
-          description: "استفاده از شیشه‌های دوجداره با شیرهای متعادل کننده هوا",
-          icon: FaCogs,
-        },
-        {
-          id: 2,
-          title: "مدیریت فشار",
-          description: "جلوگیری از مه‌گرفتگی ناشی از تفاوت فشار بین کرج و انزلی",
-          icon: FaLightbulb,
-        },
-      ],
-    },
-    {
       id: 7,
       heading: "پروژه همراه شهر",
       subheading: "چیتگر",
-      image: "/assets/images/project5-1.png",
+      image: "/assets/images/chitgar.webp",
       services: [
         {
           id: 1,
@@ -376,9 +258,9 @@ const sliderData = {
     },
     {
       id: 8,
-      heading: "راه‌پله‌های شیشه‌ای",
-      subheading: "دقت در مهندسی",
-      image: "/assets/images/project5-1.png",
+      heading: "پروژه الماس شرق",
+      subheading: " مشهد",
+      image: "/assets/images/almas.webp",
       services: [
         {
           id: 1,
@@ -393,8 +275,8 @@ const sliderData = {
           icon: FaLightbulb,
         },
       ],
-    }
-  ]
+    },
+  ],
 };
 
 const ServiceCard = ({
@@ -420,30 +302,32 @@ export default function WhatWeDo() {
   const { state } = useLanguage();
   const isRTL = state.currentLang === "fa";
   const currentData =
-  sliderData[state.currentLang === "en" ? "en" : "fa"][currentSlide];
+    sliderData[state.currentLang === "en" ? "en" : "fa"][currentSlide];
 
-const nextSlide = () => {
-  setCurrentSlide(
-    (prev) =>
-      (prev + 1) % sliderData[state.currentLang === "en" ? "en" : "fa"].length
-  );
-};
+  const nextSlide = () => {
+    setCurrentSlide(
+      (prev) =>
+        (prev + 1) % sliderData[state.currentLang === "en" ? "en" : "fa"].length
+    );
+  };
 
-const prevSlide = () => {
-  setCurrentSlide(
-    (prev) =>
-      (prev -
-        1 +
-        sliderData[state.currentLang === "en" ? "en" : "fa"].length) %
-      sliderData[state.currentLang === "en" ? "en" : "fa"].length
-  );
-};
+  const prevSlide = () => {
+    setCurrentSlide(
+      (prev) =>
+        (prev -
+          1 +
+          sliderData[state.currentLang === "en" ? "en" : "fa"].length) %
+        sliderData[state.currentLang === "en" ? "en" : "fa"].length
+    );
+  };
 
   return (
-    <div
-      className="bg-black text-white min-h-screen flex gap-4 py-4 items-center justify-center"
-    >
-      <div className="lg:flex flex-row-reverse lg:items-center">
+    <div className="bg-black text-white min-h-screen flex gap-4 py-4 items-center justify-center">
+      <div
+        className={`lg:flex ${
+          isRTL ? "flex-row" : "flex-row-reverse"
+        }  lg:items-center`}
+      >
         <div className="lg:w-1/2 mb-8 lg:mt-0 flex justify-center relative">
           <AnimatePresence mode="wait">
             <motion.div
@@ -455,16 +339,19 @@ const prevSlide = () => {
             >
               <Image
                 src={currentData.image}
-                alt="Team"
+                alt="project image"
                 width={2000}
-                height={2000}
-                className={` rounded-2xl ${isRTL ? "pl-2" : "pr-2"} `}
+                height={1000}
+                quality={100}
+                className={` max-h-[800px] rounded-2xl ${
+                  isRTL ? "pl-2" : "pr-2"
+                } `}
               />
             </motion.div>
           </AnimatePresence>
           <div
             className={`absolute bottom-4 ${
-              isRTL ? "left-4 flex-row-reverse" : "right-4 flex"
+              isRTL ? "left-4 flex-row" : "right-4 flex"
             }  flex  gap-2`}
           >
             <button
@@ -513,8 +400,6 @@ const prevSlide = () => {
               </div>
             </motion.div>
           </AnimatePresence>
-
-          
         </div>
       </div>
     </div>

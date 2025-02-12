@@ -76,7 +76,7 @@ const AnnouncementBar = () => {
   const isRTL = state.currentLang === "fa";
 
   return isVisible ? (
-    <div className="bg-[#6FBDF5]/80 backdrop-blur-lg text-white py-2 h-[40px]">
+    <div className="bg-[#6FBDF5]/80 backdrop-blur-lg text-white py-2 lg:h-[40px] h-[60px]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
           <p

@@ -52,8 +52,8 @@ export default function ChatWidget() {
         >
           <iframe
             src="https://cdn.botpress.cloud/webchat/v2.2/shareable.html?configUrl=https://files.bpcontent.cloud/2025/02/02/16/20250202160040-EGNAZZJX.json"
-            className="w-[350px] h-[300px] md:w-[400px] md:h-[400px] rounded-2xl shadow-2xl border border-gray-600
-             bg-gray-100 backdrop-blur-sm"
+            className={`w-[350px] h-[300px] md:w-[400px] md:h-[400px] ${isChatOpen ? "" : "hidden"} rounded-2xl shadow-2xl border border-gray-600 bg-gray-100 backdrop-blur-sm`}
+             
           />
         </div>
       </div>

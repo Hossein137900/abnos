@@ -1,5 +1,4 @@
 "use client";
-import Image from "next/image";
 import { motion } from "framer-motion";
 import { FaShieldAlt, FaIndustry, FaCertificate } from "react-icons/fa";
 import { useLanguage } from "../global/LanguageContext";
@@ -45,7 +44,8 @@ const content = {
   },
   fa: {
     title: " آبنوس جام با بیش از نیم قرن تجربه پیشرو در صنعت تولید شیشه",
-    description: "تولید محصولات شیشه‌ای با کیفیت برتر با استفاده از فناوری‌های نوین و دهه‌ها تجربه. نگاه شما، دقت ما.",
+    description:
+      "تولید محصولات شیشه‌ای با کیفیت برتر با استفاده از فناوری‌های نوین و دهه‌ها تجربه. نگاه شما، دقت ما.",
     buttonText: "مشاهده محصولات ما",
     imageAlt: "کارخانه شیشه سازی",
   },
@@ -57,16 +57,19 @@ const HeroSection = () => {
   const currentContent = content[state.currentLang === "en" ? "en" : "fa"];
 
   return (
-    <div className="relative h-[700px] w-full">
-      <Image
-        src={"/assets/images/hero.jpeg"}
-        alt={currentContent.imageAlt}
-        fill
-        className={`object-cover z-0 brightness-90 ${
-          isRTL ? "scale-x-[-1] h-full" : ""
+    <div className="relative min-h-screen w-full pb-24">
+      <video
+        autoPlay
+        muted
+        loop
+        playsInline
+        className={`absolute top-0 left-0 w-full h-full blur-sm object-cover z-0 brightness-95 ${
+          isRTL ? "scale-x-[-1]" : ""
         }`}
-        priority
-      />
+      >
+        <source src="/assets/video/homme.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
 
       <div className="absolute inset-0 lg:bg-black/20 bg-black/30 z-1" />
 
@@ -138,7 +141,7 @@ const HeroSection = () => {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.8 + index * 0.2 }}
-                  className="bg-white/10 p-1 backdrop-blur-sm rounded-xl hover:bg-white/20 transition-all duration-300"
+                  className="bg-[#fff]/30 p-1 backdrop-blur-sm rounded-xl hover:bg-white/20 transition-all duration-300"
                 >
                   <div
                     className={`flex flex-row justify-center items-center gap-4 ${
@@ -146,7 +149,7 @@ const HeroSection = () => {
                     }`}
                   >
                     <span className="text-[#6FBDF5]">{feature.icon}</span>
-                    <p className="text-gray-300 text-sm text-wrap">
+                    <p className="text-[#fff] text-sm text-wrap">
                       {feature.description}
                     </p>
                   </div>

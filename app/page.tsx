@@ -50,6 +50,7 @@ export default function Home() {
     >
       <Suspense fallback={<div>Loading...</div>}>
         <HeroSection />
+  
         <WhatWeDo />
         <BannerText 
           imageSrc="/assets/images/bannerText.jpg" 

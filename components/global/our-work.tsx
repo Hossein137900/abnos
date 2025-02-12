@@ -1,123 +1,282 @@
 "use client";
 import Image from "next/image";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useLanguage } from "../global/LanguageContext";
-
+import { motion, AnimatePresence } from "framer-motion";
 const works = {
   en: [
     {
       id: 1,
-      title: "Tempered Building Glass",
-      description:
-        "Tempering is a heat treatment process applicable to various types of glass including colored, plain, reflective, printed, etc., in different thicknesses.",
-      image: "/assets/images/about.jpg",
-      category: "Glass",
+      title: "Tempered Glass",
+      description: "Premium heat-treated safety glass for maximum durability",
+      images: [
+        {
+          src: "/assets/images/tempered/temp1.webp",
+          caption: "Heat-strengthened safety glass",
+        },
+        {
+          src: "/assets/images/tempered/temp2.webp",
+          caption: "Impact-resistant architectural glass",
+        },
+        {
+          src: "/assets/images/tempered/temp3.webp",
+          caption: "Thermal shock resistant glass",
+        },
+      ],
+      category: "Tempered",
+      features: [
+        "4x Stronger than regular glass",
+        "Safe fragmentation",
+        "Thermal resistance",
+      ],
     },
     {
       id: 2,
       title: "Double Glazed Glass",
-      description:
-        "Double glazing consists of two or more glass layers of different thicknesses or colors, parallel-connected by spacers. The space between glasses is filled with inert, moisture-free gases like argon.",
-      image: "/assets/images/about.jpg",
-      category: "Glass",
+      description: "Superior insulation with dual-pane technology",
+      images: [
+        {
+          src: "/assets/images/double-glazed-glass/glaze1.webp",
+          caption: "Energy efficient double glazing",
+        },
+        {
+          src: "/assets/images/double-glazed-glass/glaze2.webp",
+          caption: "Sound-proof window systems",
+        },
+        {
+          src: "/assets/images/double-glazed-glass/glaze3.webp",
+          caption: "Thermal insulation units",
+        },
+      ],
+      category: "Double Glazed",
+      features: ["Energy saving", "Sound insulation", "UV protection"],
     },
     {
       id: 3,
       title: "Printed Glass",
-      description:
-        "Abnos Jam uses both silk screen and roller printing methods, depending on customer sensitivity and precision requirements.",
-      image: "/assets/images/about.jpg",
-      category: "Glass",
+      description: "Custom designed architectural glass solutions",
+      images: [
+        {
+          src: "/assets/images/printed-glasses/print1.webp",
+          caption: "Digital printed facades",
+        },
+        {
+          src: "/assets/images/printed-glasses/print2.webp",
+          caption: "Ceramic frit patterns",
+        },
+        {
+          src: "/assets/images/printed-glasses/print3.webp",
+          caption: "Custom design prints",
+        },
+      ],
+      category: "Printed",
+      features: ["Custom designs", "Durable prints", "UV resistant"],
     },
     {
       id: 4,
       title: "Laminated Glass",
-      description:
-        "Laminated glass is a safety glass made by layering two or more flat glass sheets connected by PVB interlayer.",
-      image: "/assets/images/about.jpg",
-      category: "Glass",
+      description: "Multi-layer safety glass with PVB interlayer",
+      images: [
+        {
+          src: "/assets/images/laminated-glasses/lamin1.webp",
+          caption: "Security laminated glass",
+        },
+        {
+          src: "/assets/images/laminated-glasses/lamin2.webp",
+          caption: "Acoustic laminated units",
+        },
+      ],
+      category: "Laminated",
+      features: ["Enhanced security", "Sound reduction", "UV blocking"],
     },
     {
       id: 5,
       title: "Window Film Glass",
-      description:
-        "Window film is a thin coating layer composed of multiple thinner layers with various properties.",
-      image: "/assets/images/about.jpg",
-      category: "Glass",
+      description: "Advanced film coating for enhanced performance",
+      images: [
+        {
+          src: "/assets/images/windowFilm-glasses/window1.webp",
+          caption: "Solar control film",
+        },
+        {
+          src: "/assets/images/windowFilm-glasses/window2.webp",
+          caption: "Privacy window film",
+        },
+        {
+          src: "/assets/images/windowFilm-glasses/window4.webp",
+          caption: "Security film application",
+        },
+      ],
+      category: "Window Film",
+      features: ["Solar control", "Privacy enhancement", "Security upgrade"],
     },
     {
       id: 6,
       title: "Digital Kiln Printing",
       description:
-        "This modern system produces natural quality images compatible with computer designs through digital printing.",
-      image: "/assets/images/about.jpg",
-      category: "Glass",
-    },
-    {
-      id: 7,
-      title: "Smart Glass",
-      description:
-        "Advanced glass technology with digital integration for modern architectural solutions.",
-      image: "/assets/images/about.jpg",
-      category: "Glass",
+        "Advanced digital printing technology for architectural glass",
+      images: [
+        {
+          src: "/assets/images/digital-printin-on-glasses/dig1.webp",
+          caption: "High-resolution facade printing",
+        },
+        {
+          src: "/assets/images/digital-printin-on-glasses/dig2.webp",
+          caption: "Custom artistic glass prints",
+        },
+        {
+          src: "/assets/images/digital-printin-on-glasses/dig3.webp",
+          caption: "Commercial signage solutions",
+        },
+        {
+          src: "/assets/images/digital-printin-on-glasses/dig4.webp",
+          caption: "Decorative interior panels",
+        },
+      ],
+      category: "Digital Print",
+      features: [
+        "High resolution",
+        "Permanent ceramic inks",
+        "Custom designs",
+        "Weather resistant",
+      ],
     },
   ],
   fa: [
     {
       id: 1,
-      title: "شیشه‌های ساختمانی سکوریت",
-      description:
-        "سکوریت کردن یک فرایند حرارتی است که برروی انواع شیشه‌ها ی رنگی، ساده، رفلکتیو، چاپ شده و... با ضخامت‌های گوناگون قابل اجرا می‌باشد.",
-      image: "/assets/images/about.jpg",
-      category: "شیشه",
+      title: "شیشه سکوریت",
+      description: "شیشه ایمنی با عملیات حرارتی برای حداکثر دوام",
+      images: [
+        {
+          src: "/assets/images/tempered/temp1.webp",
+          caption: "شیشه ایمنی مقاوم شده حرارتی",
+        },
+        {
+          src: "/assets/images/tempered/temp2.webp",
+          caption: "شیشه معماری مقاوم در برابر ضربه",
+        },
+        {
+          src: "/assets/images/tempered/temp3.webp",
+          caption: "شیشه مقاوم در برابر شوک حرارتی",
+        },
+      ],
+      category: "سکوریت",
+      features: [
+        "۴ برابر مقاوم‌تر از شیشه معمولی",
+        "خرد شدن ایمن",
+        "مقاومت حرارتی",
+      ],
     },
     {
       id: 2,
-      title: "شیشه‌های دوجداره",
-      description:
-        "دوجداره قطعه‌ای شامل دو یا چند لایه شیشه درضخامت‌ها یا رنگ‌های مختلف می‌باشد که به صورت موازی به وسیله اسپیسر به یکدیگر متصل شده‌اند. فاصله بین شیشه‌ها با گازهای بی‌اثر و بدون رطوبت مانند آرگون پر می‌شود.",
-      image: "/assets/images/about.jpg",
-      category: "شیشه",
+      title: "شیشه دوجداره",
+      description: "عایق برتر با فناوری دو لایه",
+      images: [
+        {
+          src: "/assets/images/double-glazed-glass/glaze1.webp",
+          caption: "شیشه دوجداره با کارایی انرژی",
+        },
+        {
+          src: "/assets/images/double-glazed-glass/glaze2.webp",
+          caption: "سیستم پنجره ضد صدا",
+        },
+        {
+          src: "/assets/images/double-glazed-glass/glaze3.webp",
+          caption: "واحدهای عایق حرارتی",
+        },
+      ],
+      category: "دوجداره",
+      features: ["صرفه‌جویی در انرژی", "عایق صوتی", "محافظت در برابر اشعه UV"],
     },
     {
       id: 3,
-      title: "شیشه‌های چاپی",
-      description:
-        "شرکت آبنوس جام از دو روش چاپ سیلک اسکرین و چاپ غلطکی، بسته به حساسیت و دقت کار مشتری استفاده می‌کند.",
-      image: "/assets/images/about.jpg",
-      category: "شیشه",
+      title: "شیشه چاپی",
+      description: "راه‌حل‌های شیشه معماری با طراحی سفارشی",
+      images: [
+        {
+          src: "/assets/images/printed-glasses/print1.webp",
+          caption: "نمای چاپ دیجیتال",
+        },
+        {
+          src: "/assets/images/printed-glasses/print2.webp",
+          caption: "الگوهای سرامیکی",
+        },
+        {
+          src: "/assets/images/printed-glasses/print3.webp",
+          caption: "چاپ طرح‌های سفارشی",
+        },
+      ],
+      category: "چاپی",
+      features: ["طرح‌های سفارشی", "چاپ با دوام", "مقاوم در برابر UV"],
     },
     {
       id: 4,
-      title: "شیشه‌های لمینیت",
-      description:
-        "شیشه لمینت یکی از انواع شیشه‌های ایمنی می‌باشد که از روی هم قرار گرفتن دو یا چند لایه شیشه تخت که توسط لایه میانی PVB بهم متصل شده‌اند، تهیه می‌شود.",
-      image: "/assets/images/about.jpg",
-      category: "شیشه",
+      title: "شیشه لمینت",
+      description: "شیشه ایمنی چند لایه با لایه میانی PVB",
+      images: [
+        {
+          src: "/assets/images/laminated-glasses/lamin1.webp",
+          caption: "شیشه لمینت امنیتی",
+        },
+        {
+          src: "/assets/images/laminated-glasses/lamin2.webp",
+          caption: "واحدهای لمینت آکوستیک",
+        },
+      ],
+      category: "لمینیت",
+      features: ["امنیت بالا", "کاهش صدا", "مسدود کردن UV"],
     },
     {
       id: 5,
-      title: "شیشه‌های ویندوفیلم‌دار",
-      description:
-        "برچسب شیشه یا ویندوفیلم لایه پوشش نازکی است که از چند لایه نازک‌تر با خواص مختلف تشکیل شده است.",
-      image: "/assets/images/about.jpg",
-      category: "شیشه",
+      title: "شیشه ویندوفیلم",
+      description: "پوشش فیلم پیشرفته برای عملکرد بهتر",
+      images: [
+        {
+          src: "/assets/images/windowFilm-glasses/window1.webp",
+          caption: "فیلم کنترل خورشید",
+        },
+        {
+          src: "/assets/images/windowFilm-glasses/window2.webp",
+          caption: "فیلم محافظ حریم خصوصی",
+        },
+        {
+          src: "/assets/images/windowFilm-glasses/window4.webp",
+          caption: "کاربرد فیلم امنیتی",
+        },
+      ],
+      category: "ویندوفیلم",
+      features: ["کنترل نور خورشید", "حفظ حریم خصوصی", "ارتقاء امنیت"],
     },
     {
       id: 6,
       title: "چاپ دیجیتال کوره‌ای",
-      description:
-        "این سیستم نوین با چاپ دیجیتال، تصاویر را با کیفیتی طبیعی و قابل انطباق با کامپیوتر ارائه می‌دهد.",
-      image: "/assets/images/about.jpg",
-      category: "شیشه",
-    },
-    {
-      id: 7,
-      title: "شیشه‌های هوشمند",
-      description:
-        "فناوری پیشرفته شیشه با قابلیت‌های دیجیتال برای راهکارهای معماری مدرن.",
-      image: "/assets/images/about.jpg",
-      category: "شیشه",
+      description: "فناوری پیشرفته چاپ دیجیتال برای شیشه‌های معماری",
+      images: [
+        {
+          src: "/assets/images/digital-printin-on-glasses/dig1.webp",
+          caption: "چاپ نمای ساختمان با کیفیت بالا",
+        },
+        {
+          src: "/assets/images/digital-printin-on-glasses/dig2.webp",
+          caption: "چاپ هنری سفارشی روی شیشه",
+        },
+        {
+          src: "/assets/images/digital-printin-on-glasses/dig3.webp",
+          caption: "راهکارهای تابلوهای تجاری",
+        },
+        {
+          src: "/assets/images/digital-printin-on-glasses/dig4.webp",
+          caption: "پنل‌های تزئینی داخلی",
+        },
+      ],
+      category: "چاپ دیجیتال",
+      features: [
+        "وضوح بالا",
+        "جوهر سرامیکی ماندگار",
+        "طرح‌های سفارشی",
+        "مقاوم در برابر شرایط جوی",
+      ],
     },
   ],
 };
@@ -130,12 +289,27 @@ const filters = {
     "Printed",
     "Laminated",
     "Window Film",
+    "Digital Print",
   ],
-  fa: ["همه", "سکوریت", "دوجداره", "چاپی", "لمینیت", "ویندوفیلم"],
+  fa: [
+    "همه",
+    "سکوریت",
+    "دوجداره",
+    "چاپی",
+    "لمینیت",
+    "ویندوفیلم",
+    "چاپ دیجیتال",
+  ],
 };
+
+// Keep existing works and filters objects
 
 const OurWork = () => {
   const [activeFilter, setActiveFilter] = useState("all");
+  const [selectedImage, setSelectedImage] = useState<{
+    src: string;
+    caption: string;
+  } | null>(null);
   const { state } = useLanguage();
   const isRTL = state.currentLang === "fa";
   const currentWorks = works[state.currentLang === "en" ? "en" : "fa"];
@@ -146,75 +320,281 @@ const OurWork = () => {
     return work.category.toLowerCase() === activeFilter.toLowerCase();
   });
 
-  return (
-    <div className="w-full max-w-[1440px] mx-auto px-4 py-16">
-      {/* Header with dotted line */}
-      <div
-        className={` gap-4 mb-8 ${
-          state.currentLang === "fa" ? "text-right" : "text-left"
-        }`}
-        dir={` ${state.currentLang === "fa" ? "rtl" : "ltr"}`}
+ 
+
+  const handleNext = () => {
+    const currentWork = filteredWorks.find((work) =>
+      work.images.some((img) => img.src === selectedImage?.src)
+    );
+    if (!currentWork) return;
+
+    const currentIndex = currentWork.images.findIndex(
+      (img) => img.src === selectedImage?.src
+    );
+    const nextIndex = (currentIndex + 1) % currentWork.images.length;
+    setSelectedImage(currentWork.images[nextIndex]);
+  };
+
+  const handlePrev = () => {
+    const currentWork = filteredWorks.find((work) =>
+      work.images.some((img) => img.src === selectedImage?.src)
+    );
+    if (!currentWork) return;
+
+    const currentIndex = currentWork.images.findIndex(
+      (img) => img.src === selectedImage?.src
+    );
+    const prevIndex =
+      currentIndex === 0 ? currentWork.images.length - 1 : currentIndex - 1;
+    setSelectedImage(currentWork.images[prevIndex]);
+  };
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (selectedImage) {
+        if (e.key === "Escape") setSelectedImage(null);
+        if (e.key === "ArrowRight") handleNext();
+        if (e.key === "ArrowLeft") handlePrev();
+      }
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, []);
+
+  const ImageModal = () => {
+    if (!selectedImage) return null;
+
+    return (
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 p-4"
+        onClick={() => setSelectedImage(null)}
       >
-        <h2
-          className={`text-3xl font-bold whitespace-nowrap ${
-            state.currentLang === "fa" ? "text-right" : "text-left"
-          } `}
-          dir={` ${state.currentLang === "fa" ? "rtl" : "ltr"}`}
-        >
+        <div className="relative max-w-7xl w-full h-full flex items-center justify-center">
+          <motion.div
+            initial={{ scale: 0.5, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            exit={{ scale: 0.5, opacity: 0 }}
+            transition={{ type: "spring", damping: 25 }}
+            className="relative"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div className="relative group">
+              <Image
+                src={selectedImage.src}
+                alt={selectedImage.caption}
+                width={1200}
+                height={800}
+                className="max-h-[85vh] w-auto object-contain rounded-lg"
+                priority
+              />
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 p-4"
+              >
+                <p className="text-white text-center">
+                  {selectedImage.caption}
+                </p>
+              </motion.div>
+            </div>
+
+            <div className="absolute top-1/2 left-4 right-4 flex justify-between items-center -translate-y-1/2">
+              <motion.button
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
+                onClick={handlePrev}
+                className="bg-white/10 hover:bg-white/20 p-3 rounded-full backdrop-blur-sm transition-all"
+              >
+                <svg
+                  className="w-6 h-6 text-white"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M15 19l-7-7 7-7"
+                  />
+                </svg>
+              </motion.button>
+
+              <motion.button
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
+                onClick={handleNext}
+                className="bg-white/10 hover:bg-white/20 p-3 rounded-full backdrop-blur-sm transition-all"
+              >
+                <svg
+                  className="w-6 h-6 text-white"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </motion.button>
+            </div>
+
+            <motion.button
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+              onClick={() => setSelectedImage(null)}
+              className="absolute top-4 right-4 bg-white/10 hover:bg-white/20 p-3 rounded-full backdrop-blur-sm transition-all"
+            >
+              <svg
+                className="w-6 h-6 text-white"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              </svg>
+            </motion.button>
+          </motion.div>
+        </div>
+      </motion.div>
+    );
+  };
+
+  return (
+    <div className="w-full mx-auto px-4 py-16 bg-gray-50">
+      {/* Header Section */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        className="text-center mb-16"
+      >
+        <h2 className="text-4xl font-bold mb-4">
           {isRTL ? "محصولات ما" : "Our Products"}
         </h2>
-        <p
-          className="text-gray-600 whitespace-nowrap"
-          dir={`${state.currentLang === "fa" ? "rtl" : "ltr"}`}
-        >
+        <div className="w-24 h-1 bg-[#6FBDF5] mx-auto mb-4"></div>
+        <p className="text-gray-600">
           {isRTL
             ? "تولید کننده انواع شیشه‌های صنعتی و ساختمانی"
             : "Manufacturer of industrial and building glass"}
         </p>
-      </div>
+      </motion.div>
 
-      {/* Minimal Filter Bar */}
-      <div
-        className={`flex flex-wrap lg:flex-row justify-center gap-8 mb-12 `}
-        dir={`${state.currentLang === "fa" ? "rtl" : "ltr"}`}
-      >
-        {currentFilters.map((filter) => (
-          <button
-            key={filter}
-            onClick={() => setActiveFilter(filter.toLowerCase())}
-            className={`text-sm font-medium transition-all border-b-2 pb-1 ${
-              activeFilter === filter.toLowerCase()
-                ? "border-[#6FBDF5] text-[#6FBDF5]"
-                : "border-transparent text-gray-500 hover:text-gray-800"
-            }`}
-          >
-            {filter}
-          </button>
-        ))}
+      {/* Filter Buttons */}
+      <div className="flex justify-center mb-12">
+        <motion.div
+          className="flex flex-wrap gap-4 justify-center"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          dir={`${isRTL ? "rtl" : "ltr"}`}
+        >
+          {currentFilters.map((filter) => (
+            <motion.button
+              key={filter}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              onClick={() => setActiveFilter(filter.toLowerCase())}
+              className={`md:px-6 md:py-3 px-3 py-1.5 rounded-full transition-all ${
+                activeFilter === filter.toLowerCase()
+                  ? "bg-[#6FBDF5] text-white shadow-lg"
+                  : "bg-white text-gray-600 hover:bg-gray-100"
+              }`}
+            >
+              {filter}
+            </motion.button>
+          ))}
+        </motion.div>
       </div>
 
       {/* Product Grid */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+      <motion.div
+        layout
+        className={`${
+          activeFilter === "all" || activeFilter === "همه"
+            ? "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+            : "flex overflow-x-auto justify-center snap-x snap-mandatory gap-6 pb-8 hide-scrollbar"
+        }`}
+      >
         {filteredWorks.map((work) => (
-          <div key={work.id} className="group">
-            <div className="relative h-64 rounded-lg overflow-hidden mb-4">
-              <Image
-                src={work.image}
-                alt={work.title}
-                fill
-                className="object-cover transition-transform duration-300 group-hover:scale-110"
-              />
+          <motion.div
+            key={work.id}
+            layout
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className={`${
+              activeFilter === "all" || activeFilter === "همه"
+                ? ""
+                : "flex-none w-[85vw] md:w-[600px] snap-center"
+            }`}
+          >
+            <div className="bg-white rounded-xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+              <div
+                className={`${
+                  activeFilter === "all" || activeFilter === "همه"
+                    ? ""
+                    : "flex gap-4 p-4"
+                }`}
+              >
+                {work.images.map((image, index) => (
+                  <div
+                    key={index}
+                    className={`relative cursor-pointer ${
+                      activeFilter === "all" || activeFilter === "همه"
+                        ? "h-64"
+                        : "h-80 flex-1"
+                    }`}
+                    onClick={() => setSelectedImage(image)}
+                  >
+                    <Image
+                      src={image.src}
+                      alt={image.caption}
+                      fill
+                      className="object-cover rounded-lg transition-transform duration-300 hover:scale-105"
+                    />
+                    <div
+                      className={`absolute inset-0 bg-black/20 opacity-0 hover:opacity-100 transition-opacity duration-300 
+                      ${isRTL ? "items-end justify-end" : ""} flex items-end`}
+                    >
+                      <div className="p-4 text-white">
+                        <p className="text-sm">{image.caption}</p>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              <div className={`p-6 ${isRTL ? "text-right" : ""}`}>
+                <h3 className="text-xl font-bold mb-2">{work.title}</h3>
+                <p className="text-gray-600 mb-4">{work.description}</p>
+                <div className={`flex flex-row gap-2 ${isRTL ? "justify-end" : "justify-start"}`}>
+                  {work.features.map((feature, idx) => (
+                    <span
+                      key={idx}
+                      className="text-xs text-nowrap bg-gray-100 text-gray-700 px-3 py-1 rounded-full"
+                    >
+                      {feature}
+                    </span>
+                  ))}
+                </div>
+              </div>
             </div>
-            <h3
-              className={`text-lg font-medium text-center ${
-                isRTL ? "rtl" : ""
-              }`}
-            >
-              {work.title}
-            </h3>
-          </div>
+          </motion.div>
         ))}
-      </div>
+      </motion.div>
+
+      {/* Image Modal */}
+      <AnimatePresence>{selectedImage && <ImageModal />}</AnimatePresence>
     </div>
   );
 };
