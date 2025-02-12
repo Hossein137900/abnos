@@ -7,8 +7,6 @@ import CollapseFaq from "@/components/global/collapse";
 import Testimonials from "@/components/global/Testimonials";
 import Specifications from "@/components/global/Specifications";
 
-
-
 const pageContent = {
   en: {
     hero: {
@@ -99,7 +97,7 @@ const pageContent = {
     },
     completedProjects: {
       title: "Our Architectural Glass Projects",
-      subtitle: "Explore our portfolio of printed \glass installations",
+      subtitle: "Explore our portfolio of printed glass installations",
       projects: [
         {
           title: "Modern Office Tower",
@@ -107,7 +105,7 @@ const pageContent = {
           description:
             "Printed glass facade featuring a custom design for a modern office tower.",
           stats: { area: "2,000 m²", completion: "2023", rating: "5/5" },
-          imageUrl: "/assets/images/printed-glass-building.jpg",
+          imageUrl: "/assets/images/tempered/temp1.webp",
         },
       ],
     },
@@ -233,7 +231,7 @@ const pageContent = {
           description:
             "ما پنجره های شیشه ای لمینت را در سراسر یک ساختمان اداری بلند مرتبه برای افزایش ایمنی و امنیت نصب کردیم.",
           stats: { area: "۵۰۰۰ متر مربع", completion: "۲۰۲۳", rating: "5/5" },
-          imageUrl: "/assets/images/laminated-glass-office.jpg",
+          imageUrl: "/assets/images/tempered/temp1.webp",
         },
       ],
     },
@@ -266,8 +264,13 @@ function CompletedProjects({
 }: {
   content: typeof pageContent.en.completedProjects;
 }) {
+  const { state } = useLanguage();
+  const contentt = pageContent[state.currentLang];
+  const isRTL = state.currentLang === "fa";
+  console.log(contentt);
+
   return (
-    <section className="py-16 ">
+    <section className="py-16 " dir={`${isRTL ? "rtl" : "ltr"}`}>
       <div className="max-w-7xl mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold text-[#6FBDF5] mb-4">
@@ -276,7 +279,7 @@ function CompletedProjects({
           <p className="text-gray-600">{content.subtitle}</p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 justify-center items-center">
           {content.projects.map((project, index) => (
             <div
               key={index}
@@ -335,7 +338,7 @@ export default function Manufacturing() {
       />
 
       <div
-        className="grid md:grid-cols-2 pt-12 mt-8 gap-6 lg:mx-20 mx-4 gap-2"
+        className="grid md:grid-cols-2 pt-12 mt-8 gap-6 lg:mx-20 mx-4"
         {...(isRTL ? { dir: "rtl" } : {})}
       >
         <div className="md:col-span-2 space-y-6">
@@ -352,7 +355,7 @@ export default function Manufacturing() {
                 <h2 className="text-xl md:text-2xl font-bold mb-4 md:mb-6 text-[#6FBDF5]">
                   {content.applications.title}
                 </h2>
-                <ul className="grid gap-2 md:gap-3 mb-4 md:mb-6">
+                <ul className="grid gap-2 md:gap-3 mb-4">
                   {content.applications.list.map((application, index) => (
                     <li key={index} className="flex items-center gap-2">
                       <span className="text-[#6FBDF5]">•</span>
@@ -379,20 +382,19 @@ export default function Manufacturing() {
                 </ul>
               </div>
             </div>
-            <div className="w-full mt-4 md:mt-0 lg:-mt-32">
+            <div className="w-full lg:-mt-64">
               <Image
-                src="/assets/images/about.jpg"
+                src="/assets/images/page1.webp"
                 alt={`${content.hero.title} 1`}
                 className="rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 w-full object-cover"
-                width={400}
-                height={400}
+                width={2000}
+                height={2000}
               />
             </div>
           </section>
           <Specifications specifications={content.specifications} />
 
           <Testimonials testimonials={content.testimonials.feedbacks} />
-
         </div>
       </div>
 

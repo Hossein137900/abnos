@@ -11,14 +11,18 @@ const pageContent = {
   en: {
     hero: {
       title: "Advanced Window Film Solutions",
-      description: "High-performance architectural window films offering superior solar control, enhanced privacy, and advanced security features",
-      videoUrl: "/assets/video/video.mp4"
+      description:
+        "High-performance architectural window films offering superior solar control, enhanced privacy, and advanced security features",
+      videoUrl: "/assets/video/video.mp4",
     },
     content: {
       title: "Premium Window Film Technology",
-      description: "State-of-the-art window films engineered to deliver optimal solar control, UV protection, and enhanced security. Our films utilize multi-layer nano-technology to provide superior performance while maintaining crystal clear visibility.",
-      metaKeywords: "window film, solar control film, security film, UV protection, architectural film, smart glass film",
-      metaDescription: "Advanced window film solutions for commercial and residential applications. Superior UV protection, energy efficiency, and security features."
+      description:
+        "State-of-the-art window films engineered to deliver optimal solar control, UV protection, and enhanced security. Our films utilize multi-layer nano-technology to provide superior performance while maintaining crystal clear visibility.",
+      metaKeywords:
+        "window film, solar control film, security film, UV protection, architectural film, smart glass film",
+      metaDescription:
+        "Advanced window film solutions for commercial and residential applications. Superior UV protection, energy efficiency, and security features.",
     },
     features: {
       title: "Advanced Features",
@@ -32,8 +36,8 @@ const pageContent = {
         "Optically clear adhesive",
         "Self-healing surface technology",
         "15-year warranty coverage",
-        "Professional grade durability"
-      ]
+        "Professional grade durability",
+      ],
     },
     applications: {
       title: "Ideal Applications",
@@ -47,8 +51,8 @@ const pageContent = {
         "Government buildings",
         "Automotive applications",
         "Data centers",
-        "Historical preservation"
-      ]
+        "Historical preservation",
+      ],
     },
     completedProjects: {
       title: "Our Successful Implementations",
@@ -74,8 +78,8 @@ const pageContent = {
             "Visible Light Transmission: 15-70%",
             "Infrared Rejection: Up to 97%",
             "UV Rejection: 99.9%",
-            "Glare Reduction: 83%"
-          ]
+            "Glare Reduction: 83%",
+          ],
         },
         {
           category: "Physical Properties",
@@ -84,8 +88,8 @@ const pageContent = {
             "Tensile Strength: 28,500 PSI",
             "Break Strength: 190 lbs/inch",
             "Peel Strength: 5-6 lbs/inch",
-            "Surface Hardness: >2H"
-          ]
+            "Surface Hardness: >2H",
+          ],
         },
         {
           category: "Installation",
@@ -94,10 +98,10 @@ const pageContent = {
             "Curing time: 15-30 days",
             "Temperature range: -32°C to 82°C",
             "Expected lifespan: 15-20 years",
-            "Warranty coverage: 15 years"
-          ]
-        }
-      ]
+            "Warranty coverage: 15 years",
+          ],
+        },
+      ],
     },
     testimonials: {
       title: "What Our Clients Say",
@@ -123,37 +127,46 @@ const pageContent = {
     faq: [
       {
         question: "How long does window film installation take?",
-        answer: "Professional installation typically takes 1-2 days for commercial projects. The film requires 15-30 days to fully cure for optimal clarity and adhesion."
+        answer:
+          "Professional installation typically takes 1-2 days for commercial projects. The film requires 15-30 days to fully cure for optimal clarity and adhesion.",
       },
       {
         question: "What energy savings can I expect?",
-        answer: "Depending on building orientation and climate, our films typically reduce cooling costs by 25-35% and provide payback within 2-3 years."
+        answer:
+          "Depending on building orientation and climate, our films typically reduce cooling costs by 25-35% and provide payback within 2-3 years.",
       },
       {
         question: "Does window film affect glass warranty?",
-        answer: "Our films are approved by major glass manufacturers and come with a comprehensive 15-year warranty that includes glass coverage."
+        answer:
+          "Our films are approved by major glass manufacturers and come with a comprehensive 15-year warranty that includes glass coverage.",
       },
       {
         question: "Can window film be removed?",
-        answer: "Yes, professional removal is straightforward and leaves no damage to the glass when properly performed."
+        answer:
+          "Yes, professional removal is straightforward and leaves no damage to the glass when properly performed.",
       },
       {
         question: "How does the film maintain clarity?",
-        answer: "Our nano-ceramic technology ensures optimal clarity while blocking heat and UV rays. The self-healing coating resists scratches and maintains appearance."
-      }
-    ]
+        answer:
+          "Our nano-ceramic technology ensures optimal clarity while blocking heat and UV rays. The self-healing coating resists scratches and maintains appearance.",
+      },
+    ],
   },
   fa: {
     hero: {
       title: "فیلم‌های پیشرفته پنجره",
-      description: "فیلم‌های معماری با عملکرد بالا برای کنترل خورشید، حریم خصوصی بهتر و ویژگی‌های امنیتی پیشرفته",
-      videoUrl: "/assets/video/video.mp4"
+      description:
+        "فیلم‌های معماری با عملکرد بالا برای کنترل خورشید، حریم خصوصی بهتر و ویژگی‌های امنیتی پیشرفته",
+      videoUrl: "/assets/video/video.mp4",
     },
     content: {
       title: "فناوری فیلم پنجره پیشرفته",
-      description: "فیلم‌های پنجره پیشرفته مهندسی شده برای کنترل بهینه خورشید، محافظت UV و امنیت بالا. فیلم‌های ما از فناوری نانو چندلایه برای عملکرد برتر با حفظ شفافیت کریستالی استفاده می‌کنند.",
-      metaKeywords: "فیلم پنجره، فیلم کنترل خورشید، فیلم امنیتی، محافظت UV، فیلم معماری، فیلم شیشه هوشمند",
-      metaDescription: "راه‌حل‌های پیشرفته فیلم پنجره برای کاربردهای تجاری و مسکونی. محافظت برتر UV، بهره‌وری انرژی و ویژگی‌های امنیتی."
+      description:
+        "فیلم‌های پنجره پیشرفته مهندسی شده برای کنترل بهینه خورشید، محافظت UV و امنیت بالا. فیلم‌های ما از فناوری نانو چندلایه برای عملکرد برتر با حفظ شفافیت کریستالی استفاده می‌کنند.",
+      metaKeywords:
+        "فیلم پنجره، فیلم کنترل خورشید، فیلم امنیتی، محافظت UV، فیلم معماری، فیلم شیشه هوشمند",
+      metaDescription:
+        "راه‌حل‌های پیشرفته فیلم پنجره برای کاربردهای تجاری و مسکونی. محافظت برتر UV، بهره‌وری انرژی و ویژگی‌های امنیتی.",
     },
     features: {
       title: "ویژگی‌های پیشرفته",
@@ -167,8 +180,8 @@ const pageContent = {
         "چسب کاملاً شفاف",
         "فناوری سطح خود ترمیم‌شونده",
         "پوشش گارانتی ۱۵ ساله",
-        "دوام حرفه‌ای"
-      ]
+        "دوام حرفه‌ای",
+      ],
     },
     applications: {
       title: "کاربردهای ایده‌آل",
@@ -182,8 +195,8 @@ const pageContent = {
         "ساختمان‌های دولتی",
         "کاربردهای خودرویی",
         "مراکز داده",
-        "حفاظت تاریخی"
-      ]
+        "حفاظت تاریخی",
+      ],
     },
     completedProjects: {
       title: "پروژه‌های موفق ما",
@@ -198,7 +211,7 @@ const pageContent = {
             completion: "۱۴۰۲",
             rating: "۴.۹/۵",
           },
-          imageUrl: "/assets/images/opal.jpg",
+          imageUrl: "/assets/images/digital-printin-on-glasses/dig2.webp",
         },
         {
           title: "دفتر مرکزی شرکت",
@@ -209,7 +222,7 @@ const pageContent = {
             completion: "۱۴۰۲",
             rating: "۵/۵",
           },
-          imageUrl: "/assets/images/opal.jpg",
+          imageUrl: "/assets/images/digital-printin-on-glasses/dig1.webp",
         },
         {
           title: "طراحی داخلی مرکز خرید",
@@ -220,7 +233,7 @@ const pageContent = {
             completion: "۱۴۰۱",
             rating: "۴.۸/۵",
           },
-          imageUrl: "/assets/images/opal.jpg",
+          imageUrl: "/assets/images/digital-printin-on-glasses/dig4.webp",
         },
       ],
     },
@@ -234,8 +247,8 @@ const pageContent = {
             "عبور نور مرئی: ۱۵-۷۰٪",
             "رد اشعه مادون قرمز: تا ۹۷٪",
             "رد UV: ۹۹.۹٪",
-            "کاهش خیرگی: ۸۳٪"
-          ]
+            "کاهش خیرگی: ۸۳٪",
+          ],
         },
         {
           category: "خواص فیزیکی",
@@ -244,8 +257,8 @@ const pageContent = {
             "استحکام کششی: ۲۸,۵۰۰ PSI",
             "مقاومت شکست: ۱۹۰ پوند بر اینچ",
             "قدرت چسبندگی: ۵-۶ پوند بر اینچ",
-            "سختی سطح: بیش از 2H"
-          ]
+            "سختی سطح: بیش از 2H",
+          ],
         },
         {
           category: "نصب",
@@ -254,10 +267,10 @@ const pageContent = {
             "زمان عمل‌آوری: ۱۵-۳۰ روز",
             "محدوده دما: -۳۲ تا ۸۲ درجه سانتیگراد",
             "عمر مورد انتظار: ۱۵-۲۰ سال",
-            "پوشش گارانتی: ۱۵ سال"
-          ]
-        }
-      ]
+            "پوشش گارانتی: ۱۵ سال",
+          ],
+        },
+      ],
     },
     testimonials: {
       title: "نظرات مشتریان",
@@ -269,7 +282,7 @@ const pageContent = {
 
           comment:
             "کیفیت چاپ دیجیتال فراتر از انتظارات ما بود. عالی برای پروژه دفتر مرکزی ما.",
-          rating:" 5",
+          rating: " 5",
         },
         {
           name: "سارا احمدی",
@@ -294,36 +307,45 @@ const pageContent = {
     faq: [
       {
         question: "نصب فیلم پنجره چقدر طول می‌کشد؟",
-        answer: "نصب حرفه‌ای معمولاً برای پروژه‌های تجاری ۱-۲ روز طول می‌کشد. فیلم برای شفافیت و چسبندگی بهینه به ۱۵-۳۰ روز زمان عمل‌آوری نیاز دارد."
+        answer:
+          "نصب حرفه‌ای معمولاً برای پروژه‌های تجاری ۱-۲ روز طول می‌کشد. فیلم برای شفافیت و چسبندگی بهینه به ۱۵-۳۰ روز زمان عمل‌آوری نیاز دارد.",
       },
       {
         question: "چه میزان صرفه‌جویی در انرژی می‌توانم انتظار داشته باشم؟",
-        answer: "بسته به جهت‌گیری ساختمان و اقلیم، فیلم‌های ما معمولاً هزینه‌های سرمایش را ۲۵-۳۵٪ کاهش می‌دهند و در عرض ۲-۳ سال بازگشت سرمایه دارند."
+        answer:
+          "بسته به جهت‌گیری ساختمان و اقلیم، فیلم‌های ما معمولاً هزینه‌های سرمایش را ۲۵-۳۵٪ کاهش می‌دهند و در عرض ۲-۳ سال بازگشت سرمایه دارند.",
       },
       {
         question: "آیا فیلم پنجره بر گارانتی شیشه تأثیر می‌گذارد؟",
-        answer: "فیلم‌های ما توسط تولیدکنندگان اصلی شیشه تأیید شده‌اند و با گارانتی جامع ۱۵ ساله که شامل پوشش شیشه می‌شود، ارائه می‌شوند."
+        answer:
+          "فیلم‌های ما توسط تولیدکنندگان اصلی شیشه تأیید شده‌اند و با گارانتی جامع ۱۵ ساله که شامل پوشش شیشه می‌شود، ارائه می‌شوند.",
       },
       {
         question: "آیا فیلم پنجره قابل برداشتن است؟",
-        answer: "بله، برداشتن حرفه‌ای ساده است و در صورت انجام صحیح، هیچ آسیبی به شیشه وارد نمی‌کند."
+        answer:
+          "بله، برداشتن حرفه‌ای ساده است و در صورت انجام صحیح، هیچ آسیبی به شیشه وارد نمی‌کند.",
       },
       {
         question: "فیلم چگونه شفافیت را حفظ می‌کند؟",
-        answer: "فناوری نانو سرامیک ما شفافیت بهینه را در عین مسدود کردن گرما و اشعه UV تضمین می‌کند. پوشش خود ترمیم‌شونده در برابر خش مقاوم است و ظاهر را حفظ می‌کند."
-      }
-    ]
-  }
+        answer:
+          "فناوری نانو سرامیک ما شفافیت بهینه را در عین مسدود کردن گرما و اشعه UV تضمین می‌کند. پوشش خود ترمیم‌شونده در برابر خش مقاوم است و ظاهر را حفظ می‌کند.",
+      },
+    ],
+  },
 };
-
 
 function CompletedProjects({
   content,
 }: {
   content: typeof pageContent.en.completedProjects;
 }) {
+  const { state } = useLanguage();
+  const contentt = pageContent[state.currentLang];
+  const isRTL = state.currentLang === "fa";
+  console.log(contentt);
+
   return (
-    <section className="py-16 ">
+    <section className="py-16 " dir={`${isRTL ? "rtl" : "ltr"}`}>
       <div className="max-w-7xl mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold text-[#6FBDF5] mb-4">
@@ -391,7 +413,7 @@ export default function Manufacturing() {
       />
 
       <div
-        className="grid md:grid-cols-2 pt-12 mt-8 gap-6 lg:mx-20 mx-4 gap-2"
+        className="grid md:grid-cols-2 pt-12 mt-8 gap-6 lg:mx-20 mx-4"
         {...(isRTL ? { dir: "rtl" } : {})}
       >
         <div className="md:col-span-2 space-y-6">
@@ -435,21 +457,19 @@ export default function Manufacturing() {
                 </ul>
               </div>
             </div>
-            <div className="w-full mt-4 md:mt-0 lg:-mt-32">
+            <div className="w-full md:mt-0 lg:-mt-64">
               <Image
-                src="/assets/images/about.jpg"
+                src="/assets/images/page6.webp"
                 alt={`${content.hero.title} 1`}
                 className="rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 w-full object-cover"
-                width={400}
-                height={400}
+                width={2000}
+                height={2000}
               />
             </div>
           </section>
           <Specifications specifications={content.specifications} />
 
-
           <Testimonials testimonials={content.testimonials.feedbacks} />
-
         </div>
       </div>
 

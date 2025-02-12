@@ -108,7 +108,7 @@ const pageContent = {
           description:
             "Complete installation of energy-efficient double-glazed glass for enhanced thermal performance and noise reduction.",
           stats: { area: "5,000 m²", completion: "2023", rating: "5/5" },
-          imageUrl: "/assets/images/glass_project.jpg",
+          imageUrl: "/assets/images/tempered/temp2.webp",
         },
       ],
     },
@@ -254,7 +254,7 @@ const pageContent = {
             completion: "۱۴۰۲",
             rating: "۴.۹/۵",
           },
-          imageUrl: "/assets/images/project1.jpg",
+          imageUrl: "/assets/images/tempered/temp2.webp",
         },
       ],
     },
@@ -294,8 +294,12 @@ function CompletedProjects({
 }: {
   content: typeof pageContent.en.completedProjects;
 }) {
+  const { state } = useLanguage();
+  const contentt = pageContent[state.currentLang];
+  const isRTL = state.currentLang === "fa";
+  console.log(contentt);
   return (
-    <section className="py-16 ">
+    <section className="py-16 " dir={`${isRTL ? "rtl" : "ltr"}`}>
       <div className="max-w-7xl mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold text-[#6FBDF5] mb-4">
@@ -363,7 +367,7 @@ export default function Manufacturing() {
       />
 
       <div
-        className="grid md:grid-cols-2 pt-12 mt-8 gap-6 lg:mx-20 mx-4 gap-2"
+        className="grid md:grid-cols-2 pt-12 mt-8 gap-6 lg:mx-20 mx-4"
         {...(isRTL ? { dir: "rtl" } : {})}
       >
         <div className="md:col-span-2 space-y-6">
@@ -407,20 +411,19 @@ export default function Manufacturing() {
                 </ul>
               </div>
             </div>
-            <div className="w-full mt-4 md:mt-0 lg:-mt-32">
+            <div className="w-full lg:-mt-96">
               <Image
-                src="/assets/images/about.jpg"
+                src="/assets/images/page2.webp"
                 alt={`${content.hero.title} 1`}
                 className="rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 w-full object-cover"
-                width={400}
-                height={400}
+                width={2000}
+                height={2000}
               />
             </div>
           </section>
           <Specifications specifications={content.specifications} />
 
           <Testimonials testimonials={content.testimonials.feedbacks} />
-
         </div>
       </div>
 

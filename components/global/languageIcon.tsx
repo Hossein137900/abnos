@@ -27,7 +27,7 @@ const LanguageIcon = () => {
           height={20}
           alt={isEnglish ? "english" : "persian"}
           src={
-            isEnglish ? "/assets/images/world.png" : "/assets/images/map.png"
+            isEnglish ? "/assets/svg/english.svg" : "/assets/svg/iran.svg"
           }
           className="w-4 h-4 object-contain"
         />

@@ -16,28 +16,31 @@ const Footer = () => {
       tagline:
         "Crafting excellence in glass manufacturing since 1990. Your premier destination for premium glass solutions and innovative designs.",
       products: [
-        "Tempered Glass",
-        "Double-glazed Glass",
-        "Printed Glass",
-        "Laminated Glass",
-        "Window Film Glass",
-        "Digital Printing Glass",
-        "Smart Glass Solutions",
+        { name: "Tempered Glass", link: "/products/tempered-glasses" },
+        { name: "Double-glazed Glass", link: "/products/Double-glazed-glass" },
+        { name: "Printed Glass", link: "/products/printed-glasses" },
+        { name: "Laminated Glass", link: "/products/laminated-glasses" },
+        { name: "Window Film Glass", link: "/products/windowFilm-glasses" },
+        {
+          name: "Digital Printing Glass",
+          link: "/products/digital-printin-on-glasses",
+        },
       ],
-      services: [
-        "Glass Cutting",
-        "Heat Treatment",
-        "Digital Printing",
-        "Double Glazing",
-        "Custom Design",
-        "Technical Consultation",
-      ],
+      // services: [
+      //   { name: "Glass Cutting", link: "/services/glass-cutting" },
+      //   { name: "Heat Treatment", link: "/services/heat-treatment" },
+      //   { name: "Digital Printing", link: "/services/digital-printing" },
+      //   { name: "Double Glazing", link: "/services/double-glazing" },
+      //   { name: "Custom Design", link: "/services/custom-design" },
+      //   { name: "Technical Consultation", link: "/services/consultation" },
+      // ],
       company: [
-        "About Abnos",
-        "Manufacturing Process",
-        "Quality Standards",
-        "Contact Us",
-        "Career Opportunities",
+        { name: "Home", link: "/" },
+
+        { name: "About Abnos", link: "/about" },
+        // { name: "Manufacturing Process", link: "/manufacturing" },
+        // { name: "Quality Standards", link: "/quality" },
+        { name: "Contact Us", link: "/contactus" },
       ],
       footerLinks: ["Terms & Conditions", "Privacy Policy", "Sitemap"],
       socialMedia: [
@@ -65,28 +68,30 @@ const Footer = () => {
       tagline:
         "پیشگام در تولید شیشه از سال ۱۳۶۹. مرجع تخصصی تولید شیشه‌های صنعتی و ساختمانی با طراحی‌های نوآورانه.",
       products: [
-        "شیشه سکوریت",
-        "شیشه دوجداره",
-        "شیشه چاپی",
-        "شیشه لمینت",
-        "شیشه ویندوفیلم",
-        "شیشه چاپ دیجیتال",
-        "شیشه هوشمند",
+        { name: "شیشه سکوریت", link: "/products/tempered-glasses" },
+        { name: "شیشه دوجداره", link: "/products/Double-glazed-glass" },
+        { name: "شیشه چاپی", link: "/products/printed-glasses" },
+        { name: "شیشه لمینت", link: "/products/laminated-glasses" },
+        { name: "شیشه ویندوفیلم", link: "/products/windowFilm-glasses" },
+        {
+          name: "شیشه چاپ دیجیتال",
+          link: "/products/digital-printin-on-glasses",
+        },
       ],
-      services: [
-        "برش شیشه",
-        "عملیات حرارتی",
-        "چاپ دیجیتال",
-        "تولید دوجداره",
-        "طراحی سفارشی",
-        "مشاوره فنی",
-      ],
+      // services: [
+      //   { name: "برش شیشه", link: "/fa/services/glass-cutting" },
+      //   { name: "عملیات حرارتی", link: "/fa/services/heat-treatment" },
+      //   { name: "چاپ دیجیتال", link: "/fa/services/digital-printing" },
+      //   { name: "تولید دوجداره", link: "/fa/services/double-glazing" },
+      //   { name: "طراحی سفارشی", link: "/fa/services/custom-design" },
+      //   { name: "مشاوره فنی", link: "/fa/services/consultation" },
+      // ],
       company: [
-        "درباره آبنوس",
-        "فرآیند تولید",
-        "استانداردهای کیفی",
-        "تماس با ما",
-        "فرصت‌های شغلی",
+        { name: "صفحه اصلی", link: "/" },
+        { name: "درباره آبنوس", link: "/about" },
+        // { name: "فرآیند تولید", link: "/fa/manufacturing" },
+        // { name: "استانداردهای کیفی", link: "/fa/quality" },
+        { name: "تماس با ما", link: "/fa/contact" },
       ],
       footerLinks: ["قوانین و مقررات", "حریم خصوصی", "نقشه سایت"],
       socialMedia: [
@@ -112,6 +117,9 @@ const Footer = () => {
     },
   };
   const currentContent = content[state.currentLang === "en" ? "en" : "fa"];
+  const getProductLink = (link: string, lang: string) => {
+    return link; // URLs should be language-agnostic, handle language in routing config
+  };
 
   return (
     <footer className="bg-[#000814]" dir={isRTL ? "rtl" : "ltr"}>
@@ -160,34 +168,37 @@ const Footer = () => {
               {isRTL ? "محصولات" : "Products"}
             </p>
             <ul className="mt-8 space-y-4 text-sm">
-              {currentContent.products.map((item: string) => (
-                <li key={item}>
-                  <Link
-                    className="group flex justify-center lg:justify-start items-center text-gray-200 transition hover:text-[#6FBDF5]"
-                    href="#"
-                  >
-                    {isRTL ? (
-                      <>
-                        {item}
-                        <span className="mr-2 group-hover:-translate-x-2 rotate-180  transition-all duration-300 ease-in-out">
-                          →
-                        </span>
-                      </>
-                    ) : (
-                      <>
-                        {item}
-                        <span className="ml-2 group-hover:translate-x-2 transition-all duration-300 ease-in-out">
-                          →
-                        </span>
-                      </>
-                    )}
-                  </Link>
-                </li>
-              ))}
+              {currentContent.products.map(
+                (item: { name: string; link: string }) => (
+                  <li key={item.name}>
+                    <Link
+                      className="group flex justify-center lg:justify-start items-center text-gray-200 transition hover:text-[#6FBDF5]"
+                      href={getProductLink(item.link, state.currentLang)}
+                      target="_blank"
+                    >
+                      {isRTL ? (
+                        <>
+                          {item.name}
+                          <span className="mr-2 group-hover:-translate-x-2 rotate-180 transition-all duration-300 ease-in-out">
+                            →
+                          </span>
+                        </>
+                      ) : (
+                        <>
+                          {item.name}
+                          <span className="ml-2 group-hover:translate-x-2 transition-all duration-300 ease-in-out">
+                            →
+                          </span>
+                        </>
+                      )}
+                    </Link>
+                  </li>
+                )
+              )}
             </ul>
           </div>
 
-          <div
+          {/* <div
             className={` text-center   ${
               isRTL ? "md:text-right" : "md:text-left"
             }`}
@@ -196,32 +207,34 @@ const Footer = () => {
               {isRTL ? "خدمات" : "Services"}
             </p>
             <ul className="mt-8 space-y-4 text-sm">
-              {currentContent.services.map((item: string) => (
-                <li key={item}>
-                  <Link
-                    className="group flex justify-center lg:justify-start items-center text-gray-200 transition hover:text-[#6FBDF5]"
-                    href="#"
-                  >
-                    {isRTL ? (
-                      <>
-                        {item}
-                        <span className="mr-2 group-hover:-translate-x-2 rotate-180  transition-all duration-300 ease-in-out">
-                          →
-                        </span>
-                      </>
-                    ) : (
-                      <>
-                        {item}
-                        <span className="ml-2 group-hover:translate-x-2 transition-all duration-300 ease-in-out">
-                          →
-                        </span>
-                      </>
-                    )}
-                  </Link>
-                </li>
-              ))}
+              {currentContent.services.map(
+                (item: { name: string; link: string }) => (
+                  <li key={item.name}>
+                    <Link
+                      className="group flex justify-center lg:justify-start items-center text-gray-200 transition hover:text-[#6FBDF5]"
+                      href={item.link}
+                    >
+                      {isRTL ? (
+                        <>
+                          {item.name}
+                          <span className="mr-2 group-hover:-translate-x-2 rotate-180  transition-all duration-300 ease-in-out">
+                            →
+                          </span>
+                        </>
+                      ) : (
+                        <>
+                          {item.name}
+                          <span className="ml-2 group-hover:translate-x-2 transition-all duration-300 ease-in-out">
+                            →
+                          </span>
+                        </>
+                      )}
+                    </Link>
+                  </li>
+                )
+              )}
             </ul>
-          </div>
+          </div> */}
 
           <div
             className={` text-center   ${
@@ -232,35 +245,38 @@ const Footer = () => {
               {isRTL ? "شرکت" : "Company"}
             </p>
             <ul className="mt-8 space-y-4 text-sm">
-              {currentContent.company.map((item: string) => (
-                <li key={item}>
-                  <Link
-                    className="group flex justify-center lg:justify-start items-center text-gray-200 transition hover:text-[#6FBDF5]"
-                    href="#"
-                  >
-                    {isRTL ? (
-                      <>
-                        {item}
-                        <span className="mr-2 group-hover:-translate-x-2 rotate-180  transition-all duration-300 ease-in-out">
-                          →
-                        </span>
-                      </>
-                    ) : (
-                      <>
-                        {item}
-                        <span className="ml-2 group-hover:translate-x-2 transition-all duration-300 ease-in-out">
-                          →
-                        </span>
-                      </>
-                    )}
-                  </Link>
-                </li>
-              ))}
+              {currentContent.company.map(
+                (item: { name: string; link: string }) => (
+                  <li key={item.name}>
+                    <Link
+                      className="group flex justify-center lg:justify-start items-center text-gray-200 transition hover:text-[#6FBDF5]"
+                      href={getProductLink(item.link, state.currentLang)}
+                      target="_blank"
+                    >
+                      {isRTL ? (
+                        <>
+                          {item.name}
+                          <span className="mr-2 group-hover:-translate-x-2 rotate-180  transition-all duration-300 ease-in-out">
+                            →
+                          </span>
+                        </>
+                      ) : (
+                        <>
+                          {item.name}
+                          <span className="ml-2 group-hover:translate-x-2 transition-all duration-300 ease-in-out">
+                            →
+                          </span>
+                        </>
+                      )}
+                    </Link>
+                  </li>
+                )
+              )}
             </ul>
           </div>
 
           <div
-            className={`text-center  md:col-span-4 lg:col-span-3 ${
+            className={`text-center  md:col-span-4 lg:col-span-4 ${
               isRTL ? "md:text-right" : "md:text-left"
             }`}
           >
@@ -268,7 +284,11 @@ const Footer = () => {
               {isRTL ? "تماس با ما" : "Contact Us"}
             </p>
             <>
-              <span className={`text-gray-100 md:mr-12 ${isRTL ? "" : "md:ml-4"} `}>02634704990</span>
+              <span
+                className={`text-gray-100 md:mr-12 ${isRTL ? "" : "md:ml-4"} `}
+              >
+                02634704990
+              </span>
               <span className="text-gray-100 md:mr-12 mx-4">02634706969</span>
               <span className="text-gray-100 md:mr-12">02634714413-5</span>
             </>

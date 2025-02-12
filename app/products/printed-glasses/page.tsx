@@ -107,7 +107,7 @@ const pageContent = {
           description:
             "We created a custom printed glass feature wall for the lobby of a luxury hotel, featuring a stunning image of the Dubai skyline.",
           stats: { area: "100 m²", completion: "2023", rating: "5/5" },
-          imageUrl: "/assets/images/printed-glass-hotel.jpg",
+          imageUrl: "/assets/images/double-glazed-glass/glaze1.webp",
         },
       ],
     },
@@ -235,7 +235,7 @@ const pageContent = {
             completion: "۱۴۰۲",
             rating: "۴.۹/۵",
           },
-          imageUrl: "/assets/images/project1.jpg",
+          imageUrl: "/assets/images/double-glazed-glass/glaze1.webp",
         },
       ],
     },
@@ -251,8 +251,7 @@ const pageContent = {
           "معمولاً از گاز آرگون یا کریپتون برای بهبود خاصیت عایق‌بندی حرارتی و صوتی استفاده می‌شود.",
       },
       {
-        question:
-          "چقدر می‌توان از طریق شیشه دوجداره در هزینه‌های انرژی صرفه‌جویی کرد؟",
+        question: "چقدر  با شیشه دوجداره در هزینه‌ها صرفه‌جویی میشود؟",
         answer:
           "بسته به شرایط، شیشه دوجداره می‌تواند تا ۴۰٪ در هزینه‌های گرمایشی و سرمایشی صرفه‌جویی کند.",
       },
@@ -275,8 +274,13 @@ function CompletedProjects({
 }: {
   content: typeof pageContent.en.completedProjects;
 }) {
+  const { state } = useLanguage();
+  const contentt = pageContent[state.currentLang];
+  const isRTL = state.currentLang === "fa";
+  console.log(contentt);
+
   return (
-    <section className="py-16 ">
+    <section className="py-16 " dir={`${isRTL ? "rtl" : "ltr"}`}>
       <div className="max-w-7xl mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold text-[#6FBDF5] mb-4">
@@ -388,13 +392,13 @@ export default function Manufacturing() {
                 </ul>
               </div>
             </div>
-            <div className="w-full mt-4 md:mt-0 lg:-mt-32">
+            <div className="w-full -mt-12 md:-mt-2 lg:-mt-64">
               <Image
-                src="/assets/images/about.jpg"
+                src="/assets/images/page4.webp"
                 alt={`${content.hero.title} 1`}
                 className="rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 w-full object-cover"
-                width={400}
-                height={400}
+                width={2000}
+                height={2000}
               />
             </div>
           </section>

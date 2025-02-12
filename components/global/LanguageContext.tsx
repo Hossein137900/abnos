@@ -11,7 +11,7 @@ type LanguageAction = {
 };
 
 const initialState: LanguageState = {
-  currentLang: "en",
+  currentLang: "fa",
 };
 
 const languageReducer = (

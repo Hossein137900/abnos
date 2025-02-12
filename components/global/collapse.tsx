@@ -24,7 +24,10 @@ const CollapseFaq = ({ title, faqItems }: CollapseFaqProps) => {
   };
 
   return (
-    <div className="lg:mx-20 px-4 pb-28" dir={`${isEnglish ? "ltr" : "rtl"}`}>
+    <div
+      className="lg:mx-20 min-h-svh px-4"
+      dir={isEnglish ? "ltr" : "rtl"}
+    >
       {/* Header Section */}
       <div className="flex lg:flex-row flex-col gap-4 justify-between items-center py-12">
         <div>
@@ -46,7 +49,6 @@ const CollapseFaq = ({ title, faqItems }: CollapseFaqProps) => {
             {title}
           </motion.h2>
         </div>
-
         <motion.div
           initial={{ opacity: 0, x: 20 }}
           animate={{ opacity: 1, x: 0 }}
@@ -54,7 +56,8 @@ const CollapseFaq = ({ title, faqItems }: CollapseFaqProps) => {
       </div>
 
       {/* Content Section */}
-      <div className="flex flex-col items-center md:flex-row gap-8">
+      {/* Note: On mobile, we use items-start so the image remains at the top */}
+      <div className="flex flex-col md:flex-row gap-8 items-start md:items-center">
         {/* Left Image */}
         <motion.div
           className="md:w-1/3"
@@ -62,37 +65,35 @@ const CollapseFaq = ({ title, faqItems }: CollapseFaqProps) => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          {" "}
-          <div className="relative h-[400px] w-full">
+          <div className="relative  w-full">
             <Image
-              src={`${
+              src={
                 isEnglish
                   ? "/assets/images/enfaq.jpg"
                   : "/assets/images/perfaq.jpg"
-              }`}
+              }
               alt="FAQ Illustration"
-              fill
-              className="object-cover w-full rounded-lg"
-              priority
+              width={1000}
+              height={1000}
+              className="object-cover h-full w-full rounded-lg"
             />
           </div>
         </motion.div>
 
         {/* Right FAQ Collapse */}
-        <div className="md:w-2/3">
+        {/* The container here has a fixed max-width on mobile */}
+        <div className="md:w-2/3 w-full max-w-md mx-auto">
           {faqItems.map((item, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.1 }}
-              className="mb-4"
+              className="mb-4 w-full"
             >
               <motion.button
                 onClick={() => toggleCollapse(index)}
                 className="w-full flex justify-between group items-center text-black p-4 border border-[#6FBDF5] hover:bg-[#6FBDF5] rounded-lg transition-colors"
-                whileHover={{ scale: 1.01 }}
-                whileTap={{ scale: 0.99 }}
               >
                 <span className="font-medium text-left group-hover:text-white">
                   {item.question}
@@ -112,14 +113,14 @@ const CollapseFaq = ({ title, faqItems }: CollapseFaqProps) => {
                     animate={{ height: "auto", opacity: 1 }}
                     exit={{ height: 0, opacity: 0 }}
                     transition={{ duration: 0.3, ease: "easeInOut" }}
-                    className="overflow-hidden"
+                    className="overflow-hidden w-full max-w-[100%]"
                   >
-                    <div className="p-4 bg-white border border-gray-200 rounded-b-lg">
+                    <div className="p-4 bg-white border border-gray-200 rounded-b-lg w-full">
                       <motion.p
                         initial={{ y: -10, opacity: 0 }}
                         animate={{ y: 0, opacity: 1 }}
                         exit={{ y: -10, opacity: 0 }}
-                        className="text-gray-600"
+                        className="text-gray-600 break-words w-full"
                       >
                         {item.answer}
                       </motion.p>

@@ -148,7 +148,7 @@ const sliderData = {
       id: 1,
       heading: "تولید شیشه های سکوریت برای ",
       subheading: "پروژه شهرک ویلایی-انزلی",
-      image: "/assets/images/anzali1.webp",
+      image: "/assets/images/anzali3.webp",
       services: [
         {
           id: 1,
@@ -341,8 +341,7 @@ export default function WhatWeDo() {
                 src={currentData.image}
                 alt="project image"
                 width={2000}
-                height={1000}
-                quality={100}
+                height={1000} 
                 className={` max-h-[800px] rounded-2xl ${
                   isRTL ? "pl-2" : "pr-2"
                 } `}

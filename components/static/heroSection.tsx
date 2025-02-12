@@ -57,7 +57,7 @@ const HeroSection = () => {
   const currentContent = content[state.currentLang === "en" ? "en" : "fa"];
 
   return (
-    <div className="relative min-h-screen w-full pb-24">
+    <div className="relative h-[45rem] md:h-screen w-full pb-24">
       <video
         autoPlay
         muted
