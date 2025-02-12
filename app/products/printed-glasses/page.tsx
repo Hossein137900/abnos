@@ -107,7 +107,7 @@ const pageContent = {
           description:
             "We created a custom printed glass feature wall for the lobby of a luxury hotel, featuring a stunning image of the Dubai skyline.",
           stats: { area: "100 m²", completion: "2023", rating: "5/5" },
-          imageUrl: "/assets/images/double-glazed-glass/glaze1.webp",
+          imageUrl: "/assets/images/printed-glasses/print1.webp",
         },
       ],
     },
@@ -235,7 +235,7 @@ const pageContent = {
             completion: "۱۴۰۲",
             rating: "۴.۹/۵",
           },
-          imageUrl: "/assets/images/double-glazed-glass/glaze1.webp",
+          imageUrl: "/assets/images/printed-glasses/print1.webp",
         },
       ],
     },
@@ -344,7 +344,7 @@ export default function Manufacturing() {
       <HeroSection
         title={content.hero.title}
         description={content.hero.description}
-        videoUrl="/assets/video/video.mp4"
+        videoUrl="/assets/video/products.mp4"
       />
 
       <div

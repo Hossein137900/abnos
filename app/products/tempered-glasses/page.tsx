@@ -264,17 +264,6 @@ const pageContent = {
       subtitle: "برتری ما را در پروژه‌های تکمیل‌شده کشف کنید",
       projects: [
         {
-          title: "نمای هتل لوکس",
-          location: "هتل بین‌المللی دبی",
-          description: "بازسازی کامل نما با استفاده از شیشه سکوریت درجه یک",
-          stats: {
-            area: "۲,۵۰۰ متر مربع",
-            completion: "۱۴۰۲",
-            rating: "۴.۹/۵",
-          },
-          imageUrl: "/assets/images/double-glazed-glass/glaze1.webp",
-        },
-        {
           title: "دفتر مرکزی شرکت",
           location: "مرکز تجاری تهران",
           description: "نصب شیشه هوشمند برای فضاهای اداری مدرن",
@@ -419,7 +408,7 @@ export default function Manufacturing() {
       <HeroSection
         title={content.hero.title}
         description={content.hero.description}
-        videoUrl="/assets/video/video.mp4"
+        videoUrl="/assets/video/products.mp4"
       />
 
       <div

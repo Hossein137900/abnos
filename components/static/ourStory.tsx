@@ -91,7 +91,7 @@ export default function OurStory() {
         <div className="flex flex-col lg:flex-row items-center justify-center gap-10">
           <div className="">
             <Image
-              src={"/assets/images/about.jpg"}
+              src={"/assets/images/page1.webp"}
               alt="Workers"
               width={2000}
               height={2000}

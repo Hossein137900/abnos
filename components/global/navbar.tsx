@@ -234,7 +234,7 @@ const Navbar = () => {
                 </div>
               ))}{" "}
             </div>
-            <div className="md:absolute space-x-8 items-center z-[9999] absolute left-4  -top-9">
+            <div className="md:absolute hidden md:block space-x-8 items-center z-[9999] absolute left-4  -top-9">
               <LanguageIcon />
             </div>
 

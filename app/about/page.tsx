@@ -6,10 +6,40 @@ import Stats from "../../components/global/Stats";
 import Process from "../../components/global/Process";
 import Certificates from "../../components/global/Certificates";
 import AbnousCompanyInfo from "@/components/global/AbnousCompanyInfo";
+import { BlogSchema } from "@/components/schema/blogSchema";
 
 const About = () => {
   const { state } = useLanguage();
   const isEnglish = state.currentLang === "en";
+  const blogData = {
+    title: isEnglish
+      ? "About Us | Abnoos Jam Glass Industries"
+      : "درباره ما | صنایع شیشه آبنوس جم",
+    url: "/about",
+    images: ["/assets/images/founderImage.png"],
+    sections: [
+      {
+        heading: isEnglish
+          ? "Abnoos Jam Glass Industries"
+          : "صنایع شیشه آبنوس جم",
+        content: isEnglish
+          ? "Leading manufacturer of safety glass, double glazing, and silk screen printing since 1998, utilizing advanced European technology and precision craftsmanship."
+          : "تولید کننده پیشرو در زمینه شیشه‌های ایمنی، دوجداره و چاپ سیلک از سال ۱۳۷۷، با بهره‌گیری از تکنولوژی پیشرفته اروپایی و دقت بالا در تولید.",
+      },
+      {
+        heading: isEnglish ? "Our Manufacturing Process" : "فرآیند تولید ما",
+        content: isEnglish
+          ? "We combine modern technology with expert craftsmanship, using the latest German and Italian machinery to deliver premium quality glass products."
+          : "ما تکنولوژی مدرن را با مهارت‌های تخصصی ترکیب می‌کنیم و از جدیدترین ماشین‌آلات آلمانی و ایتالیایی برای تولید محصولات شیشه‌ای با کیفیت برتر استفاده می‌کنیم.",
+      },
+      {
+        heading: isEnglish ? "Our Achievements" : "دستاوردهای ما",
+        content: isEnglish
+          ? "With over 25 years of experience, 100,000+ glass panels produced, and 200+ satisfied clients, we maintain a 99% customer satisfaction rate."
+          : "با بیش از ۲۵ سال تجربه، تولید بیش از ۱۰۰,۰۰۰ پنل شیشه‌ای و خدمت به بیش از ۲۰۰ مشتری، نرخ رضایت مشتریان ما ۹۹٪ است.",
+      },
+    ],
+  };
 
   const content = {
     en: {
@@ -173,26 +203,30 @@ const About = () => {
   const currentContent = isEnglish ? content.en : content.fa;
 
   return (
-    <main className={isEnglish ? "" : "font-sahel"}>
-      <HeroSection
-        title={currentContent.hero.title}
-        description={currentContent.hero.description}
-        videoUrl="/assets/video/video.mp4"
-      /><AbnousCompanyInfo />
-      <Stats {...currentContent.stats} />
-      <Process
-        title={currentContent.process.title}
-        steps={currentContent.process.steps}
-      />
-      
-      <Certificates />
+    <>
+      <BlogSchema blogData={blogData} />
 
-      <CollapseFaq
-        title={currentContent.faq.title}
-        faqItems={currentContent.faq.items}
-      />
-    </main>
+      <main className={isEnglish ? "" : "font-sahel"}>
+        <HeroSection
+          title={currentContent.hero.title}
+          description={currentContent.hero.description}
+          videoUrl="/assets/video/video.mp4"
+        />
+        <AbnousCompanyInfo />
+        <Stats {...currentContent.stats} />
+        <Process
+          title={currentContent.process.title}
+          steps={currentContent.process.steps}
+        />
+
+        <Certificates />
+
+        <CollapseFaq
+          title={currentContent.faq.title}
+          faqItems={currentContent.faq.items}
+        />
+      </main>
+    </>
   );
 };
-
 export default About;

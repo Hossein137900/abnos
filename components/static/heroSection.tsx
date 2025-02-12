@@ -63,7 +63,7 @@ const HeroSection = () => {
         muted
         loop
         playsInline
-        className={`absolute top-0 left-0 w-full h-full blur-sm object-cover z-0 brightness-95 ${
+        className={`absolute top-0 left-0 w-full h-full  object-cover z-0 brightness-105 ${
           isRTL ? "scale-x-[-1]" : ""
         }`}
       >

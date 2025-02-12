@@ -108,7 +108,7 @@ const pageContent = {
           description:
             "We installed laminated glass windows throughout a high-rise office building to enhance safety and security.",
           stats: { area: "5,000 m²", completion: "2023", rating: "5/5" },
-          imageUrl: "/assets/images/printed-glasses/print1.webp",
+          imageUrl: "/assets/images/double-glazed-glass/glaze1.webp",
         },
       ],
     },
@@ -236,7 +236,7 @@ const pageContent = {
           description:
             "ما پنجره های شیشه ای لمینت را در سراسر یک ساختمان اداری بلند مرتبه برای افزایش ایمنی و امنیت نصب کردیم.",
           stats: { area: "۵۰۰۰ متر مربع", completion: "۲۰۲۳", rating: "5/5" },
-          imageUrl: "/assets/images/printed-glasses/print1.webp",
+          imageUrl: "/assets/images/double-glazed-glass/glaze1.webp",
         },
       ],
     },
@@ -339,7 +339,7 @@ export default function Manufacturing() {
       <HeroSection
         title={content.hero.title}
         description={content.hero.description}
-        videoUrl="/assets/video/video.mp4"
+        videoUrl="/assets/video/products.mp4"
       />
 
       <div

@@ -363,7 +363,7 @@ export default function Manufacturing() {
       <HeroSection
         title={content.hero.title}
         description={content.hero.description}
-        videoUrl="/assets/video/video.mp4"
+        videoUrl="/assets/video/products.mp4"
       />
 
       <div

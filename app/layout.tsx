@@ -22,13 +22,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <link rel="icon" href="/assets/images/logo.png" type="image/x-icon" />
+      </head>
       <body
         className={`${manrope.variable} ${sahel.className} antialiased relative`}
       >
         <LanguageProvider>
-          <div className="fixed shadow-md shadow-[#6FBDF5]  rounded-full lg:top-7 lg:right-4 right-44 top-4 z-[9999]">
-            
-          </div>
+          <div className="fixed shadow-md shadow-[#6FBDF5]  rounded-full lg:top-7 lg:right-4 right-44 top-4 z-[9999]"></div>
 
           <FontWrapper>
             <Navbar />
