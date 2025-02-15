@@ -14,7 +14,7 @@ const About = () => {
   const blogData = {
     title: isEnglish
       ? "About Us | Abnoos Jam Glass Industries"
-      : "درباره ما | صنایع شیشه آبنوس جم",
+      : "درباره ما | صنایع شیشه آبنوس جام",
     url: "/about",
     images: ["/assets/images/founderImage.png"],
     sections: [
