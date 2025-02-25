@@ -67,7 +67,7 @@ const machineData = {
     ],
   },
   fa: {
-    title: "ماشین‌آلات پیشرفته ما",
+    title: "خط تولید پیشرفته ما",
     machines: [
       {
         name: "خط دوجداره LISEC",

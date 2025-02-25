@@ -480,7 +480,7 @@ const OurWork = () => {
         className="text-center mb-16"
       >
         <h2 className="text-4xl font-bold mb-4">
-          {isRTL ? "محصولات ما" : "Our Products"}
+          {isRTL ? "محصولات آبنوس" : "Our Products"}
         </h2>
         <div className="w-24 h-1 bg-[#6FBDF5] mx-auto mb-4"></div>
         <p className="text-gray-600">

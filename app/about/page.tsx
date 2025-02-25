@@ -21,7 +21,7 @@ const About = () => {
       {
         heading: isEnglish
           ? "Abnoos Jam Glass Industries"
-          : "صنایع شیشه آبنوس جم",
+          : "صنایع شیشه آبنوس جام",
         content: isEnglish
           ? "Leading manufacturer of safety glass, double glazing, and silk screen printing since 1998, utilizing advanced European technology and precision craftsmanship."
           : "تولید کننده پیشرو در زمینه شیشه‌های ایمنی، دوجداره و چاپ سیلک از سال ۱۳۷۷، با بهره‌گیری از تکنولوژی پیشرفته اروپایی و دقت بالا در تولید.",
@@ -40,6 +40,7 @@ const About = () => {
       },
     ],
   };
+  
 
   const content = {
     en: {
@@ -121,7 +122,7 @@ const About = () => {
     },
     fa: {
       hero: {
-        title: "صنایع شیشه آبنوس جم",
+        title: "صنایع شیشه آبنوس جام",
         description:
           "تولید کننده پیشرو در زمینه شیشه‌های ایمنی، دوجداره و چاپ سیلک از سال ۱۳۷۷، با بهره‌گیری از تکنولوژی پیشرفته اروپایی و دقت بالا در تولید.",
       },

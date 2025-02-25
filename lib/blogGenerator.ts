@@ -16,7 +16,7 @@ export function generateBlogSchema(blogData: BlogSchemaProps) {
     "@type": "BlogPosting",
     mainEntityOfPage: {
       "@type": "WebPage",
-      "@id": `https://www.tomakdigitalagency.ir/${blogData.url}`,
+      "@id": `https://www.abnos.vercel.app/${blogData.url}`,
     },
     headline: blogData.title,
     image: blogData.images,
@@ -24,15 +24,15 @@ export function generateBlogSchema(blogData: BlogSchemaProps) {
     dateModified: new Date().toISOString(),
     author: {
       "@type": "Organization",
-      name: "Tomak",
-      url: "https://www.tomakdigitalagency.ir/",
+      name: "Abnos",
+      url: "https://www.abnos.vercel.app/",
     },
     publisher: {
       "@type": "Organization",
-      name: "Tomak",
+      name: "Abnos",
       logo: {
         "@type": "ImageObject",
-        url: "https://www.tomakdigitalagency.ir/",
+        url: "https://www.abnos.vercel.app/",
       },
     },
     articleBody: blogData.sections.map((section) => section.content).join(" "),

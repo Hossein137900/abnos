@@ -129,7 +129,7 @@ const companyInfoContent = {
     ],
 
     machineShowcase: {
-      title: "ماشین‌آلات پیشرفته ما",
+      title: "خ پیشرفته ما",
       machines: [
         {
           name: "خط دو جداره LISEC",

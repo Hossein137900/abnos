@@ -45,7 +45,7 @@ const navItemsEn: NavItem[] = [
 
 const navItemsIr: NavItem[] = [
   { title: "خانه", href: "/" },
-  { title: "درباره ما", href: "/about" },
+  { title: "درباره آبنوس", href: "/about" },
 
   {
     title: "محصولات",
@@ -53,7 +53,7 @@ const navItemsIr: NavItem[] = [
     dropdown: [
       { title: "شیشه سکوریت", href: "/products/tempered-glasses" },
       { title: "شیشه دوجداره", href: "/products/Double-glazed-glass" },
-      { title: "شیشه چاپی", href: "/products/printed-glasses" },
+      // { title: "شیشه چاپی", href: "/products/printed-glasses" },
       { title: "شیشه لمینت", href: "/products/laminated-glasses" },
       { title: "شیشه فیلم‌دار", href: "/products/windowFilm-glasses" },
       {
@@ -63,7 +63,7 @@ const navItemsIr: NavItem[] = [
     ],
   },
   {
-    title: "تماس با ما",
+    title: "تماس با آبنوس ",
     href: "/contactus",
     isButton: true,
   },

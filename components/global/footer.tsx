@@ -18,7 +18,7 @@ const Footer = () => {
       products: [
         { name: "Tempered Glass", link: "/products/tempered-glasses" },
         { name: "Double-glazed Glass", link: "/products/Double-glazed-glass" },
-        { name: "Printed Glass", link: "/products/printed-glasses" },
+        // { name: "Printed Glass", link: "/products/printed-glasses" },
         { name: "Laminated Glass", link: "/products/laminated-glasses" },
         { name: "Window Film Glass", link: "/products/windowFilm-glasses" },
         {
@@ -70,7 +70,7 @@ const Footer = () => {
       products: [
         { name: "شیشه سکوریت", link: "/products/tempered-glasses" },
         { name: "شیشه دوجداره", link: "/products/Double-glazed-glass" },
-        { name: "شیشه چاپی", link: "/products/printed-glasses" },
+        // { name: "شیشه چاپی", link: "/products/printed-glasses" },
         { name: "شیشه لمینت", link: "/products/laminated-glasses" },
         { name: "شیشه ویندوفیلم", link: "/products/windowFilm-glasses" },
         {
@@ -91,7 +91,7 @@ const Footer = () => {
         { name: "درباره آبنوس", link: "/about" },
         // { name: "فرآیند تولید", link: "/fa/manufacturing" },
         // { name: "استانداردهای کیفی", link: "/fa/quality" },
-        { name: "تماس با ما", link: "/fa/contact" },
+        { name: "تماس با آبنوس", link: "/fa/contact" },
       ],
       footerLinks: ["قوانین و مقررات", "حریم خصوصی", "نقشه سایت"],
       socialMedia: [
@@ -283,7 +283,7 @@ const Footer = () => {
             }`}
           >
             <p className="text-lg md:inline font-bold text-gray-50">
-              {isRTL ? "تماس با ما" : "Contact Us"}
+              {isRTL ? "تماس با آبنوس" : "Contact Us"}
             </p>
             <>
               <span
