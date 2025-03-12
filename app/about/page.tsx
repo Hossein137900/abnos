@@ -40,7 +40,6 @@ const About = () => {
       },
     ],
   };
-  
 
   const content = {
     en: {
