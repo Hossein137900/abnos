@@ -27,6 +27,17 @@ Allow:/contactus/          # اجازه دسترسی به صفحه تماس با
 Allow:/products/           # اجازه دسترسی به صفحه محصولات
 Crawl-delay: 2
 
+User-agent: AhrefsBot
+Allow: /                    # اجازه دسترسی به همه صفحات
+Allow:/contactus/          # اجازه دسترسی به صفحه تماس با ما
+Allow:/products/           # اجازه دسترسی به صفحه محصولات
+Allow:/about/              # اجازه دسترسی به صفحه درباره ما
+
+User-agent: Googlebot-Mobile
+Allow: /
+Allow:/about/
+Allow:/contactus/
+Allow:/products/
 # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 # سایتمپ (SEO)
 # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
