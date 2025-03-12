@@ -37,8 +37,8 @@ const BlogPost = dynamic(() => import("@/components/global/blog-post"), {
 });
 
 export const metadata = {
-  title: "Abnos - High Performance Website",
-  description: "Optimized website with AMP-like performance",
+  title: " آبنوس جام | تولید کننده و تجارت شیشه‌ای با کیفیت بالا",
+  description: " آبنوس جام، تولید کننده و تجارت شیشه‌ای با کیفیت بالا",
   viewport: "width=device-width, initial-scale=1, minimum-scale=1",
   themeColor: "#ffffff",
 };

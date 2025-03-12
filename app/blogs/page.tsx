@@ -1,9 +1,9 @@
-'use client'
+"use client";
 import BlogPost from "@/components/global/blog-post";
 import HeroSection from "@/components/global/heroSection";
 import { useLanguage } from "@/components/global/LanguageContext";
 import { BlogSchema } from "@/components/schema/blogSchema";
-import React from "react";
+import React, { useEffect } from "react";
 
 const Blogs = () => {
   const { state } = useLanguage();
@@ -42,6 +42,17 @@ const Blogs = () => {
       },
     ],
   };
+
+  useEffect(() => {
+    document.title = "وبلاگ ما | آبنوس جام";
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute(
+        "content",
+        "درباره ما | آبنوس جام - تولید کننده پیشرو در زمینه شیشه‌های ایمنی، دوجداره و چاپ سیلک از سال ۱۳۷۷، با بهره‌گیری از تکنولوژی پیشرفته اروپایی و دقت بالا در تولید."
+      );
+    }
+  }, []);
   return (
     <main className="">
       <BlogSchema blogData={blogData} />

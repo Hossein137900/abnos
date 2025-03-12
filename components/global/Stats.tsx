@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import { useLanguage } from "./LanguageContext";
 import { motion } from "framer-motion";
 import { useState, useEffect, useRef } from "react";
@@ -26,17 +26,21 @@ const Stats = ({ title, stats }: StatsProps) => {
     <FaChartLine key="chart" className="text-4xl text-blue-500" />,
     <FaUsers key="users" className="text-4xl text-green-500" />,
     <FaIndustry key="industry" className="text-4xl text-purple-500" />,
-    <FaTrophy key="trophy" className="text-4xl text-yellow-500" />
+    <FaTrophy key="trophy" className="text-4xl text-yellow-500" />,
   ];
 
   // Convert number string to actual number, handling '+' and '%' signs
   const parseNumber = (numStr: string): number => {
-    const cleanNum = numStr.replace(/[+%]/g, '');
+    const cleanNum = numStr.replace(/[+%]/g, "");
     return parseFloat(cleanNum);
   };
 
   // Animate numbers
-  const animateCountUp = (element: HTMLDivElement, start: number, end: number) => {
+  const animateCountUp = (
+    element: HTMLDivElement,
+    start: number,
+    end: number
+  ) => {
     let startTimestamp: number | null = null;
     const duration = 2000; // 2 seconds
 
@@ -46,9 +50,11 @@ const Stats = ({ title, stats }: StatsProps) => {
       const currentNumber = Math.floor(progress * (end - start) + start);
 
       // Format the number back to original string format
-      const formattedNumber = stats[statsRef.current.indexOf(element)].number.includes('+') 
+      const formattedNumber = stats[
+        statsRef.current.indexOf(element)
+      ].number.includes("+")
         ? `${currentNumber}+`
-        : stats[statsRef.current.indexOf(element)].number.includes('%')
+        : stats[statsRef.current.indexOf(element)].number.includes("%")
         ? `${currentNumber}%`
         : `${currentNumber}`;
 
@@ -66,7 +72,7 @@ const Stats = ({ title, stats }: StatsProps) => {
     // Add icons to stats if not provided
     const enrichedStats = stats.map((stat, index) => ({
       ...stat,
-      icon: stat.icon || defaultIcons[index % defaultIcons.length]
+      icon: stat.icon || defaultIcons[index % defaultIcons.length],
     }));
     setAnimatedStats(enrichedStats);
 
@@ -102,9 +108,9 @@ const Stats = ({ title, stats }: StatsProps) => {
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.2
-      }
-    }
+        staggerChildren: 0.2,
+      },
+    },
   };
 
   const itemVariants = {
@@ -114,30 +120,29 @@ const Stats = ({ title, stats }: StatsProps) => {
       opacity: 1,
       transition: {
         type: "spring",
-        stiffness: 100
-      }
+        stiffness: 100,
+      },
     },
     hover: {
       scale: 1.05,
-      transition: { duration: 0.3 }
-    }
+      transition: { duration: 0.3 },
+    },
   };
 
   return (
-    <section 
-      className="py-20 bg-gray-50" 
-      dir={isEnglish ? 'ltr' : 'rtl'}
-    >
+    <section className="py-20 bg-gray-50" dir={isEnglish ? "ltr" : "rtl"}>
       <div className="container mx-auto px-4">
-        <motion.h2 
+        <motion.h2
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className={`text-3xl font-bold text-center mb-16 ${isEnglish ? "" : "font-sahel"}`}
+          className={`text-3xl font-bold text-center mb-16 ${
+            isEnglish ? "" : "font-sahel"
+          }`}
         >
           {title}
         </motion.h2>
-        <motion.div 
+        <motion.div
           variants={containerVariants}
           initial="hidden"
           animate="visible"
@@ -150,12 +155,10 @@ const Stats = ({ title, stats }: StatsProps) => {
               whileHover="hover"
               className="text-center p-6 bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 group"
             >
-              <div className="mb-4 flex justify-center">
-                {stat.icon}
-              </div>
-              <motion.h3 
+              <div className="mb-4 flex justify-center">{stat.icon}</div>
+              <motion.h3
                 ref={(el) => {
-                  if (el) statsRef.current[index] = el
+                  if (el) statsRef.current[index] = el;
                 }}
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
@@ -168,7 +171,8 @@ const Stats = ({ title, stats }: StatsProps) => {
                 {stat.label}
               </p>
             </motion.div>
-          ))}        </motion.div>
+          ))}{" "}
+        </motion.div>
       </div>
     </section>
   );

@@ -6,6 +6,7 @@ import Image from "next/image";
 import CollapseFaq from "@/components/global/collapse";
 import Testimonials from "@/components/global/Testimonials";
 import Specifications from "@/components/global/Specifications";
+import { useEffect } from "react";
 
 const pageContent = {
   en: {
@@ -274,6 +275,17 @@ function CompletedProjects({
   const contentt = pageContent[state.currentLang];
   const isRTL = state.currentLang === "fa";
   console.log(contentt);
+
+  useEffect(() => {
+    document.title = "  شیشه لمینت | آبنوس جام";
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute(
+        "content",
+        "درباره ما | آبنوس جام - تولید کننده پیشرو در زمینه شیشه‌های ایمنی، دوجداره و چاپ سیلک از سال ۱۳۷۷، با بهره‌گیری از تکنولوژی پیشرفته اروپایی و دقت بالا در تولید."
+      );
+    }
+  }, []);
   return (
     <section className="py-16 " dir={`${isRTL ? "rtl" : "ltr"}`}>
       <div className="max-w-7xl mx-auto px-4">

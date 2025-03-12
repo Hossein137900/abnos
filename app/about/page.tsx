@@ -7,6 +7,7 @@ import Process from "../../components/global/Process";
 import Certificates from "../../components/global/Certificates";
 import AbnousCompanyInfo from "@/components/global/AbnousCompanyInfo";
 import { BlogSchema } from "@/components/schema/blogSchema";
+import { useEffect } from "react";
 
 const About = () => {
   const { state } = useLanguage();
@@ -201,6 +202,17 @@ const About = () => {
   };
 
   const currentContent = isEnglish ? content.en : content.fa;
+
+  useEffect(() => {
+    document.title = "درباره ما | آبنوس جام";
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute(
+        "content",
+        "درباره ما | آبنوس جام - تولید کننده پیشرو در زمینه شیشه‌های ایمنی، دوجداره و چاپ سیلک از سال ۱۳۷۷، با بهره‌گیری از تکنولوژی پیشرفته اروپایی و دقت بالا در تولید."
+      );
+    }
+  }, []);
 
   return (
     <>

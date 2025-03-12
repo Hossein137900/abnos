@@ -3,6 +3,7 @@ import HeroSection from "@/components/global/heroSection";
 import ContactUs from "@/components/static/contact_us";
 import { useLanguage } from "@/components/global/LanguageContext";
 import { BlogSchema } from "@/components/schema/blogSchema";
+import { useEffect } from "react";
 
 const heroContent = {
   en: {
@@ -21,7 +22,7 @@ const heroContent = {
 const Contactus = () => {
   const { state } = useLanguage();
   const content = heroContent[state.currentLang === "en" ? "en" : "fa"];
-  
+
   const blogData = {
     title:
       state.currentLang === "en"
@@ -70,6 +71,16 @@ const Contactus = () => {
       },
     ],
   };
+  useEffect(() => {
+    document.title = "تماس با ما | آبنوس جام";
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute(
+        "content",
+        "درباره ما | آبنوس جام - تولید کننده پیشرو در زمینه شیشه‌های ایمنی، دوجداره و چاپ سیلک از سال ۱۳۷۷، با بهره‌گیری از تکنولوژی پیشرفته اروپایی و دقت بالا در تولید."
+      );
+    }
+  }, []);
 
   return (
     <div className="">
