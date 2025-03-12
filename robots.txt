@@ -41,4 +41,6 @@ Allow:/products/
 # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 # سایتمپ (SEO)
 # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-Sitemap: https://yourdomain.com/sitemap.xml
+Sitemap: https://abnoosjam.com/sitemap.xml
+
+
